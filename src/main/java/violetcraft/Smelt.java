@@ -8,7 +8,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import violetcraft.items.VioletItem;
+import violetcraft.registry.ItemsRegistry;
 
 @Mod(modid = "ttr_smelt")
 public class Smelt {
@@ -19,7 +19,7 @@ public class Smelt {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
 
-        GameRegistry.addSmelting(VioletCraftMod.BlockVirenOre,new ItemStack(VioletItem.VirenIngot),0.1f);
+        GameRegistry.addSmelting(VioletCraftMod.BlockVirenOre,new ItemStack(ItemsRegistry.VirenIngot),0.1f);
 
         GameRegistry.registerFuelHandler(new IFuelHandler(){
             @Override
