@@ -5,15 +5,15 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
+import violetcraft.block.BlockBlueTopazOre;
+import violetcraft.block.BlockPinkSapphireOre;
+import violetcraft.block.BlockRollYellowOre;
+import violetcraft.block.BlockScarRedOre;
 import violetcraft.block.BlockVirenOre;
-import violetcraft.item.ItemVirenIngot;
 import violetcraft.item.ItemRabbitegg;
+import violetcraft.item.ItemVirenIngot;
 import violetcraft.item.ItemVirenSword;
 import violetcraft.item.ItemYukariParker;
-import violetcraft.block.BlockScarRedOre;
-import violetcraft.block.BlockRollYellowOre;
-import violetcraft.block.BlockPinkSapphireOre;
-import violetcraft.block.BlockBlueTopazOre;
 
 public class ItemsRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
@@ -52,7 +52,6 @@ public class ItemsRegistry {
     public static Item rabbitegg;
 
     public static void registry() {
-//		YellowIngot = new RollYellowIngot();
         VirenIngot = new ItemVirenIngot();
         VirenSword = new ItemVirenSword();
 
@@ -61,9 +60,6 @@ public class ItemsRegistry {
         blueTopazOre = new BlockBlueTopazOre();
         PinkSapphireOre = new BlockPinkSapphireOre();
         BlockVirenOre = new BlockVirenOre();
-//		GameRegistry.registerBlock(new BlockVirenOre(), "BlockVirenOre");
-//    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
-//		test = new test();
         yukariParker = new ItemYukariParker(Parker, 0, 1);
 
         rabbitegg = new ItemRabbitegg();
