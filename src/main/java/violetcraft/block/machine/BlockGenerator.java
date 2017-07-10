@@ -1,4 +1,4 @@
-package violetcraft.block;
+package violetcraft.block.machine;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -16,15 +16,13 @@ import violetcraft.tiles.TileEntityGenerator;
 public class BlockGenerator extends BlockContainer
 {
 
-	private static boolean field_149934_M;
-
 	public BlockGenerator()
 	{
 		super(Material.rock);
 		this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-		this.setBlockName("VC.Generator");
-		this.setBlockTextureName("violetcraft:Block_Generator");
-		this.setHardness(1.0F);
+        this.setBlockName("vc.generator");
+        this.setBlockTextureName("violetcraft:generator");
+        this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setLightLevel(0);
@@ -33,15 +31,11 @@ public class BlockGenerator extends BlockContainer
 	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
 		int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
 		TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
-		field_149934_M = true;
-
 		if (p_149931_0_) {
-			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.TestMachine);
-		} else {
-			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.TestMachine);
-		}
-
-		field_149934_M = false;
+            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
+        } else {
+            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
+        }
 		p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
 
 		if (tileentity != null) {
@@ -52,10 +46,6 @@ public class BlockGenerator extends BlockContainer
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
-//		if (world.isRemote) {
-//			return true;
-//		} else {
-			// GUIを開く。
 			TileEntityGenerator TileEntityGenerator = (TileEntityGenerator)world.getTileEntity(x, y, z);
 
             if (TileEntityGenerator != null)

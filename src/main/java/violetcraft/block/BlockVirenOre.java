@@ -22,9 +22,9 @@ public class BlockVirenOre extends Block
     {
     	super(Material.rock);
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName("virenore");
-	    setBlockTextureName("violetcraft:VirenOre");
-	    setHardness(1.5F);
+        setBlockName("vc.virenOre");
+        setBlockTextureName("violetcraft:viren_ore");
+        setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
         /*setBlockUnbreakable();*//*ブロックを破壊不可に設定*/

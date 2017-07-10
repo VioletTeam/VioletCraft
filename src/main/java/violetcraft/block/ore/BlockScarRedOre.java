@@ -10,9 +10,9 @@ public class BlockScarRedOre extends Block
 		super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName("BlockScarRedOre");
-        setBlockTextureName("violetcraft:ScarRed_Ore");
-	    setHardness(1.5F);
+        setBlockName("vc.blockScarRedOre");
+        setBlockTextureName("violetcraft:scar_red_ore");
+        setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
         setLightOpacity(1);

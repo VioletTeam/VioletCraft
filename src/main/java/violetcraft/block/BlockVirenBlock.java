@@ -8,15 +8,13 @@ public class BlockVirenBlock extends Block {
 
 	/**
 	 * ヴァイレンブロック
-	 *
-	 * @param name 名前
 	 */
-    public BlockVirenBlock(String name)
+    public BlockVirenBlock()
     {
     	super(Material.rock);
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName(name);
-	    setBlockTextureName("violetcraft:block_viren_block");
+        setBlockName("vc.virenBlock");
+        setBlockTextureName("violetcraft:block_viren_block");
 	    setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);

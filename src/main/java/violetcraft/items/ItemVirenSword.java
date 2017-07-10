@@ -11,31 +11,25 @@ import violetcraft.VioletCraftRegistry;
 
 import java.util.List;
 
-public class ItemVirenSword extends ItemSword
-{
+public class ItemVirenSword extends ItemSword {
+    //ToDo
     public static Item toolconf;
-	public static Item VirenSword;
 
     public static ToolMaterial TOOLCONF
-	 = EnumHelper.addToolMaterial("TOOLCONF",3,50,8F,10F,10)
-			.setRepairItem(new ItemStack(toolconf));
+            = EnumHelper.addToolMaterial("TOOLCONF", 3, 50, 8F, 10F, 10)
+            .setRepairItem(new ItemStack(toolconf));
 
-    public ItemVirenSword()
-    {
-    	super(TOOLCONF);
-
-		String name = "virensword";
-
+    public ItemVirenSword() {
+        super(TOOLCONF);
         this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        this.setUnlocalizedName(name);
-	    maxStackSize = 1;
-	    this.setTextureName( "violetcraft:viren_sword" );
+        this.setUnlocalizedName("vc.virenSword");
+        maxStackSize = 1;
+        this.setTextureName("violetcraft:viren_sword");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean advanced)
-    {
-        list.add("test text");
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean advanced) {
+
     }
 }

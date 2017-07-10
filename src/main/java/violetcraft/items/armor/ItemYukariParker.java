@@ -9,12 +9,10 @@ import violetcraft.VioletCraftRegistry;
 public class ItemYukariParker extends ItemArmor {
     public ItemYukariParker(ItemArmor.ArmorMaterial Parker, int p_i45325_2_, int p_i45325_3_) {
         super(Parker, p_i45325_2_, p_i45325_3_);
-        String name = "yukariparker";
-
         this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        this.setUnlocalizedName(name);
+        this.setUnlocalizedName("vc.yukari_parker");
         maxStackSize = 1;
-        this.setTextureName( "violetcraft:Yukariparker" );
+        this.setTextureName("violetcraft:yukari_parker");
     }
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

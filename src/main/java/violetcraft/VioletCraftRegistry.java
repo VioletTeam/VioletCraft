@@ -12,10 +12,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.BlockGenerator;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
-import violetcraft.block.machine.BlockTestMachine;
+import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
 import violetcraft.block.ore.BlockRollYellowOre;
@@ -24,7 +23,6 @@ import violetcraft.items.ItemRabbitEgg;
 import violetcraft.items.ItemVirenIngot;
 import violetcraft.items.ItemVirenSword;
 import violetcraft.items.armor.ItemYukariParker;
-import violetcraft.tiles.TilEntityeTestMachine;
 import violetcraft.tiles.TileEntityGenerator;
 import violetcraft.tiles.TileEntityGuiBlock;
 
@@ -63,8 +61,7 @@ public final class VioletCraftRegistry {
     public static final Item RabbitEgg = new ItemRabbitEgg();
 
     //Block ============================================================================================================
-    public static final Block VirenBlock = new BlockVirenBlock("viren_block");
-    public static final Block TestMachine = new BlockTestMachine();
+    public static final Block VirenBlock = new BlockVirenBlock();
     public static final Block Generator = new BlockGenerator();
 
     // Ore =============================================================================================================
@@ -87,7 +84,6 @@ public final class VioletCraftRegistry {
 
         //Register Blocks
         registerBlock(VirenBlock);
-        registerBlock(TestMachine);
         registerBlock(Generator);
         //Register Ores
         registerBlock(VirenOre);
@@ -100,7 +96,6 @@ public final class VioletCraftRegistry {
     static void handleInit(FMLInitializationEvent event) {
         //Register TileEntities
         GameRegistry.registerTileEntity(TileEntityGuiBlock.class, "TileEntityGuiBlock");
-        GameRegistry.registerTileEntity(TilEntityeTestMachine.class, "TilEntityeTestMachine");
         GameRegistry.registerTileEntity(TileEntityGenerator.class, "TileEntityGenerator");
 
         //Add Recipes

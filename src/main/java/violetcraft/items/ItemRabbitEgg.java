@@ -17,12 +17,10 @@ import static violetcraft.VioletCraftRegistry.VioletCraftMod;
 
 public class ItemRabbitEgg extends Item {
     public ItemRabbitEgg() {
-        String name = "moonrabbitegg";
-
         this.setCreativeTab(VioletCraftMod);
-        this.setUnlocalizedName(name);
+        this.setUnlocalizedName("vc.rabbitEgg");
         maxStackSize = 16;
-        this.setTextureName("violetcraft:ItemRabbitEgg");
+        this.setTextureName("violetcraft:rabbit_egg");
     }
 
     @Override
