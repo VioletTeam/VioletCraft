@@ -4,22 +4,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import violetcraft.registry.ItemsRegistry;
+import violetcraft.items.VioletItem;
 
 public class Recipes {
 	public static void registry()
 	{
 		GameRegistry.addRecipe
 		(
-			new ItemStack(ItemsRegistry.VirenSword, 1),
+			new ItemStack(VioletItem.VirenSword, 1),
 				" x ",
 				" x ",
 				" y ",
-				'x', ItemsRegistry.VirenIngot,
+				'x', VioletItem.VirenIngot,
 				'y', Items.stick);
 		GameRegistry.addRecipe
 				(
-						new ItemStack(ItemsRegistry.yukariParker),
+						new ItemStack(VioletItem.yukariParker),
 
 						"wbw",
 						"blb",
@@ -29,5 +29,6 @@ public class Recipes {
 						'l', Items.leather_chestplate,
 						'w', Blocks.wool
 				);
+		GameRegistry.addSmelting(VioletItem.moonmeat_raw,new ItemStack(VioletItem.moonmeat_cooked),0.15f);
 	}
 }
