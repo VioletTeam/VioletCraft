@@ -10,7 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 
 public class ItemVirenSword extends ItemSword
 {
@@ -27,7 +27,7 @@ public class ItemVirenSword extends ItemSword
 
 		String name = "virensword";
 
-		setCreativeTab(VioletCraft.VioletCradtTab);
+		setCreativeTab(VioletCraftMod.VioletCradtTab);
 	    this.setUnlocalizedName(name);
 	    maxStackSize = 1;
 	    this.setTextureName( "violetcraft:viren_sword" );

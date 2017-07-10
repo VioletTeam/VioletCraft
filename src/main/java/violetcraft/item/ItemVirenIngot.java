@@ -2,7 +2,7 @@ package violetcraft.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 
 public class ItemVirenIngot extends Item
 {
@@ -10,7 +10,7 @@ public class ItemVirenIngot extends Item
     {
 		String name = "vireningot";
 
-		this.setCreativeTab(VioletCraft.VioletCradtTab);
+		this.setCreativeTab(VioletCraftMod.VioletCradtTab);
 	    this.setUnlocalizedName(name);
 	    maxStackSize = 64;
 	    this.setTextureName( "violetcraft:VirenIngot" );

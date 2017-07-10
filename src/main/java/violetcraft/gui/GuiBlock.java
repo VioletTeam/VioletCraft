@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 import violetcraft.tiles.TileEntityGuiBlock;
 
 public class GuiBlock extends Block implements ITileEntityProvider
@@ -32,7 +32,7 @@ public class GuiBlock extends Block implements ITileEntityProvider
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
 		// GUIを開く。
-		player.openGui(VioletCraft.INSTANCE, 2, world, x, y, z);
+		player.openGui(VioletCraftMod.INSTANCE, 2, world, x, y, z);
 		return true;
 	}
 

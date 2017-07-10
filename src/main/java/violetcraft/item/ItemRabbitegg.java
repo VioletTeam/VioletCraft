@@ -13,14 +13,14 @@ import net.minecraft.util.Facing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 import violetcraft.entity.EntityMoonRabbit;
 
 public class ItemRabbitegg extends Item {
     public ItemRabbitegg() {
         String name = "moonrabbitegg";
 
-        this.setCreativeTab(VioletCraft.VioletCradtTab);
+        this.setCreativeTab(VioletCraftMod.VioletCradtTab);
         this.setUnlocalizedName(name);
         maxStackSize = 16;
         this.setTextureName("violetcraft:Rabbitegg");

@@ -9,14 +9,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 
 public class ItemRawMoonRabbit extends ItemFood {
     public ItemRawMoonRabbit(int hanger, float hiddenhanger, boolean wolffood) {
         super(hanger, hiddenhanger, wolffood);
         String name = "raw_moonrabbit";
 
-        setCreativeTab(VioletCraft.VioletCradtTab);
+        setCreativeTab(VioletCraftMod.VioletCradtTab);
         setUnlocalizedName(name);
         maxStackSize = 64;
         this.setTextureName("violetcraft:rabbit_raw");

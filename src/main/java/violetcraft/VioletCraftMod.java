@@ -3,6 +3,7 @@ package violetcraft;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -21,15 +22,23 @@ import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
 
-@Mod(modid = "violet_craft",
-        name = "Violet Craft",
-        version = "0.1.0.0")
+@Mod(modid		= VioletCraftMod.MOD_ID,
+	 name		= VioletCraftMod.MOD_NAME,
+	 version	= VioletCraftMod.VERSION)
 
-public class VioletCraft {
+public class VioletCraftMod {
+	public static final String MOD_ID = "violetcraftmod";
+	public static final String MOD_NAME = "ViolentCraft";
+	public static final String VERSION = "0.1.0.0";
+
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
-    @Mod.Instance("violet_craft")
-    public static VioletCraft INSTANCE;
+
+    @Mod.Instance(MOD_ID)
+    public static VioletCraftMod INSTANCE;
+
+    @Mod.Metadata
+    public static ModMetadata metadata;
 
     public static Block BlockVirenOre;
 
@@ -39,7 +48,8 @@ public class VioletCraft {
     /***
      * Configファイル読み込みと出力
      * アイテム　ブロックの登録
-     * @param event
+     *
+     * @param event please see cpw.mods.fml.common.event.FMLPreInitializationEvent
      */
 
     @EventHandler
@@ -57,6 +67,7 @@ public class VioletCraft {
             cfg.save();
         }
 
+        // 登録一覧
         BlockRegistry.blockRegistry();
         ItemRegistry.registry();
         MachineRegistry.registry();
@@ -66,14 +77,15 @@ public class VioletCraft {
     /***
      * レシピの追加
      * 各種データ設定
-     * @param event
+     *
+     * @param eventplease see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
     public void preInit(FMLPostInitializationEvent event) {
         GuiBlock = new GuiBlock()
                 .setBlockTextureName("violetcraft:Gui_Block")
                 .setBlockName("GuiBlock")
-                .setCreativeTab(VioletCraft.VioletCradtTab);
+                .setCreativeTab(VioletCraftMod.VioletCradtTab);
         GameRegistry.registerBlock(GuiBlock, "GuiBlock");
         VioletEntity.register(this);
 

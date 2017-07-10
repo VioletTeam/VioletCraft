@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.tiles.TilEntityeTestMachine;
 
@@ -22,7 +22,7 @@ public class ItemTestMachine extends BlockContainer
 	public ItemTestMachine()
 	{
 		super(Material.rock);
-		setCreativeTab(VioletCraft.VioletCradtTab);
+		setCreativeTab(VioletCraftMod.VioletCradtTab);
     	this.setBlockName("TestMachine");
 	    this.setBlockTextureName("violetcraft:TestMachine");
 		this.setHardness(1.0F);
@@ -48,7 +48,7 @@ public class ItemTestMachine extends BlockContainer
 
             if (tileenTityTestMachine != null)
             {
-            	player.openGui(VioletCraft.INSTANCE, 0, world, x, y, z);
+            	player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
             }
 			return true;
 		}

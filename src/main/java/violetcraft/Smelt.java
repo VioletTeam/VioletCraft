@@ -19,7 +19,7 @@ public class Smelt {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
 
-        GameRegistry.addSmelting(VioletCraft.BlockVirenOre,new ItemStack(ItemRegistry.VirenIngot),0.1f);
+        GameRegistry.addSmelting(VioletCraftMod.BlockVirenOre,new ItemStack(ItemRegistry.VirenIngot),0.1f);
 
         GameRegistry.registerFuelHandler(new IFuelHandler(){
             @Override

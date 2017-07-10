@@ -3,7 +3,7 @@ package violetcraft.block;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 
 public class BlockPinkSapphireOre extends Block
 {
@@ -11,7 +11,7 @@ public class BlockPinkSapphireOre extends Block
 	{
 		super(Material.rock);
 
-		setCreativeTab(VioletCraft.VioletCradtTab);
+		setCreativeTab(VioletCraftMod.VioletCradtTab);
 		setBlockName("PinkSapphireOre");
 		setBlockTextureName("violetcraft:PinkSapphire_Ore");
 	    setHardness(1.5F);
