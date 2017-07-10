@@ -2,7 +2,7 @@ package violetcraft.registry;
 
 import net.minecraft.block.Block;
 import violetcraft.block.BlockGenerator;
-import violetcraft.items.machine.TestMachine;
+import violetcraft.item.ItemTestMachine;
 
 public class MachineRegistry
 {
@@ -12,7 +12,7 @@ public class MachineRegistry
 
 	public static void registry()
 	{
-		TestMachine = new TestMachine();
+		TestMachine = new ItemTestMachine();
 		BlockGenerator = new BlockGenerator();
 	}
 }

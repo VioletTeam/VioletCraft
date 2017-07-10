@@ -19,7 +19,7 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import violetcraft.items.machine.TestMachine;
+import violetcraft.item.ItemTestMachine;
 
 public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
 {
@@ -303,7 +303,7 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
             {
                 flag1 = true;
                 //block見た目更新
-                TestMachine.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                ItemTestMachine.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 

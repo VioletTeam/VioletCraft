@@ -1,4 +1,4 @@
-package violetcraft.items.item;
+package violetcraft.item;
 
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -9,16 +9,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import violetcraft.VioletCraft;
 
-import static violetcraft.VioletCraftMod.VioletCradtMod;
-
-public class RawMoonRabbit extends ItemFood {
-    public RawMoonRabbit(int hanger, float hiddenhanger, boolean wolffood) {
+public class ItemRawMoonRabbit extends ItemFood {
+    public ItemRawMoonRabbit(int hanger, float hiddenhanger, boolean wolffood) {
         super(hanger, hiddenhanger, wolffood);
         String name = "raw_moonrabbit";
 
-        this.setCreativeTab(VioletCradtMod);
-        this.setUnlocalizedName(name);
+        setCreativeTab(VioletCraft.VioletCradtTab);
+        setUnlocalizedName(name);
         maxStackSize = 64;
         this.setTextureName("violetcraft:rabbit_raw");
 

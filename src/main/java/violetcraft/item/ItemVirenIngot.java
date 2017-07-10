@@ -1,16 +1,16 @@
-package violetcraft.items;
+package violetcraft.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraft;
 
-public class VirenIngot extends Item
+public class ItemVirenIngot extends Item
 {
-    public VirenIngot()
+    public ItemVirenIngot()
     {
 		String name = "vireningot";
 
-		this.setCreativeTab( VioletCraftMod.VioletCradtMod );
+		this.setCreativeTab(VioletCraft.VioletCradtTab);
 	    this.setUnlocalizedName(name);
 	    maxStackSize = 64;
 	    this.setTextureName( "violetcraft:VirenIngot" );

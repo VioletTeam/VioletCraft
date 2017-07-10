@@ -1,4 +1,4 @@
-package violetcraft.items.machine;
+package violetcraft.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -10,19 +10,19 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraft;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.tiles.TilEntityeTestMachine;
 
-public class TestMachine extends BlockContainer
+public class ItemTestMachine extends BlockContainer
 {
 
 	private static boolean field_149934_M;
 
-	public TestMachine()
+	public ItemTestMachine()
 	{
 		super(Material.rock);
-		this.setCreativeTab(VioletCraftMod.VioletCradtMod);
+		setCreativeTab(VioletCraft.VioletCradtTab);
     	this.setBlockName("TestMachine");
 	    this.setBlockTextureName("violetcraft:TestMachine");
 		this.setHardness(1.0F);
@@ -48,11 +48,8 @@ public class TestMachine extends BlockContainer
 
             if (tileenTityTestMachine != null)
             {
-            	player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
-//            	player.func_146100_a(tileenTityTestMachine);
+            	player.openGui(VioletCraft.INSTANCE, 0, world, x, y, z);
             }
-
-//			player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
 			return true;
 		}
 	}
