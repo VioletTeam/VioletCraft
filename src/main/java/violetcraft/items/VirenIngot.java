@@ -10,8 +10,8 @@ public class VirenIngot extends Item
     {
 		String name = "vireningot";
 
-		this.setCreativeTab( VioletCraftMod.VioletCradtMod );
-	    this.setUnlocalizedName(name);
+		this.setCreativeTab(VioletCraftMod.VioletCraftMod);
+		this.setUnlocalizedName(name);
 	    maxStackSize = 64;
 	    this.setTextureName( "violetcraft:VirenIngot" );
 

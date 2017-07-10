@@ -11,8 +11,8 @@ public class BlueTopazOre extends Block
 	{
 		super(Material.rock);
 
-		setCreativeTab(VioletCraftMod.VioletCradtMod);
-		setBlockName("BlueTopazOre");
+        setCreativeTab(VioletCraftMod.VioletCraftMod);
+        setBlockName("BlueTopazOre");
 		setBlockTextureName("violetcraft:BlueTopaz_Ore");
 	    setHardness(1.5F);
         setResistance(1.0F);

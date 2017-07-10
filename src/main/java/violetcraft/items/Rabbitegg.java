@@ -5,7 +5,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -15,13 +14,13 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import violetcraft.entity.EntityMoonRabbit;
 
-import static violetcraft.VioletCraftMod.VioletCradtMod;
+import static violetcraft.VioletCraftMod.VioletCraftMod;
 
 public class Rabbitegg extends Item {
     public Rabbitegg() {
         String name = "moonrabbitegg";
 
-        this.setCreativeTab(VioletCradtMod);
+        this.setCreativeTab(VioletCraftMod);
         this.setUnlocalizedName(name);
         maxStackSize = 16;
         this.setTextureName("violetcraft:Rabbitegg");
@@ -111,7 +110,7 @@ public class Rabbitegg extends Item {
         entityliving.setLocationAndAngles(x, y, z, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
         entityliving.rotationYawHead = entityliving.rotationYaw;
         entityliving.renderYawOffset = entityliving.rotationYaw;
-        entityliving.onSpawnWithEgg((IEntityLivingData) null);
+        entityliving.onSpawnWithEgg(null);
         world.spawnEntityInWorld(entityliving);
         entityliving.playLivingSound();
         return entityliving;

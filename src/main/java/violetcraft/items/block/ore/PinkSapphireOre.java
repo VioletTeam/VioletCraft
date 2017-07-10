@@ -11,8 +11,8 @@ public class PinkSapphireOre extends Block
 	{
 		super(Material.rock);
 
-		setCreativeTab(VioletCraftMod.VioletCradtMod);
-		setBlockName("PinkSapphireOre");
+        setCreativeTab(VioletCraftMod.VioletCraftMod);
+        setBlockName("PinkSapphireOre");
 		setBlockTextureName("violetcraft:PinkSapphire_Ore");
 	    setHardness(1.5F);
         setResistance(1.0F);

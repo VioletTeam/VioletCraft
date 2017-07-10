@@ -22,8 +22,8 @@ public class BlockGenerator extends BlockContainer
 	public BlockGenerator()
 	{
 		super(Material.rock);
-		this.setCreativeTab(VioletCraftMod.VioletCradtMod);
-    	this.setBlockName("VC.BlockGenerator");
+		this.setCreativeTab(VioletCraftMod.VioletCraftMod);
+		this.setBlockName("VC.BlockGenerator");
 	    this.setBlockTextureName("violetcraft:Block_Generator");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
@@ -31,6 +31,26 @@ public class BlockGenerator extends BlockContainer
 		this.setLightLevel(0);
 
 		GameRegistry.registerBlock(this, "BlockGenerator");
+	}
+
+	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
+		int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
+		TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
+		field_149934_M = true;
+
+		if (p_149931_0_) {
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
+		} else {
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
+		}
+
+		field_149934_M = false;
+		p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
+
+		if (tileentity != null) {
+			tileentity.validate();
+			p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
+		}
 	}
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
@@ -107,29 +127,4 @@ public class BlockGenerator extends BlockContainer
 
 		super.breakBlock(par1World, par2, par3, par4, par5, par6);
 	}
-
-	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_)
-    {
-        int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
-        TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
-        field_149934_M = true;
-
-        if (p_149931_0_)
-        {
-        	p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
-        }
-        else
-        {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
-        }
-
-        field_149934_M = false;
-        p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
-
-        if (tileentity != null)
-        {
-            tileentity.validate();
-            p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
-        }
-    }
 }

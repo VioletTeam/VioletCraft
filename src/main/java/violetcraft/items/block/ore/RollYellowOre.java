@@ -11,7 +11,7 @@ public class RollYellowOre extends Block
 	{
 		super(Material.rock);
 
-		setCreativeTab(VioletCraftMod.VioletCradtMod);
+		setCreativeTab(VioletCraftMod.VioletCraftMod);
 		setBlockName("RollYellowOre");
 		setBlockTextureName("violetcraft:RollYellow_Ore");
 	    setHardness(1.5F);

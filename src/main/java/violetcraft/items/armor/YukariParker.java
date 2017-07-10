@@ -12,7 +12,7 @@ public class YukariParker extends ItemArmor {
         super(Parker, p_i45325_2_, p_i45325_3_);
         String name = "yukariparker";
 
-        this.setCreativeTab( VioletCraftMod.VioletCradtMod );
+        this.setCreativeTab(VioletCraftMod.VioletCraftMod);
         this.setUnlocalizedName(name);
         maxStackSize = 1;
         this.setTextureName( "violetcraft:Yukariparker" );

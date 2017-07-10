@@ -22,8 +22,8 @@ public class TestMachine extends BlockContainer
 	public TestMachine()
 	{
 		super(Material.rock);
-		this.setCreativeTab(VioletCraftMod.VioletCradtMod);
-    	this.setBlockName("TestMachine");
+		this.setCreativeTab(VioletCraftMod.VioletCraftMod);
+		this.setBlockName("TestMachine");
 	    this.setBlockTextureName("violetcraft:TestMachine");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
@@ -32,31 +32,6 @@ public class TestMachine extends BlockContainer
 
 		GameRegistry.registerBlock(this, "TestMachine");
 	}
-
-	public TileEntity createNewTileEntity(World world, int meta)
-	{
-		return new TilEntityeTestMachine();
-	}
-
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
-	{
-		if (world.isRemote) {
-			return true;
-		} else {
-			// GUIを開く。
-			TilEntityeTestMachine tileenTityTestMachine = (TilEntityeTestMachine)world.getTileEntity(x, y, z);
-
-            if (tileenTityTestMachine != null)
-            {
-            	player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
-//            	player.func_146100_a(tileenTityTestMachine);
-            }
-
-//			player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
-			return true;
-		}
-	}
-
 
 	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_)
     {
@@ -83,6 +58,26 @@ public class TestMachine extends BlockContainer
         }
     }
 
+	public TileEntity createNewTileEntity(World world, int meta) {
+		return new TilEntityeTestMachine();
+	}
+
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+		if (world.isRemote) {
+			return true;
+		} else {
+			// GUIを開く。
+			TilEntityeTestMachine tileenTityTestMachine = (TilEntityeTestMachine) world.getTileEntity(x, y, z);
+
+			if (tileenTityTestMachine != null) {
+				player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
+//            	player.func_146100_a(tileenTityTestMachine);
+			}
+
+//			player.openGui(VioletCraftMod.INSTANCE, 0, world, x, y, z);
+			return true;
+		}
+	}
 
 	//ブロックが壊れた時の処理
 	//周辺に中に入っていたアイテムをまき散らす
