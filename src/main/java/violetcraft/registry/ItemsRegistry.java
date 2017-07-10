@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.registry;
 
 
 import net.minecraft.block.Block;
@@ -6,13 +6,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 import violetcraft.block.BlockVirenOre;
+import violetcraft.items.Rabbitegg;
+import violetcraft.items.VirenIngot;
+import violetcraft.items.VirenSword;
 import violetcraft.items.armor.YukariParker;
 import violetcraft.items.block.ore.BlueTopazOre;
 import violetcraft.items.block.ore.PinkSapphireOre;
 import violetcraft.items.block.ore.RollYellowOre;
 import violetcraft.items.block.ore.ScarRedOre;
 
-public class VioletItem {
+public class ItemsRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     /***
      * Ore

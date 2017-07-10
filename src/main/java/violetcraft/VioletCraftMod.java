@@ -16,9 +16,9 @@ import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
 import violetcraft.gui.GuiHandler;
-import violetcraft.items.VioletItem;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
+import violetcraft.registry.ItemsRegistry;
 
 @Mod(modid = "VioletCraftMod",
         name = "Violet Craft",
@@ -56,7 +56,7 @@ public class VioletCraftMod {
             cfg.save();
         }
 
-        VioletItem.registry();
+        ItemsRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
 
@@ -111,7 +111,7 @@ public class VioletCraftMod {
     public static CreativeTabs VioletCradtMod
             = new CreativeTabs("violettab") {
         public Item getTabIconItem() {
-            return VioletItem.VirenIngot;
+            return ItemsRegistry.VirenIngot;
         }
     };
 }
