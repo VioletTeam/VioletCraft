@@ -124,100 +124,103 @@ C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\TutorialLogger.
 C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\TutorialLogger.java:20: エラー: この文字は、エンコーディングMS932にマップできません
 	 * 繝ｭ繧ｰ繧貞?ｺ縺励◆縺?蝣ｴ謇?縺ｧ縺薙?ｮ繧ｯ繝ｩ繧ｹ縺ｮ繝｡繧ｽ繝?繝峨ｒ蜻ｼ縺ｶ繧医≧縺ｫ縺吶ｋ縺ｨ縲∝ｰ代＠謇矩俣繧堤怐逡･縺ｧ縺阪ｋ縲?
 	                                                                            ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:48: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:33: エラー: この文字は、エンコーディングMS932にマップできません
      * Config繝輔ぃ繧､繝ｫ隱ｭ縺ｿ霎ｼ縺ｿ縺ｨ蜃ｺ蜉?
                                  ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:49: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:34: エラー: この文字は、エンコーディングMS932にマップできません
      * 繧｢繧､繝?繝?縲?繝悶Ο繝?繧ｯ縺ｮ逋ｻ骭ｲ
             ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:49: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:34: エラー: この文字は、エンコーディングMS932にマップできません
      * 繧｢繧､繝?繝?縲?繝悶Ο繝?繧ｯ縺ｮ逋ｻ骭ｲ
               ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:49: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:34: エラー: この文字は、エンコーディングMS932にマップできません
      * 繧｢繧､繝?繝?縲?繝悶Ο繝?繧ｯ縺ｮ逋ｻ骭ｲ
                 ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:49: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:34: エラー: この文字は、エンコーディングMS932にマップできません
      * 繧｢繧､繝?繝?縲?繝悶Ο繝?繧ｯ縺ｮ逋ｻ骭ｲ
                      ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:47: エラー: この文字は、エンコーディングMS932にマップできません
              * Config縺ｮ鬆?逶ｮ縺ｮ逕滓?舌→隱ｭ縺ｿ霎ｼ縺ｿ縲?
                         ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:47: エラー: この文字は、エンコーディングMS932にマップできません
              * Config縺ｮ鬆?逶ｮ縺ｮ逕滓?舌→隱ｭ縺ｿ霎ｼ縺ｿ縲?
                                ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:47: エラー: この文字は、エンコーディングMS932にマップできません
              * Config縺ｮ鬆?逶ｮ縺ｮ逕滓?舌→隱ｭ縺ｿ霎ｼ縺ｿ縲?
                                            ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:61: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:48: エラー: この文字は、エンコーディングMS932にマップできません
 			 * 縺薙?ｮ谿ｵ髫弱〒縺ｯ縲√∪縺?鬆?逶ｮ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲?
 			     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:61: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:48: エラー: この文字は、エンコーディングMS932にマップできません
 			 * 縺薙?ｮ谿ｵ髫弱〒縺ｯ縲√∪縺?鬆?逶ｮ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲?
 			                  ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:61: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:48: エラー: この文字は、エンコーディングMS932にマップできません
 			 * 縺薙?ｮ谿ｵ髫弱〒縺ｯ縲√∪縺?鬆?逶ｮ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲?
 			                    ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:61: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:48: エラー: この文字は、エンコーディングMS932にマップできません
 			 * 縺薙?ｮ谿ｵ髫弱〒縺ｯ縲√∪縺?鬆?逶ｮ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲?
 			                                  ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:80: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:59: エラー: この文字は、エンコーディングMS932にマップできません
      * 繝ｬ繧ｷ繝斐?ｮ霑ｽ蜉?
              ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:80: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:59: エラー: この文字は、エンコーディングMS932にマップできません
      * 繝ｬ繧ｷ繝斐?ｮ霑ｽ蜉?
                   ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:81: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
      * 蜷?遞ｮ繝?繝ｼ繧ｿ險ｭ螳?
         ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:81: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
      * 蜷?遞ｮ繝?繝ｼ繧ｿ險ｭ螳?
             ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:81: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:60: エラー: この文字は、エンコーディングMS932にマップできません
      * 蜷?遞ｮ繝?繝ｼ繧ｿ險ｭ螳?
                     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:103: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:72: エラー: この文字は、エンコーディングMS932にマップできません
      * 縺昴?ｮ莉?
          ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:103: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:72: エラー: この文字は、エンコーディングMS932にマップできません
      * 縺昴?ｮ莉?
             ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:104: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:73: エラー: この文字は、エンコーディングMS932にマップできません
      * 莉悶?ｮMod騾｣謳ｺ縺ｪ縺ｩ
          ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:116: エラー: この文字は、エンコーディングMS932にマップできません
-	     *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
-	                                        ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:116: エラー: この文字は、エンコーディングMS932にマップできません
-	     *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
-	                                              ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:116: エラー: この文字は、エンコーディングMS932にマップできません
-	     *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
-	                                                    ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:116: エラー: この文字は、エンコーディングMS932にマップできません
-	     *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
-	                                                     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:135: エラー: この文字は、エンコーディングMS932にマップできません
-     * 繧ｯ繝ｪ繧ｨ繧､繝?繧｣繝悶ち繝悶い繧､繧ｳ繝ｳ
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:85: エラー: この文字は、エンコーディングMS932にマップできません
+         *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
+                                            ^
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:85: エラー: この文字は、エンコーディングMS932にマップできません
+         *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
+                                                  ^
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:85: エラー: この文字は、エンコーディングMS932にマップできません
+         *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
+                                                        ^
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftMod.java:85: エラー: この文字は、エンコーディングMS932にマップできません
+         *Client蛛ｴ縺ｧ縺ｮ縺ｿ逋ｻ骭ｲ縺吶ｋ縺溘ａ縲∽ｻ雁屓縺ｯif譁?縺ｧ蜃ｦ逅?繧偵☆繧九??*/
+                                                         ^
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftRegistry.java:35: エラー: この文字は、エンコーディングMS932にマップできません
+     * 繧ｯ繝ｪ繧ｨ繧､繝?繧｣繝悶ち繝?
                 ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:41: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\VioletCraftRegistry.java:35: エラー: この文字は、エンコーディングMS932にマップできません
+     * 繧ｯ繝ｪ繧ｨ繧､繝?繧｣繝悶ち繝?
+                       ^
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:59: エラー: この文字は、エンコーディングMS932にマップできません
 			// GUI繧帝幕縺上??
 			           ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:41: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:59: エラー: この文字は、エンコーディングMS932にマップできません
 			// GUI繧帝幕縺上??
 			            ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:58: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:76: エラー: この文字は、エンコーディングMS932にマップできません
 	//繝悶Ο繝?繧ｯ縺悟｣翫ｌ縺滓凾縺ｮ蜃ｦ逅?
 	      ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:58: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:76: エラー: この文字は、エンコーディングMS932にマップできません
 	//繝悶Ο繝?繧ｯ縺悟｣翫ｌ縺滓凾縺ｮ蜃ｦ逅?
 	                      ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:59: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:77: エラー: この文字は、エンコーディングMS932にマップできません
 	//蜻ｨ霎ｺ縺ｫ荳ｭ縺ｫ蜈･縺｣縺ｦ縺?縺溘い繧､繝?繝?繧偵∪縺肴淵繧峨☆
 	                   ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:59: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:77: エラー: この文字は、エンコーディングMS932にマップできません
 	//蜻ｨ霎ｺ縺ｫ荳ｭ縺ｫ蜈･縺｣縺ｦ縺?縺溘い繧､繝?繝?繧偵∪縺肴淵繧峨☆
 	                          ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:59: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockGenerator.java:77: エラー: この文字は、エンコーディングMS932にマップできません
 	//蜻ｨ霎ｺ縺ｫ荳ｭ縺ｫ蜈･縺｣縺ｦ縺?縺溘い繧､繝?繝?繧偵∪縺肴淵繧峨☆
 	                            ^
 C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenBlock.java:11: エラー: この文字は、エンコーディングMS932にマップできません
@@ -271,50 +274,47 @@ C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVire
 C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:36: エラー: この文字は、エンコーディングMS932にマップできません
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);/*蠖薙◆繧雁愛螳?*/
                                                                     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:44: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:43: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞承繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                 ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:44: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:43: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞承繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                            ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:44: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:43: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞承繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                                    ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:44: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:43: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞承繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                                         ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:50: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:49: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞ｷｦ繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                 ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:50: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:49: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞ｷｦ繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                             ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:50: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:49: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞ｷｦ繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                                     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:50: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:49: エラー: この文字は、エンコーディングMS932にマップできません
 //        //繝悶Ο繝?繧ｯ繧貞ｷｦ繧ｯ繝ｪ繝?繧ｯ縺励◆髫帙?ｮ蜍穂ｽ?
                                          ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:55: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:54: エラー: この文字は、エンコーディングMS932にマップできません
         //蜻ｨ蝗ｲ縺ｮ繝悶Ο繝?繧ｯ縺梧峩譁ｰ縺輔ｌ縺滄圀縺ｮ蜍穂ｽ?
                     ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:55: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:54: エラー: この文字は、エンコーディングMS932にマップできません
         //蜻ｨ蝗ｲ縺ｮ繝悶Ο繝?繧ｯ縺梧峩譁ｰ縺輔ｌ縺滄圀縺ｮ蜍穂ｽ?
                                        ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:60: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:59: エラー: この文字は、エンコーディングMS932にマップできません
         //繝峨Ο繝?繝励☆繧九い繧､繝?繝?繧定ｿ斐☆
               ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:60: エラー: この文字は、エンコーディングMS932にマップできません
+C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:59: エラー: この文字は、エンコーディングMS932にマップできません
         //繝峨Ο繝?繝励☆繧九い繧､繝?繝?繧定ｿ斐☆
                         ^
-C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVirenOre.java:60: エラー: この文字は、エンコーディングMS932にマップできません
-        //繝峨Ο繝?繝励☆繧九い繧､繝?繝?繧定ｿ斐☆
-                          ^
 注意:C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\items\VirenSword.javaの操作は、未チェックまたは安全ではありません。
 注意:詳細は、-Xlint:uncheckedオプションを指定して再コンパイルしてください。
 警告1個
 
-:processResources UP-TO-DATE
+:processResources
 :classes
 :jar
 :getVersionJson
@@ -326,38 +326,38 @@ C:\GitHub\VioletCraft\Refactoring\build\sources\java\violetcraft\block\BlockVire
 [ant:javac] 警告: [options] ブートストラップ・クラスパスが-source 1.6と一緒に設定されていません
 [ant:javac] 警告1個
 :runClient
-[19:19:53] [main/INFO] [GradleStart]: Extra: []
-[19:19:53] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/ma87k/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[19:19:53] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
-[19:19:53] [main/INFO] [FML]: Forge Mod Loader version 7.99.40.1614 for Minecraft 1.7.10 loading
-[19:19:53] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_121, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_121\jre
-[19:19:53] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[19:19:53] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
-[19:19:53] [main/INFO] [GradleStart]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
-[19:19:53] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[19:19:53] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[19:19:53] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[19:19:53] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[19:19:54] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[19:19:54] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[19:19:54] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[19:19:54] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[19:19:54] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
-[19:19:54] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
-[19:19:54] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[19:19:55] [main/INFO]: Setting user: Player830
-[19:19:56] [Client thread/INFO]: LWJGL Version: 2.9.1
-[19:19:57] [Client thread/INFO] [STDOUT]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
-// On the bright side, I bought you a teddy bear!
+[21:04:45] [main/INFO] [GradleStart]: Extra: []
+[21:04:45] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/ma87k/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:04:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[21:04:45] [main/INFO] [FML]: Forge Mod Loader version 7.99.40.1614 for Minecraft 1.7.10 loading
+[21:04:45] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_121, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_121\jre
+[21:04:45] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[21:04:45] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[21:04:45] [main/INFO] [GradleStart]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[21:04:45] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[21:04:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[21:04:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[21:04:45] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[21:04:46] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[21:04:46] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[21:04:46] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[21:04:46] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[21:04:46] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[21:04:46] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[21:04:46] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[21:04:47] [main/INFO]: Setting user: Player624
+[21:04:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:04:50] [Client thread/INFO] [STDOUT]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
+// Why did you do that?
 
-Time: 17/07/10 19:19
+Time: 17/07/10 21:04
 Description: Loading screen debug info
 
 This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
@@ -372,82 +372,121 @@ Details:
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_121, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 166066040 bytes (158 MB) / 275775488 bytes (263 MB) up to 3782737920 bytes (3607 MB)
+	Memory: 162713320 bytes (155 MB) / 272629760 bytes (260 MB) up to 3782737920 bytes (3607 MB)
 	JVM Flags: 0 total; 
 	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 384.76' Renderer: 'GeForce GTX 960/PCIe/SSE2'
-[19:19:57] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
-[19:19:57] [Client thread/INFO] [FML]: MinecraftForge v10.13.4.1614 Initialized
-[19:19:57] [Client thread/INFO] [FML]: Replaced 183 ore recipies
-[19:19:57] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
-[19:19:57] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
-[19:19:57] [Client thread/INFO] [FML]: Searching C:\GitHub\VioletCraft\Refactoring\eclipse\mods for mods
-[19:20:01] [Client thread/INFO] [ttr_smelt]: Mod ttr_smelt is missing the required element 'name'. Substituting ttr_smelt
-[19:20:01] [Client thread/WARN] [ttr_smelt]: Mod ttr_smelt is missing the required element 'version' and no fallback can be found. Substituting '1.0'.
-[19:20:01] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
-[19:20:01] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, ttr_smelt, violetcraftmod] at CLIENT
-[19:20:01] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, ttr_smelt, violetcraftmod] at SERVER
-[19:20:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:ttr_smelt, FMLFileResourcePack:ViolentCraft
-[19:20:02] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[19:20:02] [Client thread/INFO] [FML]: Found 341 ObjectHolder annotations
-[19:20:02] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[19:20:02] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[19:20:02] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[19:20:02] [Client thread/INFO] [FML]: Applying holder lookups
-[19:20:02] [Client thread/INFO] [FML]: Holder lookups applied
-[19:20:02] [Client thread/INFO] [FML]: Injecting itemstacks
-[19:20:02] [Client thread/INFO] [FML]: Itemstack injection complete
-[19:20:02] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:02] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[19:20:02] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[19:20:02] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[19:20:02] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[19:20:02] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:02] [Sound Library Loader/INFO]: Sound engine started
-[19:20:03] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[19:20:03] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[19:20:03] [Client thread/INFO] [FML]: Injecting itemstacks
-[19:20:03] [Client thread/INFO] [FML]: Itemstack injection complete
-[19:20:03] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
-[19:20:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:ttr_smelt, FMLFileResourcePack:ViolentCraft
-[19:20:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[19:20:03] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[19:20:03] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:03] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[19:20:04] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[19:20:04] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:04] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:04] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[19:20:04] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[19:20:04] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[19:20:04] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[19:20:04] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:04] [Sound Library Loader/INFO]: Sound engine started
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: The following texture errors were found.
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:   DOMAIN violetcraft
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: --------------------------------------------------
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:   domain violetcraft is missing 2 textures
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:     domain violetcraft has 2 locations:
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:       mod ttr_smelt resources at C:\GitHub\VioletCraft\Refactoring\build\libs\VioletCraft-0.1.0.0.jar
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:       mod violetcraftmod resources at C:\GitHub\VioletCraft\Refactoring\build\libs\VioletCraft-0.1.0.0.jar
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:     The missing resources for domain violetcraft are:
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:       textures/blocks/TestMachine.png
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:       textures/blocks/block_viren_block.png
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]:     No other errors exist for domain violetcraft
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
-[19:20:05] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-[19:20:30] [Client thread/INFO]: Stopping!
-[19:20:30] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[19:20:30] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[19:20:30] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[19:20:30] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:50] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
+[21:04:50] [Client thread/INFO] [FML]: MinecraftForge v10.13.4.1614 Initialized
+[21:04:50] [Client thread/INFO] [FML]: Replaced 183 ore recipies
+[21:04:50] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
+[21:04:50] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
+[21:04:50] [Client thread/INFO] [FML]: Searching C:\GitHub\VioletCraft\Refactoring\eclipse\mods for mods
+[21:04:55] [Client thread/INFO] [ttr_smelt]: Mod ttr_smelt is missing the required element 'name'. Substituting ttr_smelt
+[21:04:55] [Client thread/WARN] [ttr_smelt]: Mod ttr_smelt is missing the required element 'version' and no fallback can be found. Substituting '1.0'.
+[21:04:55] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[21:04:55] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, ttr_smelt, violetcraftmod] at CLIENT
+[21:04:55] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, ttr_smelt, violetcraftmod] at SERVER
+[21:04:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:ttr_smelt, FMLFileResourcePack:ViolentCraft
+[21:04:55] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[21:04:55] [Client thread/INFO] [FML]: Found 341 ObjectHolder annotations
+[21:04:55] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[21:04:55] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[21:04:55] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[21:04:55] [Client thread/INFO] [FML]: Applying holder lookups
+[21:04:55] [Client thread/INFO] [FML]: Holder lookups applied
+[21:04:55] [Client thread/INFO] [FML]: Injecting itemstacks
+[21:04:55] [Client thread/INFO] [FML]: Itemstack injection complete
+[21:04:55] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:55] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[21:04:55] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[21:04:55] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:04:56] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[21:04:56] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:56] [Sound Library Loader/INFO]: Sound engine started
+[21:04:58] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[21:04:58] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[21:04:58] [Client thread/INFO] [FML]: Injecting itemstacks
+[21:04:58] [Client thread/INFO] [FML]: Itemstack injection complete
+[21:04:58] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[21:04:58] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:ttr_smelt, FMLFileResourcePack:ViolentCraft
+[21:04:58] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:04:58] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:04:58] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:58] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[21:04:58] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[21:04:58] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:58] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:58] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[21:04:58] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[21:04:58] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[21:04:58] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: The following texture errors were found.
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:   DOMAIN violetcraft
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: --------------------------------------------------
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:   domain violetcraft is missing 2 textures
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:     domain violetcraft has 2 locations:
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:       mod ttr_smelt resources at C:\GitHub\VioletCraft\Refactoring\build\libs\VioletCraft-0.1.0.0.jar
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:       mod violetcraftmod resources at C:\GitHub\VioletCraft\Refactoring\build\libs\VioletCraft-0.1.0.0.jar
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:     The missing resources for domain violetcraft are:
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:       textures/blocks/TestMachine.png
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:       textures/blocks/block_viren_block.png
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]:     No other errors exist for domain violetcraft
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
+[21:04:59] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[21:04:59] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:04:59] [Sound Library Loader/INFO]: Sound engine started
+[21:05:30] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:05:30] [Server thread/INFO]: Generating keypair
+[21:05:31] [Server thread/INFO]: Converting map!
+[21:05:31] [Server thread/INFO]: Scanning folders...
+[21:05:31] [Server thread/INFO]: Total conversion count is 0
+[21:05:31] [Server thread/INFO] [FML]: Injecting existing block and item data into this server instance
+[21:05:31] [Server thread/INFO] [FML]: Applying holder lookups
+[21:05:31] [Server thread/INFO] [FML]: Holder lookups applied
+[21:05:31] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@6ead9e15)
+[21:05:31] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@6ead9e15)
+[21:05:31] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@6ead9e15)
+[21:05:31] [Server thread/INFO]: Preparing start region for level 0
+[21:05:32] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:05:32] [Netty Client IO #0/INFO] [FML]: Server protocol version 2
+[21:05:32] [Netty IO #1/INFO] [FML]: Client protocol version 2
+[21:05:32] [Netty IO #1/INFO] [FML]: Client attempting to join with 5 mods : ttr_smelt@1.0,FML@7.10.99.99,Forge@10.13.4.1614,violetcraftmod@0.1.0.0,mcp@9.05
+[21:05:32] [Netty IO #1/INFO] [FML]: Attempting connection with missing mods [] at CLIENT
+[21:05:32] [Netty Client IO #0/INFO] [FML]: Attempting connection with missing mods [] at SERVER
+[21:05:32] [Client thread/INFO] [FML]: [Client thread] Client side modded connection established
+[21:05:32] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[21:05:32] [Server thread/INFO]: Player624[local:E:93142d90] logged in with entity id 28 at (-41.5, 4.0, -1832.5)
+[21:05:32] [Server thread/INFO]: Player624 joined the game
+[21:05:33] [Server thread/INFO]: Player624 has just earned the achievement [Taking Inventory]
+[21:05:34] [Client thread/INFO]: [CHAT] Player624 has just earned the achievement [Taking Inventory]
+[21:05:57] [Server thread/INFO]: Saving and pausing game...
+[21:05:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:05:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:05:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:05:58] [Server thread/INFO]: Stopping server
+[21:05:58] [Server thread/INFO]: Saving players
+[21:05:58] [Server thread/INFO]: Saving worlds
+[21:05:58] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:05:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:05:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:05:58] [Server thread/INFO] [FML]: Unloading dimension 0
+[21:05:58] [Server thread/INFO] [FML]: Unloading dimension -1
+[21:05:58] [Server thread/INFO] [FML]: Unloading dimension 1
+[21:05:59] [Server thread/INFO] [FML]: Applying holder lookups
+[21:05:59] [Server thread/INFO] [FML]: Holder lookups applied
+[21:05:59] [Client thread/INFO]: Stopping!
+[21:05:59] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[21:05:59] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[21:05:59] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[21:05:59] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
 
 BUILD SUCCESSFUL
 
-Total time: 40.254 secs
+Total time: 1 mins 24.219 secs
