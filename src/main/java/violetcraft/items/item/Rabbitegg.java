@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.items.item;
 
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -28,7 +28,6 @@ public class Rabbitegg extends Item {
 
         GameRegistry.registerItem(this, name);
 
-        return;
     }
 
     @Override

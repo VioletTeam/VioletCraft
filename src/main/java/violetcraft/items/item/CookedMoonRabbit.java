@@ -7,8 +7,8 @@ import net.minecraft.item.ItemFood;
 import static violetcraft.VioletCraftMod.VioletCradtMod;
 
 public class CookedMoonRabbit extends ItemFood {
-    public CookedMoonRabbit(int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_) {
-        super(p_i45339_1_, p_i45339_2_, p_i45339_3_);
+    public CookedMoonRabbit(int hanger, float hiddenhanger, boolean wolffood) {
+        super(hanger, hiddenhanger, wolffood);
         String name = "cooked_moonrabbit";
 
         this.setCreativeTab(VioletCradtMod);

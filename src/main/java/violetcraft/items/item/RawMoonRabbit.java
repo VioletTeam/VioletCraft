@@ -13,8 +13,8 @@ import net.minecraft.world.World;
 import static violetcraft.VioletCraftMod.VioletCradtMod;
 
 public class RawMoonRabbit extends ItemFood {
-    public RawMoonRabbit(int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_) {
-        super(p_i45339_1_, p_i45339_2_, p_i45339_3_);
+    public RawMoonRabbit(int hanger, float hiddenhanger, boolean wolffood) {
+        super(hanger, hiddenhanger, wolffood);
         String name = "raw_moonrabbit";
 
         this.setCreativeTab(VioletCradtMod);
