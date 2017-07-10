@@ -14,8 +14,8 @@ public class BlockVirenBlock extends Block {
     	super(Material.rock);
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
         setBlockName("vc.virenBlock");
-        setBlockTextureName("violetcraft:block_viren_block");
-	    setHardness(1.5F);
+        setBlockTextureName("violetcraft:viren_block");
+        setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
         setLightLevel(0F);

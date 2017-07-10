@@ -209,3 +209,5 @@ Temporary Items
 .apdisk
 
 !/src/main/java/violetcraft/VioletCraftRegistry.java
+!/src/main/java/violetcraft/block/BlockVirenBlock.java
+!/src/main/java/violetcraft/block/BlockVirenOre.java

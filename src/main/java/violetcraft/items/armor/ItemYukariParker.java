@@ -10,7 +10,7 @@ public class ItemYukariParker extends ItemArmor {
     public ItemYukariParker(ItemArmor.ArmorMaterial Parker, int p_i45325_2_, int p_i45325_3_) {
         super(Parker, p_i45325_2_, p_i45325_3_);
         this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        this.setUnlocalizedName("vc.yukari_parker");
+        this.setUnlocalizedName("vc.yukariParker");
         maxStackSize = 1;
         this.setTextureName("violetcraft:yukari_parker");
     }

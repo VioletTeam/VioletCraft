@@ -10,8 +10,8 @@ public class BlockPinkSapphireOre extends Block
 		super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName("vb.blockPinkSapphireOre");
-        setBlockTextureName("violetcraft:pink_sapphire_Ore");
+        setBlockName("vv.pinkSapphireOre");
+        setBlockTextureName("violetcraft:pink_sapphire_ore");
         setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
