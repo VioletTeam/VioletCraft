@@ -16,11 +16,10 @@ import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
 import violetcraft.gui.GuiHandler;
-import violetcraft.items.VioletItem;
 import violetcraft.registry.BlockRegistry;
+import violetcraft.registry.ItemsRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
-import violetcraft.registry.ItemsRegistry;
 
 @Mod(modid = "VioletCraftMod",
         name = "Violet Craft",
@@ -59,7 +58,6 @@ public class VioletCraftMod {
         }
 
         BlockRegistry.blockRegistry();
-        VioletItem.registry();
         ItemsRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
