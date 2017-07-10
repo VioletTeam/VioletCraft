@@ -5,6 +5,7 @@ item.yukariparker.name=YukariParker
 item.moonrabbitegg.name=MoonRabbitEgg
 
 block.virenore.name=Viren Ore
+tile.block_viren_block.name=Viren Block
 
 entity.MoonRabbit.name=MoonRabbit
 

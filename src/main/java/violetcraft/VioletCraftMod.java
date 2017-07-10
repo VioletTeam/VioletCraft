@@ -16,6 +16,8 @@ import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
 import violetcraft.gui.GuiHandler;
+import violetcraft.items.VioletItem;
+import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
 import violetcraft.registry.ItemsRegistry;
@@ -56,6 +58,8 @@ public class VioletCraftMod {
             cfg.save();
         }
 
+        BlockRegistry.blockRegistry();
+        VioletItem.registry();
         ItemsRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
