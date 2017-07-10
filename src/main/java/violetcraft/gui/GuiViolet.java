@@ -1,21 +1,18 @@
 package violetcraft.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
+import org.lwjgl.opengl.GL11;
 import violetcraft.tiles.TileEntityGuiBlock;
 
-public class GuiContainerViolet extends GuiContainer
+public class GuiViolet extends GuiContainer
 {
+    private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/yukari_gui.png");
 	private TileEntityGuiBlock tileEntity;
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/yukari_gui.png");
-
-    public GuiContainerViolet(EntityPlayer player, TileEntityGuiBlock tileEnttiy)
-    {
+	public GuiViolet(EntityPlayer player, TileEntityGuiBlock tileEnttiy) {
         super(new ContainerViolet(player, tileEnttiy));
         this.tileEntity = tileEnttiy;
 		ySize = 222;

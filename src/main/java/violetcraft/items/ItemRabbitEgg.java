@@ -15,14 +15,14 @@ import violetcraft.entity.EntityMoonRabbit;
 
 import static violetcraft.VioletCraftRegistry.VioletCraftMod;
 
-public class Rabbitegg extends Item {
-    public Rabbitegg() {
+public class ItemRabbitEgg extends Item {
+    public ItemRabbitEgg() {
         String name = "moonrabbitegg";
 
         this.setCreativeTab(VioletCraftMod);
         this.setUnlocalizedName(name);
         maxStackSize = 16;
-        this.setTextureName("violetcraft:Rabbitegg");
+        this.setTextureName("violetcraft:ItemRabbitEgg");
     }
 
     @Override

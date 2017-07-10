@@ -1,4 +1,4 @@
-package violetcraft.items.machine;
+package violetcraft.block.machine;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -13,17 +13,17 @@ import violetcraft.VioletCraftMod;
 import violetcraft.VioletCraftRegistry;
 import violetcraft.tiles.TilEntityeTestMachine;
 
-public class TestMachine extends BlockContainer
+public class BlockTestMachine extends BlockContainer
 {
 
 	private static boolean field_149934_M;
 
-	public TestMachine()
+	public BlockTestMachine()
 	{
 		super(Material.rock);
 		this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-		this.setBlockName("TestMachine");
-	    this.setBlockTextureName("violetcraft:TestMachine");
+		this.setBlockName("BlockTestMachine");
+		this.setBlockTextureName("violetcraft:BlockTestMachine");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setHarvestLevel("pickaxe", 3);

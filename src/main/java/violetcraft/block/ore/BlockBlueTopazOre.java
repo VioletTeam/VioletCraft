@@ -1,18 +1,17 @@
-package violetcraft.items.block.ore;
+package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftRegistry;
 
-public class BlueTopazOre extends Block
+public class BlockBlueTopazOre extends Block
 {
-	public BlueTopazOre()
-	{
+    public BlockBlueTopazOre() {
 		super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName("BlueTopazOre");
-		setBlockTextureName("violetcraft:BlueTopaz_Ore");
+        setBlockName("BlockBlueTopazOre");
+        setBlockTextureName("violetcraft:BlueTopaz_Ore");
 	    setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);

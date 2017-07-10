@@ -1,11 +1,9 @@
 package violetcraft.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
-import violetcraft.inventory.ContainerGenerator;
+import org.lwjgl.opengl.GL11;
 import violetcraft.tiles.TileEntityGenerator;
 
 

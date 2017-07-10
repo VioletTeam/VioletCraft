@@ -4,8 +4,6 @@ import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.inventory.ContainerGenerator;
-import violetcraft.inventory.ContainerTestMachine;
 import violetcraft.tiles.TilEntityeTestMachine;
 import violetcraft.tiles.TileEntityGenerator;
 import violetcraft.tiles.TileEntityGuiBlock;
@@ -49,8 +47,8 @@ public class GuiHandler implements IGuiHandler
     	}
 
     	if (tileentity instanceof TileEntityGuiBlock) {
-    		return new GuiContainerViolet(player, (TileEntityGuiBlock) tileentity);
-    	}
+			return new GuiViolet(player, (TileEntityGuiBlock) tileentity);
+		}
 
         if (ID == 1) {
         	return new GuiGenerator(player, (TileEntityGenerator) tileentity);

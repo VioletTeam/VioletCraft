@@ -1,5 +1,5 @@
 package violetcraft.items.item.ingot;
 
-public class RollYellowIngot {
+public class ItemScarRedIngot {
 
 }

@@ -11,7 +11,7 @@ import violetcraft.VioletCraftRegistry;
 
 import java.util.List;
 
-public class VirenSword extends ItemSword
+public class ItemVirenSword extends ItemSword
 {
     public static Item toolconf;
 	public static Item VirenSword;
@@ -20,7 +20,7 @@ public class VirenSword extends ItemSword
 	 = EnumHelper.addToolMaterial("TOOLCONF",3,50,8F,10F,10)
 			.setRepairItem(new ItemStack(toolconf));
 
-    public VirenSword()
+    public ItemVirenSword()
     {
     	super(TOOLCONF);
 

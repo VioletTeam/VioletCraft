@@ -22,8 +22,8 @@ public class BlockGenerator extends BlockContainer
 	{
 		super(Material.rock);
 		this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-		this.setBlockName("VC.BlockGenerator");
-	    this.setBlockTextureName("violetcraft:Block_Generator");
+		this.setBlockName("VC.Generator");
+		this.setBlockTextureName("violetcraft:Block_Generator");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setHarvestLevel("pickaxe", 3);

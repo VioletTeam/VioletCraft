@@ -1,4 +1,4 @@
-package violetcraft.inventory;
+package violetcraft.gui;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -100,7 +100,7 @@ public class ContainerGenerator extends Container
 			}
 			if (itemstack1.stackSize == 0)
 			{
-				slot.putStack((ItemStack)null);
+				slot.putStack(null);
 			}
 			else
 			{

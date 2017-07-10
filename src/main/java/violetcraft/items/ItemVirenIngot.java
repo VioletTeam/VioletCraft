@@ -3,15 +3,14 @@ package violetcraft.items;
 import net.minecraft.item.Item;
 import violetcraft.VioletCraftRegistry;
 
-public class VirenIngot extends Item
+public class ItemVirenIngot extends Item
 {
-    public VirenIngot()
-    {
+	public ItemVirenIngot() {
 		String name = "vireningot";
 
 		this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
 		this.setUnlocalizedName(name);
 	    maxStackSize = 64;
-	    this.setTextureName( "violetcraft:VirenIngot" );
-    }
+		this.setTextureName("violetcraft:ItemVirenIngot");
+	}
 }

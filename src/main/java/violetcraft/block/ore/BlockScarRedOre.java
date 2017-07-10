@@ -1,18 +1,17 @@
-package violetcraft.items.block.ore;
+package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftRegistry;
 
-public class PinkSapphireOre extends Block
+public class BlockScarRedOre extends Block
 {
-	public PinkSapphireOre()
-	{
+    public BlockScarRedOre() {
 		super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.VioletCraftMod);
-        setBlockName("PinkSapphireOre");
-		setBlockTextureName("violetcraft:PinkSapphire_Ore");
+        setBlockName("BlockScarRedOre");
+        setBlockTextureName("violetcraft:ScarRed_Ore");
 	    setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);

@@ -9,17 +9,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemHoe;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.ItemTool;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import violetcraft.items.machine.TestMachine;
+import violetcraft.block.machine.BlockTestMachine;
 
 public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
 {
@@ -34,6 +29,51 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
     private String field_145958_o;
 
 	private ItemStack[] testMachineItemStacks = new ItemStack[3];
+
+    public static int getItemBurnTime(ItemStack itemStack) {
+        if (itemStack == null) {
+            return 0;
+        } else {
+            int moddedBurnTime = net.minecraftforge.event.ForgeEventFactory.getFuelBurnTime(itemStack);
+            if (moddedBurnTime >= 0) return moddedBurnTime;
+
+            Item item = itemStack.getItem();
+
+            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
+                Block block = Block.getBlockFromItem(item);
+
+                if (block == Blocks.wooden_slab) {
+                    return 150;
+                }
+
+                if (block.getMaterial() == Material.wood) {
+                    return 300;
+                }
+
+                if (block == Blocks.coal_block) {
+                    return 16000;
+                }
+            }
+
+            if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemSword && ((ItemSword) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemHoe && ((ItemHoe) item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item == Items.stick) return 100;
+            if (item == Items.coal) return 1600;
+            if (item == Items.lava_bucket) return 20000;
+            if (item == Item.getItemFromBlock(Blocks.sapling)) return 100;
+            if (item == Items.blaze_rod) return 2400;
+            return GameRegistry.getFuelValue(itemStack);
+        }
+    }
+
+    public static boolean isItemFuel(ItemStack p_145954_0_) {
+        /**
+         * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
+         * fuel
+         */
+        return getItemBurnTime(p_145954_0_) > 0;
+    }
 
 	@Override
 	public int getSizeInventory() {
@@ -166,59 +206,6 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
         }
     }
 
-    public static int getItemBurnTime(ItemStack itemStack) {
-	       if (itemStack == null)
-	        {
-	            return 0;
-	        }
-	        else
-	        {
-	        	int moddedBurnTime = net.minecraftforge.event.ForgeEventFactory.getFuelBurnTime(itemStack);
-	        	if (moddedBurnTime >= 0) return moddedBurnTime;
-
-	            Item item = itemStack.getItem();
-
-	            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air)
-	            {
-	                Block block = Block.getBlockFromItem(item);
-
-	                if (block == Blocks.wooden_slab)
-	                {
-	                    return 150;
-	                }
-
-	                if (block.getMaterial() == Material.wood)
-	                {
-	                    return 300;
-	                }
-
-	                if (block == Blocks.coal_block)
-	                {
-	                    return 16000;
-	                }
-	            }
-
-	            if (item instanceof ItemTool && ((ItemTool)item).getToolMaterialName().equals("WOOD")) return 200;
-	            if (item instanceof ItemSword && ((ItemSword)item).getToolMaterialName().equals("WOOD")) return 200;
-	            if (item instanceof ItemHoe && ((ItemHoe)item).getToolMaterialName().equals("WOOD")) return 200;
-	            if (item == Items.stick) return 100;
-	            if (item == Items.coal) return 1600;
-	            if (item == Items.lava_bucket) return 20000;
-	            if (item == Item.getItemFromBlock(Blocks.sapling)) return 100;
-	            if (item == Items.blaze_rod) return 2400;
-	            return GameRegistry.getFuelValue(itemStack);
-	        }
-	}
-
-    public static boolean isItemFuel(ItemStack p_145954_0_)
-    {
-        /**
-         * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
-         * fuel
-         */
-        return getItemBurnTime(p_145954_0_) > 0;
-    }
-
 	@Override
 	public int getInventoryStackLimit() {
         return 64;
@@ -303,7 +290,7 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
             {
                 flag1 = true;
                 //block見た目更新
-                TestMachine.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+                BlockTestMachine.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
         }
 
@@ -360,7 +347,7 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer p_70300_1_) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : p_70300_1_.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && p_70300_1_.getDistanceSq((double) this.xCoord + 0.5D, (double) this.yCoord + 0.5D, (double) this.zCoord + 0.5D) <= 64.0D;
 
 	}
 
@@ -372,8 +359,8 @@ public class TilEntityeTestMachine extends TileEntity implements ISidedInventory
 
 	@Override
 	public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-		return p_94041_1_ == 2 ? false : (p_94041_1_ == 1 ? isItemFuel(p_94041_2_) : true);
-	}
+        return p_94041_1_ != 2 && (p_94041_1_ != 1 || isItemFuel(p_94041_2_));
+    }
 
 	@Override
 	public int[] getAccessibleSlotsFromSide(int p_94128_1_) {

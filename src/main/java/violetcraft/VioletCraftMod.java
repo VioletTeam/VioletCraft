@@ -12,7 +12,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.config.Configuration;
-import violetcraft.entity.VioletEntity;
+import violetcraft.entity.EntityViolet;
 import violetcraft.gui.GuiHandler;
 
 @Mod(modid = VioletCraftMod.MOD_ID, name = VioletCraftMod.MOD_NAME, version = VioletCraftMod.VERSION, useMetadata = true)
@@ -63,7 +63,7 @@ public final class VioletCraftMod {
     @EventHandler
     @SuppressWarnings("unused")
     public void init(FMLInitializationEvent event) {
-        VioletEntity.register(this);
+        EntityViolet.register(this);
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         VioletCraftRegistry.handleInit(event);
     }
@@ -76,8 +76,8 @@ public final class VioletCraftMod {
     @EventHandler
     @SuppressWarnings("unused")
     public void postInit(FMLPostInitializationEvent event) {
-        VioletEntity.register(this);
-        VioletEntity.addSpawns();
+        EntityViolet.register(this);
+        EntityViolet.addSpawns();
         proxy.registerRender();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());

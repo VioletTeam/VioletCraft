@@ -1,13 +1,11 @@
 package violetcraft.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
-import violetcraft.inventory.ContainerTestMachine;
+import org.lwjgl.opengl.GL11;
 import violetcraft.tiles.TilEntityeTestMachine;
 
 @SideOnly(Side.CLIENT)
@@ -25,8 +23,8 @@ public class GuiTestMachine extends GuiContainer
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseZ)
     {
-    	fontRendererObj.drawString("TestMachine", 58, 6, 0x404040);
-    	fontRendererObj.drawString("Inventory", 8, (ySize - 96) + 2, 0x404040);
+        fontRendererObj.drawString("BlockTestMachine", 58, 6, 0x404040);
+        fontRendererObj.drawString("Inventory", 8, (ySize - 96) + 2, 0x404040);
 
     	if(this.tileeEtity.isBurning())
     	{

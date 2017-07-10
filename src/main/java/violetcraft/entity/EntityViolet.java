@@ -6,7 +6,7 @@ import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 import violetcraft.VioletCraftMod;
 
-public class VioletEntity {
+public class EntityViolet {
     public static void register(VioletCraftMod violetCraftMod) {
         EntityRegistry.registerModEntity(EntityMoonRabbit.class, "MoonRabbit", 0, violetCraftMod, 30, 1, false);
     }

@@ -15,15 +15,15 @@ import net.minecraftforge.common.util.EnumHelper;
 import violetcraft.block.BlockGenerator;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
-import violetcraft.items.Rabbitegg;
-import violetcraft.items.VirenIngot;
-import violetcraft.items.VirenSword;
-import violetcraft.items.armor.YukariParker;
-import violetcraft.items.block.ore.BlueTopazOre;
-import violetcraft.items.block.ore.PinkSapphireOre;
-import violetcraft.items.block.ore.RollYellowOre;
-import violetcraft.items.block.ore.ScarRedOre;
-import violetcraft.items.machine.TestMachine;
+import violetcraft.block.machine.BlockTestMachine;
+import violetcraft.block.ore.BlockBlueTopazOre;
+import violetcraft.block.ore.BlockPinkSapphireOre;
+import violetcraft.block.ore.BlockRollYellowOre;
+import violetcraft.block.ore.BlockScarRedOre;
+import violetcraft.items.ItemRabbitEgg;
+import violetcraft.items.ItemVirenIngot;
+import violetcraft.items.ItemVirenSword;
+import violetcraft.items.armor.ItemYukariParker;
 import violetcraft.tiles.TilEntityeTestMachine;
 import violetcraft.tiles.TileEntityGenerator;
 import violetcraft.tiles.TileEntityGuiBlock;
@@ -32,13 +32,14 @@ import violetcraft.tiles.TileEntityGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
+
     /***
      * Material
      */
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     // Item ============================================================================================================
     // Ingot ===========================================================================================================
-    public static final Item VirenIngot = new VirenIngot();
+    public static final Item VirenIngot = new ItemVirenIngot();
     /***
      * クリエイティブタブ
      */
@@ -49,29 +50,29 @@ public final class VioletCraftRegistry {
     };
     public static final Item RollYellowIngot = null;
     public static final Item ScarRedIngot = null;
-    public static final Item blueTopaz = null;
+    public static final Item BLueTopaz = null;
     public static final Item PinkSapphire = null;
 
     // Tools ===========================================================================================================
-    public static final Item VirenSword = new VirenSword();
+    public static final Item VirenSword = new ItemVirenSword();
 
     // Armor ===========================================================================================================
-    public static final Item yukariParker = new YukariParker(Parker, 0, 1);
+    public static final Item YukariParker = new ItemYukariParker(Parker, 0, 1);
 
     // Egg =============================================================================================================
-    public static final Item rabbitegg = new Rabbitegg();
+    public static final Item RabbitEgg = new ItemRabbitEgg();
 
     //Block ============================================================================================================
-    public static final Block BlockVirenBlock = new BlockVirenBlock("viren_block");
-    public static final Block TestMachine = new TestMachine();
-    public static final Block BlockGenerator = new BlockGenerator();
+    public static final Block VirenBlock = new BlockVirenBlock("viren_block");
+    public static final Block TestMachine = new BlockTestMachine();
+    public static final Block Generator = new BlockGenerator();
 
     // Ore =============================================================================================================
-    public static final Block RollYellowOre = new RollYellowOre();
-    public static final Block ScarRedOre = new ScarRedOre();
-    public static final Block blueTopazOre = new BlueTopazOre();
-    public static final Block PinkSapphireOre = new PinkSapphireOre();
-    public static final Block BlockVirenOre = new BlockVirenOre();
+    public static final Block RollYellowOre = new BlockRollYellowOre();
+    public static final Block ScarRedOre = new BlockScarRedOre();
+    public static final Block BlueTopazOre = new BlockBlueTopazOre();
+    public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
+    public static final Block VirenOre = new BlockVirenOre();
 
     static void handlePreInit(FMLPreInitializationEvent event) {
         //Register Items
@@ -80,19 +81,19 @@ public final class VioletCraftRegistry {
         //Register Tools
         registerItem(VirenSword);
         //Register Armors
-        registerItem(yukariParker);
+        registerItem(YukariParker);
         //Register Eggs
-        registerItem(rabbitegg);
+        registerItem(RabbitEgg);
 
         //Register Blocks
-        registerBlock(BlockVirenBlock);
+        registerBlock(VirenBlock);
         registerBlock(TestMachine);
-        registerBlock(BlockGenerator);
+        registerBlock(Generator);
         //Register Ores
-        registerBlock(BlockVirenOre);
+        registerBlock(VirenOre);
         registerBlock(ScarRedOre);
         registerBlock(PinkSapphireOre);
-        registerBlock(blueTopazOre);
+        registerBlock(BlueTopazOre);
         registerBlock(RollYellowOre);
     }
 
@@ -104,12 +105,12 @@ public final class VioletCraftRegistry {
 
         //Add Recipes
         GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.VirenSword, 1), " x ", " x ", " y ", 'x', VioletCraftRegistry.VirenIngot, 'y', Items.stick);
-        GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.yukariParker),
+        GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.YukariParker),
                 "wbw", "blb", "wpw",
                 'b', new ItemStack(Items.dye, 1, 0), 'p', new ItemStack(Items.dye, 1, 9), 'l', Items.leather_chestplate, 'w', Blocks.wool);
 
         //Add Smelting Recipes
-        GameRegistry.addSmelting(VioletCraftRegistry.BlockVirenOre, new ItemStack(VioletCraftRegistry.VirenIngot), 0.1f);
+        GameRegistry.addSmelting(VioletCraftRegistry.VirenOre, new ItemStack(VioletCraftRegistry.VirenIngot), 0.1f);
 
         GameRegistry.registerFuelHandler(new IFuelHandler() {
             @Override

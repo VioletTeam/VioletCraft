@@ -1,5 +1,5 @@
 package violetcraft.items.item.ingot;
 
-public class PinkSapphire {
+public class ItemPinkSapphire {
 
 }
