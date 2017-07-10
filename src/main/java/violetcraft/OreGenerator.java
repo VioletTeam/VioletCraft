@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldProviderSurface;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import violetcraft.registry.ItemsRegistry;
+import violetcraft.registry.ItemRegistry;
 
 public class OreGenerator implements IWorldGenerator {
 
@@ -24,13 +24,13 @@ public class OreGenerator implements IWorldGenerator {
 			int genX = x + random.nextInt(16);
 			int genY = 1 + random.nextInt(60);
 			int genZ = z + random.nextInt(16);
-			new WorldGenMinable(ItemsRegistry.RollYellowOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
+			new WorldGenMinable(ItemRegistry.RollYellowOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
 		}
 		for(int i = 0; i < 5; i++) {
 			int genX = x + random.nextInt(16);
 			int genY = 1 + random.nextInt(15);
 			int genZ = z + random.nextInt(16);
-			new WorldGenMinable(ItemsRegistry.BlockVirenOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
+			new WorldGenMinable(ItemRegistry.BlockVirenOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
 		}
 	}
 

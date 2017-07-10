@@ -17,7 +17,7 @@ import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
 import violetcraft.gui.GuiHandler;
 import violetcraft.registry.BlockRegistry;
-import violetcraft.registry.ItemsRegistry;
+import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
 
@@ -58,7 +58,7 @@ public class VioletCraft {
         }
 
         BlockRegistry.blockRegistry();
-        ItemsRegistry.registry();
+        ItemRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
     }
@@ -106,7 +106,7 @@ public class VioletCraft {
     public static CreativeTabs VioletCradtTab
             = new CreativeTabs("violettab") {
         public Item getTabIconItem() {
-            return ItemsRegistry.VirenIngot;
+            return ItemRegistry.VirenIngot;
         }
     };
 }
