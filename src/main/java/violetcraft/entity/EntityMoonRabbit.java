@@ -71,18 +71,6 @@ public class EntityMoonRabbit extends EntityAnimal
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
         }
     }
-    protected String getHurtSound()
-    {
-        return "mob.player.hurt";
-    }
-
-    /**
-     * Returns the sound this mob makes on death.
-     */
-    protected String getDeathSound()
-    {
-        return "mob.player.hurt";
-    }
 
     public boolean isBreedingItem(ItemStack p_70877_1_)
     {
