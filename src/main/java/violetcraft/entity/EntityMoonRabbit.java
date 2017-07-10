@@ -15,6 +15,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import violetcraft.VioletCraftRegistry;
 
 public class EntityMoonRabbit extends EntityAnimal
 {
@@ -66,7 +67,7 @@ public class EntityMoonRabbit extends EntityAnimal
         if (!this.worldObj.isRemote && !this.isChild() && !this.func_152116_bZ() && --this.timeUntilNextItem <= 0)
         {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.dropItem(Items.gold_nugget, 1);
+            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
         }
     }
@@ -94,15 +95,21 @@ public class EntityMoonRabbit extends EntityAnimal
     }
 
     /**MOBのドロップアイテムを返すメソッド*/
-    public Item getDropItem () {
-
-        return null;//なにも落とさない
+    protected Item getDropItem() {
+        return VioletCraftRegistry.RawMoonMeat;
     }
-    @Override
-    protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel) {
-        {
-            this.entityDropItem(new ItemStack(Items.leather, 1, 0), 0.0F);
 
+    protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel) {
+        int j = this.rand.nextInt(3) + this.rand.nextInt(1 + parLootingLevel);
+        int k;
+
+        for (k = 0; k < j; ++k) {
+            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
+        }
+        if (this.isBurning()) {
+            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
+        } else {
+            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
         }
     }
 

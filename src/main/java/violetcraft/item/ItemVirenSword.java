@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -21,7 +21,7 @@ public class ItemVirenSword extends ItemSword {
 
     public ItemVirenSword() {
         super(TOOLCONF);
-        this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         this.setUnlocalizedName("vc.virenSword");
         maxStackSize = 1;
         this.setTextureName("violetcraft:viren_sword");

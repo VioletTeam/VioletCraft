@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.item;
 
 
 import net.minecraft.block.Block;
@@ -13,11 +13,11 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import violetcraft.entity.EntityMoonRabbit;
 
-import static violetcraft.VioletCraftRegistry.VioletCraftMod;
+import static violetcraft.VioletCraftRegistry.tabVioletCraft;
 
 public class ItemRabbitEgg extends Item {
     public ItemRabbitEgg() {
-        this.setCreativeTab(VioletCraftMod);
+        this.setCreativeTab(tabVioletCraft);
         this.setUnlocalizedName("vc.rabbitEgg");
         maxStackSize = 16;
         this.setTextureName("violetcraft:rabbit_egg");

@@ -21,7 +21,7 @@ public class BlockVirenOre extends Block
     public BlockVirenOre()
     {
     	super(Material.rock);
-        setCreativeTab(VioletCraftRegistry.VioletCraftMod);
+        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("vc.virenOre");
         setBlockTextureName("violetcraft:viren_ore");
         setHardness(1.5F);

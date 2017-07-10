@@ -1,4 +1,4 @@
-package violetcraft.items.item.ingot;
+package violetcraft.item;
 
 public class ItemRollYellowIngot {
 

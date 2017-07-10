@@ -1,4 +1,4 @@
-package violetcraft.items.armor;
+package violetcraft.item.armor;
 
 
 import net.minecraft.entity.Entity;
@@ -9,7 +9,7 @@ import violetcraft.VioletCraftRegistry;
 public class ItemYukariParker extends ItemArmor {
     public ItemYukariParker(ItemArmor.ArmorMaterial Parker, int p_i45325_2_, int p_i45325_3_) {
         super(Parker, p_i45325_2_, p_i45325_3_);
-        this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         this.setUnlocalizedName("vc.yukariParker");
         maxStackSize = 1;
         this.setTextureName("violetcraft:yukari_parker");

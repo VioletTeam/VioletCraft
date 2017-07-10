@@ -15,8 +15,8 @@ import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.EntityViolet;
 import violetcraft.gui.GuiHandler;
 
-@Mod(modid = VioletCraftMod.MOD_ID, name = VioletCraftMod.MOD_NAME, version = VioletCraftMod.VERSION, useMetadata = true)
-public final class VioletCraftMod {
+@Mod(modid = VioletCraft.MOD_ID, name = VioletCraft.MOD_NAME, version = VioletCraft.VERSION, useMetadata = true)
+public final class VioletCraft {
     //Mod Info
     public static final String MOD_ID = "violetcraftmod";
     public static final String MOD_NAME = "ViolentCraft";
@@ -27,7 +27,7 @@ public final class VioletCraftMod {
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)
-    public static VioletCraftMod INSTANCE;
+    public static VioletCraft INSTANCE;
     @Mod.Metadata
     public static ModMetadata metadata;
 

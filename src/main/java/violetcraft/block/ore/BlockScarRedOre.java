@@ -9,7 +9,7 @@ public class BlockScarRedOre extends Block
     public BlockScarRedOre() {
 		super(Material.rock);
 
-        setCreativeTab(VioletCraftRegistry.VioletCraftMod);
+        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("vc.scarRedOre");
         setBlockTextureName("violetcraft:scar_red_ore");
         setHardness(1.5F);
