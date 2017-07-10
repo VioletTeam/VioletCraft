@@ -9,7 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraft;
 
 public class BlockVirenOre extends Block
 {
@@ -22,7 +22,7 @@ public class BlockVirenOre extends Block
     public BlockVirenOre()
     {
     	super(Material.rock);
-    	setCreativeTab(VioletCraftMod.VioletCradtMod);
+    	setCreativeTab(VioletCraft.VioletCradtTab);
     	setBlockName("virenore");
 	    setBlockTextureName("violetcraft:VirenOre");
 	    setHardness(1.5F);

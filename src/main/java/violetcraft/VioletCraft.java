@@ -21,15 +21,15 @@ import violetcraft.registry.ItemsRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
 
-@Mod(modid = "VioletCraftMod",
+@Mod(modid = "violet_craft",
         name = "Violet Craft",
         version = "0.1.0.0")
 
-public class VioletCraftMod {
+public class VioletCraft {
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
-    @Mod.Instance("VioletCraftMod")
-    public static VioletCraftMod INSTANCE;
+    @Mod.Instance("violet_craft")
+    public static VioletCraft INSTANCE;
 
     public static Block BlockVirenOre;
 
@@ -73,7 +73,7 @@ public class VioletCraftMod {
         GuiBlock = new GuiBlock()
                 .setBlockTextureName("violetcraft:Gui_Block")
                 .setBlockName("GuiBlock")
-                .setCreativeTab(VioletCraftMod.VioletCradtMod);
+                .setCreativeTab(VioletCraft.VioletCradtTab);
         GameRegistry.registerBlock(GuiBlock, "GuiBlock");
         VioletEntity.register(this);
 
@@ -103,7 +103,7 @@ public class VioletCraftMod {
     /***
      * クリエイティブタブアイコン
      */
-    public static CreativeTabs VioletCradtMod
+    public static CreativeTabs VioletCradtTab
             = new CreativeTabs("violettab") {
         public Item getTabIconItem() {
             return ItemsRegistry.VirenIngot;

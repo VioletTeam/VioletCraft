@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraft;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.tiles.TileEntityGenerator;
 
@@ -22,7 +22,7 @@ public class BlockGenerator extends BlockContainer
 	public BlockGenerator()
 	{
 		super(Material.rock);
-		this.setCreativeTab(VioletCraftMod.VioletCradtMod);
+		setCreativeTab(VioletCraft.VioletCradtTab);
     	this.setBlockName("VC.BlockGenerator");
 	    this.setBlockTextureName("violetcraft:Block_Generator");
 		this.setHardness(1.0F);
@@ -43,7 +43,7 @@ public class BlockGenerator extends BlockContainer
 
             if (TileEntityGenerator != null)
             {
-            	player.openGui(VioletCraftMod.INSTANCE, 1, world, x, y, z);
+            	player.openGui(VioletCraft.INSTANCE, 1, world, x, y, z);
             }
 
 			return true;
