@@ -22,6 +22,7 @@ import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
 
+@SuppressWarnings("ALL")
 @Mod(modid		= VioletCraftMod.MOD_ID,
 	 name		= VioletCraftMod.MOD_NAME,
 	 version	= VioletCraftMod.VERSION)
