@@ -1,6 +1,5 @@
 package violetcraft.block;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -11,7 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
-import violetcraft.registry.MachineRegistry;
+import violetcraft.VioletCraftRegistry;
 import violetcraft.tiles.TileEntityGenerator;
 
 public class BlockGenerator extends BlockContainer
@@ -22,15 +21,13 @@ public class BlockGenerator extends BlockContainer
 	public BlockGenerator()
 	{
 		super(Material.rock);
-		this.setCreativeTab(VioletCraftMod.VioletCraftMod);
+		this.setCreativeTab(VioletCraftRegistry.VioletCraftMod);
 		this.setBlockName("VC.BlockGenerator");
 	    this.setBlockTextureName("violetcraft:Block_Generator");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setLightLevel(0);
-
-		GameRegistry.registerBlock(this, "BlockGenerator");
 	}
 
 	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
@@ -39,9 +36,9 @@ public class BlockGenerator extends BlockContainer
 		field_149934_M = true;
 
 		if (p_149931_0_) {
-			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.TestMachine);
 		} else {
-			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.TestMachine);
 		}
 
 		field_149934_M = false;

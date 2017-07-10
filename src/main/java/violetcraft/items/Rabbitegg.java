@@ -1,7 +1,6 @@
 package violetcraft.items;
 
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.Entity;
@@ -14,7 +13,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import violetcraft.entity.EntityMoonRabbit;
 
-import static violetcraft.VioletCraftMod.VioletCraftMod;
+import static violetcraft.VioletCraftRegistry.VioletCraftMod;
 
 public class Rabbitegg extends Item {
     public Rabbitegg() {
@@ -24,10 +23,6 @@ public class Rabbitegg extends Item {
         this.setUnlocalizedName(name);
         maxStackSize = 16;
         this.setTextureName("violetcraft:Rabbitegg");
-
-        GameRegistry.registerItem(this, name);
-
-        return;
     }
 
     @Override

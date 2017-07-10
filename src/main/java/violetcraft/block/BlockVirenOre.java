@@ -1,13 +1,12 @@
 package violetcraft.block;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraftRegistry;
 
 import java.util.Random;
 
@@ -22,7 +21,7 @@ public class BlockVirenOre extends Block
     public BlockVirenOre()
     {
     	super(Material.rock);
-        setCreativeTab(VioletCraftMod.VioletCraftMod);
+        setCreativeTab(VioletCraftRegistry.VioletCraftMod);
         setBlockName("virenore");
 	    setBlockTextureName("violetcraft:VirenOre");
 	    setHardness(1.5F);
@@ -35,7 +34,6 @@ public class BlockVirenOre extends Block
         setLightLevel(0F);/*明るさ 1.0F = 15*/
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);/*当たり判定*/
 
-        GameRegistry.registerBlock(this, "BlockVirenOre");
 //    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
     }
 

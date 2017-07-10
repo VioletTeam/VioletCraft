@@ -11,19 +11,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiHandler;
-import violetcraft.registry.BlockRegistry;
-import violetcraft.registry.ItemsRegistry;
-import violetcraft.registry.MachineRegistry;
-import violetcraft.registry.TileEntityRegistry;
 
 @Mod(modid = VioletCraftMod.MOD_ID, name = VioletCraftMod.MOD_NAME, version = VioletCraftMod.VERSION, useMetadata = true)
-public class VioletCraftMod {
+public final class VioletCraftMod {
     //Mod Info
     public static final String MOD_ID = "violetcraftmod";
     public static final String MOD_NAME = "ViolentCraft";
@@ -35,18 +28,6 @@ public class VioletCraftMod {
     public static VioletCraftMod INSTANCE;
     @Mod.Metadata
     public static ModMetadata metadata;
-    public static Block BlockVirenOre;
-    public static Block GuiBlock;
-
-    /***
-     * クリエイティブタブ
-     */
-    public static CreativeTabs VioletCraftMod
-            = new CreativeTabs("violet_craft") {
-        public Item getTabIconItem() {
-            return ItemsRegistry.VirenIngot;
-        }
-    };
 
     /***
      * Configファイル読み込みと出力
@@ -71,10 +52,7 @@ public class VioletCraftMod {
         } finally {
             cfg.save();
         }
-
-        BlockRegistry.blockRegistry();
-        ItemsRegistry.registry();
-        MachineRegistry.registry();
+        VioletCraftRegistry.handlePreInit(event);
     }
 
     /***
@@ -87,8 +65,7 @@ public class VioletCraftMod {
     public void init(FMLInitializationEvent event) {
         VioletEntity.register(this);
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
-        TileEntityRegistry.registry();
-        Recipes.registry();
+        VioletCraftRegistry.handleInit(event);
     }
 
     /***
