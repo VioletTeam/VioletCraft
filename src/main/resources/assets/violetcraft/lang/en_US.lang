@@ -3,10 +3,14 @@ item.vireningot.name=Viren Ingot
 item.virensword.name=Viren Sword
 item.yukariparker.name=YukariParker
 item.moonrabbitegg.name=MoonRabbitEgg
+item.moonrabbit_tear.name=MoonRabbit Tear
+item.raw_moonrabbit.name=Raw MoonRabbit
+item.cooked_moonrabbit.name=Cooked MoonRabbit
 
 block.virenore.name=Viren Ore
-tile.block_viren_block.name=Viren Block
 
 entity.MoonRabbit.name=MoonRabbit
+
+tile.block_viren_block.name=Viren Block
 
 itemGroup.violettab=Violet Tab
