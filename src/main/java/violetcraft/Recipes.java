@@ -4,22 +4,22 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import violetcraft.items.VioletItem;
+import violetcraft.registry.ItemsRegistry;
 
 public class Recipes {
 	public static void registry()
 	{
 		GameRegistry.addRecipe
 		(
-			new ItemStack(VioletItem.VirenSword, 1),
+			new ItemStack(ItemsRegistry.VirenSword, 1),
 				" x ",
 				" x ",
 				" y ",
-				'x', VioletItem.VirenIngot,
+				'x', ItemsRegistry.VirenIngot,
 				'y', Items.stick);
 		GameRegistry.addRecipe
 				(
-						new ItemStack(VioletItem.yukariParker),
+						new ItemStack(ItemsRegistry.yukariParker),
 
 						"wbw",
 						"blb",

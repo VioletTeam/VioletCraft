@@ -20,6 +20,7 @@ import violetcraft.items.VioletItem;
 import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.TileEntityRegistry;
+import violetcraft.registry.ItemsRegistry;
 
 @Mod(modid = "VioletCraftMod",
         name = "Violet Craft",
@@ -59,6 +60,7 @@ public class VioletCraftMod {
 
         BlockRegistry.blockRegistry();
         VioletItem.registry();
+        ItemsRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
 
@@ -113,7 +115,7 @@ public class VioletCraftMod {
     public static CreativeTabs VioletCradtMod
             = new CreativeTabs("violettab") {
         public Item getTabIconItem() {
-            return VioletItem.VirenIngot;
+            return ItemsRegistry.VirenIngot;
         }
     };
 }
