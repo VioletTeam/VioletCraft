@@ -101,9 +101,9 @@ public class EntityMoonRabbit extends EntityAnimal
         return VioletItem.moontear;
     }
 
-    protected void dropFewItems(boolean p_70628_1_, int p_70628_2_)
+    protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel)
     {
-        int j = this.rand.nextInt(3) + this.rand.nextInt(1 + p_70628_2_);
+        int j = this.rand.nextInt(3) + this.rand.nextInt(1 + parLootingLevel);
         int k;
 
         for (k = 0; k < j; ++k)
