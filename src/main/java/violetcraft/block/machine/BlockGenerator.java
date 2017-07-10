@@ -11,7 +11,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
 import violetcraft.VioletCraftRegistry;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.tiles.TileGenerator;
 
 public class BlockGenerator extends BlockContainer
 {
@@ -46,11 +46,11 @@ public class BlockGenerator extends BlockContainer
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
-			TileEntityGenerator TileEntityGenerator = (TileEntityGenerator)world.getTileEntity(x, y, z);
+        TileGenerator tileGenerator = (TileGenerator) world.getTileEntity(x, y, z);
 
-            if (TileEntityGenerator != null)
+        if (tileGenerator != null)
             {
-            	player.openGui(VioletCraftMod.INSTANCE, 1, world, x, y, z);
+                player.openGui(VioletCraftMod.INSTANCE, VioletCraftMod.GUI_GENERATOR, world, x, y, z);
             }
 
 			return true;
@@ -59,15 +59,15 @@ public class BlockGenerator extends BlockContainer
 
 	@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-		return new TileEntityGenerator();
-	}
+        return new TileGenerator();
+    }
 
 	//ブロックが壊れた時の処理
 	//周辺に中に入っていたアイテムをまき散らす
 	@Override
 	public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6)
 	{
-		TileEntityGenerator tileentity = (TileEntityGenerator) par1World.getTileEntity(par2, par3, par4);
+        TileGenerator tileentity = (TileGenerator) par1World.getTileEntity(par2, par3, par4);
 
 		if (tileentity != null)
 		{

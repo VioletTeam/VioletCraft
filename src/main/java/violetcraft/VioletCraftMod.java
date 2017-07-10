@@ -21,7 +21,9 @@ public final class VioletCraftMod {
     public static final String MOD_ID = "violetcraftmod";
     public static final String MOD_NAME = "ViolentCraft";
     public static final String VERSION = "0.1.0.0";
-    public static final int GUI_ID = 0;
+    //Gui IDs
+    public static final int GUI_VIOLENT = 0;
+    public static final int GUI_GENERATOR = 1;
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)
@@ -34,7 +36,6 @@ public final class VioletCraftMod {
      * アイテム　ブロックの登録
      * @param event please see cpw.mods.fml.common.event.FMLPreInitializationEvent
      */
-
     @EventHandler
     @SuppressWarnings("unused")
     public void preInit(FMLPreInitializationEvent event) {

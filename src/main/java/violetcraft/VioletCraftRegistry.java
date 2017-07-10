@@ -23,8 +23,8 @@ import violetcraft.items.ItemRabbitEgg;
 import violetcraft.items.ItemVirenIngot;
 import violetcraft.items.ItemVirenSword;
 import violetcraft.items.armor.ItemYukariParker;
-import violetcraft.tiles.TileEntityGenerator;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tiles.TileGenerator;
+import violetcraft.tiles.TileGuiBlock;
 
 /**
  * @author C6H2Cl2
@@ -95,8 +95,8 @@ public final class VioletCraftRegistry {
 
     static void handleInit(FMLInitializationEvent event) {
         //Register TileEntities
-        GameRegistry.registerTileEntity(TileEntityGuiBlock.class, "TileEntityGuiBlock");
-        GameRegistry.registerTileEntity(TileEntityGenerator.class, "TileEntityGenerator");
+        GameRegistry.registerTileEntity(TileGuiBlock.class, "TileGuiBlock");
+        GameRegistry.registerTileEntity(TileGenerator.class, "TileGenerator");
 
         //Add Recipes
         GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.VirenSword, 1), " x ", " x ", " y ", 'x', VioletCraftRegistry.VirenIngot, 'y', Items.stick);

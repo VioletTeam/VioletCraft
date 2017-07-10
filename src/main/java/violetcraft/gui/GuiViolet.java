@@ -5,14 +5,14 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tiles.TileGuiBlock;
 
 public class GuiViolet extends GuiContainer
 {
     private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/yukari_gui.png");
-	private TileEntityGuiBlock tileEntity;
+    private TileGuiBlock tileEntity;
 
-	public GuiViolet(EntityPlayer player, TileEntityGuiBlock tileEnttiy) {
+    public GuiViolet(EntityPlayer player, TileGuiBlock tileEnttiy) {
         super(new ContainerViolet(player, tileEnttiy));
         this.tileEntity = tileEnttiy;
 		ySize = 222;
@@ -35,17 +35,4 @@ public class GuiViolet extends GuiContainer
 		int l = (height - ySize) / 2;
 		this.drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
 	}
-
-//    @Override
-//    protected void drawGuiContainerBackgroundLayer(float partialTick, int mouseX, int mouseZ)
-//    {
-//        this.mc.renderEngine.bindTexture(TEXTURE);
-//        this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, xSize, ySize);
-//    }
-
-    /*GUIが開いている時にゲームの処理を止めるかどうか。*/
-//    @Override
-//    public boolean doesGuiPauseGame() {
-//        return false;
-//    }
 }

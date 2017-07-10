@@ -5,14 +5,14 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.tiles.TileGenerator;
 
 public class ContainerGenerator extends Container
 {
-	private TileEntityGenerator tileEntityGenerator;
+	private TileGenerator tileGenerator;
 
-	public ContainerGenerator(EntityPlayer player, TileEntityGenerator tileentity) {
-    	this.tileEntityGenerator = tileentity;
+	public ContainerGenerator(EntityPlayer player, TileGenerator tileentity) {
+		this.tileGenerator = tileentity;
 
 		// InventorySampleで追加するインベントリ
     	// かまど上部スロット
