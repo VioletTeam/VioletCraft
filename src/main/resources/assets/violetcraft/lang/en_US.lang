@@ -11,4 +11,6 @@ block.virenore.name=Viren Ore
 
 entity.MoonRabbit.name=MoonRabbit
 
+tile.block_viren_block.name=Viren Block
+
 itemGroup.violettab=Violet Tab

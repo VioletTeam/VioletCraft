@@ -6,4 +6,6 @@ item.moonrabbit_tear.name=ムーンラビットの涙
 item.raw_moonrabbit.name=生のムーンラビットの肉
 item.cooked_moonrabbit.name=焼いたムーンラビットの肉
 
+tile.block_viren_block.name=Viren Block
+
 entity.MoonRabbit.name=ムーンラビット
