@@ -61,10 +61,6 @@ public class VioletCraftMod {
         ItemsRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
-
-//       	BlockVirenOre = new BlockVirenOre();
-//    	GameRegistry.registerBlock(BlockVirenOre, "BlockVirenOre");
-//    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
     }
 
     /***
@@ -80,9 +76,6 @@ public class VioletCraftMod {
                 .setCreativeTab(VioletCraftMod.VioletCradtMod);
         GameRegistry.registerBlock(GuiBlock, "GuiBlock");
         VioletEntity.register(this);
-
-//        sampleGuiItem = new SampleGuiItem().setTextureName("arrow").setUnlocalizedName("sampleGuiItem").setCreativeTab(CreativeTabs.tabMisc);
-//        GameRegistry.registerItem(sampleGuiItem, "sample_GuiItem");
 
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
 

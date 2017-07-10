@@ -1,25 +1,25 @@
-package violetcraft.items.block.ore;
+package violetcraft.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftMod;
 
-public class PinkSapphireOre extends Block
+public class BlockBlueTopazOre extends Block
 {
-	public PinkSapphireOre()
+	public BlockBlueTopazOre()
 	{
 		super(Material.rock);
 
 		setCreativeTab(VioletCraftMod.VioletCradtMod);
-		setBlockName("PinkSapphireOre");
-		setBlockTextureName("violetcraft:PinkSapphire_Ore");
+		setBlockName("BlueTopazOre");
+		setBlockTextureName("violetcraft:BlueTopaz_Ore");
 	    setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
         setLightOpacity(1);
         setLightLevel(0F);
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
-        GameRegistry.registerBlock(this, "PinkSapphireOre");
+        GameRegistry.registerBlock(this, "BlueTopazOre");
 	}
 }

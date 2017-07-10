@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.item;
 
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -17,8 +17,8 @@ import violetcraft.entity.EntityMoonRabbit;
 
 import static violetcraft.VioletCraftMod.VioletCradtMod;
 
-public class Rabbitegg extends Item {
-    public Rabbitegg() {
+public class ItemRabbitegg extends Item {
+    public ItemRabbitegg() {
         String name = "moonrabbitegg";
 
         this.setCreativeTab(VioletCradtMod);

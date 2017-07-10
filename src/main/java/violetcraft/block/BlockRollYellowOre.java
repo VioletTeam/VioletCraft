@@ -1,13 +1,13 @@
-package violetcraft.items.block.ore;
+package violetcraft.block;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftMod;
 
-public class RollYellowOre extends Block
+public class BlockRollYellowOre extends Block
 {
-	public RollYellowOre()
+	public BlockRollYellowOre()
 	{
 		super(Material.rock);
 

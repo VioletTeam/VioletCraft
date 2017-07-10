@@ -1,12 +1,12 @@
-package violetcraft.items;
+package violetcraft.item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import violetcraft.VioletCraftMod;
 
-public class VirenIngot extends Item
+public class ItemVirenIngot extends Item
 {
-    public VirenIngot()
+    public ItemVirenIngot()
     {
 		String name = "vireningot";
 

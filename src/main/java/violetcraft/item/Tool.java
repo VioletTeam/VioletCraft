@@ -1,4 +1,4 @@
-package violetcraft.items;
+package violetcraft.item;
 
 import java.util.Set;
 
