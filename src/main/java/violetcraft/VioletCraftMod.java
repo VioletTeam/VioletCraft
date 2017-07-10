@@ -39,7 +39,6 @@ public class VioletCraftMod {
 
     @Mod.Metadata
     public static ModMetadata metadata;
-
     public static Block BlockVirenOre;
 
     public static final int GUI_ID = 0;
@@ -72,6 +71,10 @@ public class VioletCraftMod {
         ItemRegistry.registry();
         MachineRegistry.registry();
         Recipes.registry();
+
+//       	BlockVirenOre = new BlockVirenOre();
+//    	GameRegistry.registerBlock(BlockVirenOre, "BlockVirenOre");
+//    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
     }
 
     /***
@@ -86,6 +89,7 @@ public class VioletCraftMod {
                 .setBlockTextureName("violetcraft:Gui_Block")
                 .setBlockName("GuiBlock")
                 .setCreativeTab(VioletCraftMod.VioletCradtTab);
+
         GameRegistry.registerBlock(GuiBlock, "GuiBlock");
         VioletEntity.register(this);
 

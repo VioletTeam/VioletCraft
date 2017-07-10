@@ -20,6 +20,7 @@ public class Smelt {
     public void init(FMLInitializationEvent event){
 
         GameRegistry.addSmelting(VioletCraftMod.BlockVirenOre,new ItemStack(ItemRegistry.VirenIngot),0.1f);
+        GameRegistry.addSmelting(ItemRegistry.moonmeat_raw,new ItemStack(ItemRegistry.moonmeat_cooked),0.1f);
 
         GameRegistry.registerFuelHandler(new IFuelHandler(){
             @Override
