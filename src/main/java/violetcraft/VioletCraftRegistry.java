@@ -31,7 +31,6 @@ import violetcraft.tiles.TileGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
-
     /***
      * Material
      */
