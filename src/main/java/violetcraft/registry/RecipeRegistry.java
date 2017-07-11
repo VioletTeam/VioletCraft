@@ -12,9 +12,9 @@ public class RecipeRegistry {
 	 */
 	public static void registerRecipes()
 	{
-		GameRegistry.addRecipe ( new ItemStack(ItemRegistry.VirenSword, 1),
+		GameRegistry.addRecipe ( new ItemStack(BlockRegistry.BlockVirenBlock, 1),
 			"xxx", "xxx", "xxx",
-			'x', BlockRegistry.BlockVirenBlock);
+			'x', ItemRegistry.VirenIngot);
 		GameRegistry.addRecipe ( new ItemStack(ItemRegistry.VirenSword, 1),
 			" x ", " x ", " y ",
 			'x', ItemRegistry.VirenIngot,
