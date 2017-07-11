@@ -12,7 +12,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
 import violetcraft.registry.MachineRegistry;
-import violetcraft.tiles.TilEntityeTestMachine;
+import violetcraft.tileentity.TilEntityeTestMachine;
 
 public class ItemTestMachine extends BlockContainer
 {

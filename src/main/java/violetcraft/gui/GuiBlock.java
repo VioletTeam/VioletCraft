@@ -12,7 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tileentity.TileEntityGuiBlock;
 
 public class GuiBlock extends Block implements ITileEntityProvider
 {
