@@ -12,11 +12,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.config.Configuration;
-import violetcraft.entity.EntityViolet;
 import violetcraft.gui.GuiHandler;
 
-@Mod(modid = VioletCraft.MOD_ID, name = VioletCraft.MOD_NAME, version = VioletCraft.VERSION, useMetadata = true)
-public final class VioletCraft {
+@Mod(modid = VioletCraftMod.MOD_ID, name = VioletCraftMod.MOD_NAME, version = VioletCraftMod.VERSION, useMetadata = true)
+public final class VioletCraftMod {
     //Mod Info
     public static final String MOD_ID = "violetcraftmod";
     public static final String MOD_NAME = "ViolentCraft";
@@ -27,7 +26,7 @@ public final class VioletCraft {
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)
-    public static VioletCraft INSTANCE;
+    public static VioletCraftMod INSTANCE;
     @Mod.Metadata
     public static ModMetadata metadata;
 
@@ -64,7 +63,6 @@ public final class VioletCraft {
     @EventHandler
     @SuppressWarnings("unused")
     public void init(FMLInitializationEvent event) {
-        EntityViolet.register(this);
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         VioletCraftRegistry.handleInit(event);
     }
@@ -77,8 +75,6 @@ public final class VioletCraft {
     @EventHandler
     @SuppressWarnings("unused")
     public void postInit(FMLPostInitializationEvent event) {
-        EntityViolet.register(this);
-        EntityViolet.addSpawns();
         proxy.registerRender();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());

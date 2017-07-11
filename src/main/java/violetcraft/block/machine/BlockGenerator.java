@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 import violetcraft.VioletCraftRegistry;
 import violetcraft.tiles.TileGenerator;
 
@@ -50,7 +50,7 @@ public class BlockGenerator extends BlockContainer
 
         if (tileGenerator != null)
             {
-				player.openGui(VioletCraft.INSTANCE, VioletCraft.GUI_GENERATOR, world, x, y, z);
+				player.openGui(VioletCraftMod.INSTANCE, VioletCraftMod.GUI_GENERATOR, world, x, y, z);
 			}
 
 			return true;

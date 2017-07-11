@@ -4,7 +4,7 @@ import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.VioletCraft;
+import violetcraft.VioletCraftMod;
 import violetcraft.tiles.TileGenerator;
 import violetcraft.tiles.TileGuiBlock;
 
@@ -21,7 +21,7 @@ public class GuiHandler implements IGuiHandler
         if (tileentity instanceof TileGuiBlock) {
             return new ContainerViolet(player, (TileGuiBlock) tileentity);
         }
-        if (ID == VioletCraft.GUI_GENERATOR) {
+        if (ID == VioletCraftMod.GUI_GENERATOR) {
             return new ContainerGenerator(player, (TileGenerator) tileentity);
         }
         return null;

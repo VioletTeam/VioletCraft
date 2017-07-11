@@ -2,14 +2,17 @@ package violetcraft;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
@@ -18,6 +21,7 @@ import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
 import violetcraft.block.ore.BlockRollYellowOre;
 import violetcraft.block.ore.BlockScarRedOre;
+import violetcraft.entity.EntityMoonRabbit;
 import violetcraft.item.*;
 import violetcraft.item.armor.ItemYukariParker;
 import violetcraft.tiles.TileGenerator;
@@ -103,6 +107,7 @@ public final class VioletCraftRegistry {
         //Add Smelting Recipes
         GameRegistry.addSmelting(VioletCraftRegistry.VirenOre, new ItemStack(VioletCraftRegistry.VirenIngot), 0.1f);
 
+        //Add Fuel Handler
         GameRegistry.registerFuelHandler(fuel -> {
             Item item = fuel.getItem();
             if (item == Items.apple) {
@@ -111,6 +116,12 @@ public final class VioletCraftRegistry {
                 return 0;
             }
         });
+
+        //Add Entities
+        EntityRegistry.registerModEntity(EntityMoonRabbit.class, "MoonRabbit", 0, VioletCraftMod.INSTANCE, 30, 1, false);
+
+        //Add Entity Spawns
+        EntityRegistry.addSpawn(EntityMoonRabbit.class, 5, 1, 4, EnumCreatureType.creature, BiomeGenBase.plains);
     }
 
     private static void registerBlock(Block block) {
