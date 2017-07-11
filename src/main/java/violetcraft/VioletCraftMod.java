@@ -41,6 +41,9 @@ public class VioletCraftMod {
     public static ModMetadata metadata;
     public static Block BlockVirenOre;
 
+    // 独自ディメンションのID
+    public static int dimensionID = -5;
+
     public static final int GUI_ID = 0;
     public static Block GuiBlock;
 
