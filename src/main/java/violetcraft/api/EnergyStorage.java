@@ -4,13 +4,13 @@ public class EnergyStorage implements IEnergyStorage{
 
 	protected int energy;
 	protected int capacity;
-	protected int maxReceive;
-	protected int maxExtract;
+	protected int maxInput;
+	protected int maxOutput;
 
 	/* IEnergyStorage */
 	@Override
 	public int inputEnergy(int maxInput, boolean has) {
-		int energyReceived = Math.min(capacity - energy, Math.min(this.maxReceive, maxReceive));
+		int energyReceived = Math.min(capacity - energy, Math.min(this.maxInput, maxInput));
 
 		if (!has) {
 			energy += energyReceived;
@@ -20,7 +20,7 @@ public class EnergyStorage implements IEnergyStorage{
 
 	@Override
 	public int outputEnergy(int maxOutput, boolean has) {
-		int energyExtracted = Math.min(energy, Math.min(this.maxExtract, maxExtract));
+		int energyExtracted = Math.min(energy, Math.min(this.maxOutput, maxOutput));
 
 		if (!has) {
 			energy -= energyExtracted;
