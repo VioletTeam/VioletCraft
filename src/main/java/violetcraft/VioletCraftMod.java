@@ -14,6 +14,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
@@ -49,10 +50,9 @@ public class VioletCraftMod {
 
     BiomeIdManager idManager = new BiomeIdManager();
     // 独自ディメンションのID
-    public static int dimensionID = -60;
-    public static int providerType = -60;
+    public static int dimensionID = -90;
+    public static int providerType = -61;
 
-    public static BiomeGenBase violet;
 
     public static int biomevioletID = 80;
     public static int biomevioletID2 = 81;
@@ -128,15 +128,15 @@ public class VioletCraftMod {
     @EventHandler
     public void init(FMLInitializationEvent event) {
 
-        violet = (new BiomeGenViolet(biomevioletID))
+        BiomeGenBase violetplain = (new BiomeGenViolet(biomevioletID))
         .setColor(0x00ff00).setBiomeName("Violetplean");
-        violet = (new BiomeGenVioletIce(biomevioletID2))
+        BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
                 .setColor(0x00ff00).setBiomeName("VioletIce");
         VioletEntity.register(this);
         VioletEntity.addSpawns();
         proxy.registerRender();
 
-        NetworkRegistry.INSTANCE.registerGuiHandler(this.INSTANCE, new GuiHandler());
+        NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());
     }
 
 

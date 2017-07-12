@@ -63,7 +63,7 @@ public class ContainerViolet extends Container
 			}
 
 			if (itemStack1.stackSize == 0) {
-				slot.putStack((ItemStack) null);
+				slot.putStack(null);
 			} else {
 				slot.onSlotChanged();
 			}

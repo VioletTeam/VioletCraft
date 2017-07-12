@@ -1,13 +1,7 @@
 package violetcraft.world.biome;
 
-import javafx.scene.LightBase;
-import javafx.scene.image.PixelWriter;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import org.w3c.dom.css.CSS2Properties;
-import org.w3c.dom.html.HTMLBaseFontElement;
-import org.w3c.dom.html.HTMLFontElement;
 import violetcraft.entity.EntityMoonRabbit;
 import violetcraft.registry.ItemRegistry;
 
@@ -28,7 +22,7 @@ public class BiomeGenVioletIce extends BiomeGenBase {
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
         this.spawnableCaveCreatureList.clear();
-        this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityMoonRabbit.class, 3, 1, 3));
+        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityMoonRabbit.class, 3, 1, 3));
         this.generateLakes = true;
         this.enableSnow = true;
         this.worldGeneratorTrees= true;

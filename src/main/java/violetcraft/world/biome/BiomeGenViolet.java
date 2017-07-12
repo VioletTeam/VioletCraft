@@ -1,7 +1,5 @@
 package violetcraft.world.biome;
 
-import net.minecraft.init.Blocks;
-
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import violetcraft.entity.EntityMoonRabbit;
@@ -21,7 +19,7 @@ public class BiomeGenViolet extends BiomeGenBase {
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
         this.spawnableCaveCreatureList.clear();
-        this.spawnableMonsterList.add(new SpawnListEntry(EntityMoonRabbit.class, 3, 1, 3));
+        this.spawnableCreatureList.add(new SpawnListEntry(EntityMoonRabbit.class, 6, 1, 3));
         this.generateLakes = true;
     }
 

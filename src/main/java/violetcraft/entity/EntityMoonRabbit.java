@@ -17,11 +17,13 @@ import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import violetcraft.registry.ItemRegistry;
 
@@ -136,6 +138,7 @@ public class EntityMoonRabbit extends EntityAnimal
             return super.attackEntityFrom(source, damage);
         }
     }
+
     public boolean func_152116_bZ()
     {
         return this.field_152118_bv;

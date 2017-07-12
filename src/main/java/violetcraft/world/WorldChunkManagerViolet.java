@@ -10,6 +10,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
+import violetcraft.VioletCraftMod;
 import violetcraft.world.biome.BiomeGenViolet;
 import violetcraft.world.biome.BiomeGenVioletIce;
 
@@ -26,13 +27,17 @@ public class WorldChunkManagerViolet extends WorldChunkManager {
     private GenLayer biomeIndexLayer;
     private BiomeCache biomeCache;
     private List biomesToSpawnIn;
-    private BiomeGenVioletIce iceviolet;
-    private BiomeGenViolet plainviolet;
 
+    public static int biomevioletID = 80;
+    public static int biomevioletID2 = 81;
+
+    private BiomeGenBase plainviolet = (new BiomeGenViolet(biomevioletID));
+    private BiomeGenBase iceviolet = (new BiomeGenVioletIce(biomevioletID2));
     // 独自ディメンションにはメサとキノコバイオームのみ
     private ArrayList<BiomeGenBase> allowedBiomes = new ArrayList<BiomeGenBase>(Arrays.asList(plainviolet,iceviolet));
 
     public static final BiomeGenBase[] biomeList = new BiomeGenBase[256];
+
 
     {
         for (int i = 0; i < 256; ++i) {

@@ -7,5 +7,8 @@ item.raw_moonrabbit.name=生のムーンラビットの肉
 item.cooked_moonrabbit.name=焼いたムーンラビットの肉
 
 tile.block_viren_block.name=Viren Block
+tile.VioletGrassBlock.name=バイオレットの草ブロック
+tile.VioletGrass.name=バイオレットの草
+tile.VioletDift.name=バイオレットの土
 
 entity.MoonRabbit.name=ムーンラビット

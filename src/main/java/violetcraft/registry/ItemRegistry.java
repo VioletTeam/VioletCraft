@@ -68,7 +68,7 @@ public class ItemRegistry {
         moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
         moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
         rabbittear = new ItemMoonRabbitTear();
-        portal = new BlockVioletPortal(Material.portal,string);
+        portal = new BlockVioletPortal();
         dift = new VioletDift();
         grassblock = new BlockVioletGrass();
         grass = new VioletGrass();
