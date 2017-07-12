@@ -1,6 +1,7 @@
 package violetcraft.block;
 
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,13 +19,14 @@ public class BlockVioletPortal extends Block {
 
     public BlockVioletPortal(Material p_i45394_1_, String name) {
         super(p_i45394_1_);
+        name = "VioletPortal";
         setBlockName(name);
         setBlockTextureName("violetcraft:violetportal");
         setHardness(3.0F);
         setResistance(2.0F);
         setStepSound(Block.soundTypeStone);
         setLightLevel(1.5F);
-        setBlockName("violetportal");
+        GameRegistry.registerBlock(this, name);
     }
     public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
     {

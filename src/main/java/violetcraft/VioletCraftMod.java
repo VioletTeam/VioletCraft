@@ -13,6 +13,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
@@ -20,7 +22,11 @@ import violetcraft.gui.GuiHandler;
 import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
+import violetcraft.registry.RecipeRegistry;
 import violetcraft.registry.TileEntityRegistry;
+import violetcraft.world.WorldProviderViolet;
+import violetcraft.world.biome.BiomeGenViolet;
+import violetcraft.world.biome.BiomeGenVioletIce;
 
 @Mod(modid		= VioletCraftMod.MOD_ID,
 	 name		= VioletCraftMod.MOD_NAME,
@@ -41,8 +47,16 @@ public class VioletCraftMod {
     public static ModMetadata metadata;
     public static Block BlockVirenOre;
 
+    BiomeIdManager idManager = new BiomeIdManager();
     // 独自ディメンションのID
-    public static int dimensionID = -5;
+    public static int dimensionID = -60;
+    public static int providerType = -60;
+
+    public static BiomeGenBase violet;
+
+    public static int biomevioletID = 80;
+    public static int biomevioletID2 = 81;
+
 
     public static final int GUI_ID = 0;
     public static Block GuiBlock;
@@ -73,7 +87,7 @@ public class VioletCraftMod {
         BlockRegistry.blockRegistry();
         ItemRegistry.registry();
         MachineRegistry.registry();
-        Recipes.registry();
+        RecipeRegistry.registerRecipes();
 
 //       	BlockVirenOre = new BlockVirenOre();
 //    	GameRegistry.registerBlock(BlockVirenOre, "BlockVirenOre");
@@ -100,6 +114,10 @@ public class VioletCraftMod {
 
         TileEntityRegistry.registry();
 
+        DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
+
+        // 独自ディメンションを登録
+        DimensionManager.registerDimension(dimensionID, providerType);
     }
 
     /***
@@ -109,13 +127,16 @@ public class VioletCraftMod {
      */
     @EventHandler
     public void init(FMLInitializationEvent event) {
+
+        violet = (new BiomeGenViolet(biomevioletID))
+        .setColor(0x00ff00).setBiomeName("Violetplean");
+        violet = (new BiomeGenVioletIce(biomevioletID2))
+                .setColor(0x00ff00).setBiomeName("Violetplean");
         VioletEntity.register(this);
         VioletEntity.addSpawns();
         proxy.registerRender();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(this.INSTANCE, new GuiHandler());
-	    /*EntityのRenderを登録する
-	     *Client側でのみ登録するため、今回はif文で処理をする。*/
     }
 
 

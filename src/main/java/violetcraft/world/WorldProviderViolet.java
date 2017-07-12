@@ -9,21 +9,21 @@ public class WorldProviderViolet extends WorldProvider {
 
     @Override
     public String getDimensionName() {
-        return "Sample";
+        return "Violet";
     }
 
     // 独自のワールドタイプやワールドチャンクマネージャーを設定
     @Override
     protected void registerWorldChunkManager() {
         worldObj.getWorldInfo().setTerrainType(WorldTypeViolet.worldTypeSample);
-        worldChunkMgr = new WorldChunkManagerSample(worldObj);
+        worldChunkMgr = new WorldChunkManagerViolet(worldObj);
         setDimension(VioletCraftMod.dimensionID);
-        hasNoSky = false;
+        hasNoSky = true;
     }
 
     // チャンク生成は独自のチャンクプロバイダが担当する
     @Override
     public IChunkProvider createChunkGenerator() {
-        return new ChunkProviderSample(worldObj, worldObj.getSeed(), true);
+        return new ChunkProviderViolet(worldObj, worldObj.getSeed(), true);
     }
 }

@@ -19,12 +19,10 @@ public class ItemRegistry {
     public static Block blueTopazOre;
     public static Block PinkSapphireOre;
     public static Block BlockVirenOre;
-    public static Block dimensionportal;
-    public static Block violetdift;
-    public static Block violetgrass;
-    public static Block violettallgrass;
-
-
+    public static Block grassblock;
+    public static Block grass;
+    public static Block portal;
+    public static Block dift;
 
     /***
      * Ingot
@@ -43,17 +41,19 @@ public class ItemRegistry {
     public static Item test;
     public static Item moonmeat_cooked;
     public static Item moonmeat_raw;
-    public static Item moonrabbit_tear;
+    public static Item rabbittear;
     public static Item rabbitegg;
     /***
      * YukariParker
      */
     public static Item yukariParker;
-
+    /***
+     * egg
+     */
     public static String string;
 
-    public static void registry() {
 
+    public static void registry() {
         VirenIngot = new ItemVirenIngot();
         VirenSword = new ItemVirenSword();
 
@@ -65,14 +65,12 @@ public class ItemRegistry {
         yukariParker = new ItemYukariParker(Parker, 0, 1);
 
         rabbitegg = new ItemRabbitegg();
-        moonrabbit_tear = new ItemMoonRabbitTear();
         moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
         moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
-
-        dimensionportal = new BlockVioletPortal(Material.portal ,string);
-        violetdift = new VioletDift();
-        violetgrass = new BlockVioletGrass();
-        violettallgrass = new VioletGrass();
-
+        rabbittear = new ItemMoonRabbitTear();
+        portal = new BlockVioletPortal(Material.portal,string);
+        dift = new VioletDift();
+        grassblock = new BlockVioletGrass();
+        grass = new VioletGrass();
     }
 }
