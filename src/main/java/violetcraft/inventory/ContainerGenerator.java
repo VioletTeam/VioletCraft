@@ -5,7 +5,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.tileentity.TileEntityGenerator;
 
 public class ContainerGenerator extends Container
 {

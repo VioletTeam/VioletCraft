@@ -6,7 +6,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tileentity.TileEntityGuiBlock;
 
 public class GuiContainerViolet extends GuiContainer
 {

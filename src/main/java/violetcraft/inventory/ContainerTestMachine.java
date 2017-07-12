@@ -10,7 +10,7 @@ import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntityFurnace;
-import violetcraft.tiles.TilEntityeTestMachine;
+import violetcraft.tileentity.TilEntityeTestMachine;
 
 public class ContainerTestMachine extends Container
 {

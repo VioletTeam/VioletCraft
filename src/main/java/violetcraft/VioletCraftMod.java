@@ -20,6 +20,7 @@ import violetcraft.gui.GuiHandler;
 import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
+import violetcraft.registry.RecipeRegistry;
 import violetcraft.registry.TileEntityRegistry;
 
 @Mod(modid		= VioletCraftMod.MOD_ID,
@@ -73,7 +74,7 @@ public class VioletCraftMod {
         BlockRegistry.blockRegistry();
         ItemRegistry.registry();
         MachineRegistry.registry();
-        Recipes.registry();
+        RecipeRegistry.registerRecipes();
 
 //       	BlockVirenOre = new BlockVirenOre();
 //    	GameRegistry.registerBlock(BlockVirenOre, "BlockVirenOre");

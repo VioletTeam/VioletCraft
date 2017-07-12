@@ -2,12 +2,20 @@ package violetcraft.registry;
 
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.*;
-import violetcraft.item.*;
+import violetcraft.block.BlockBlueTopazOre;
+import violetcraft.block.BlockPinkSapphireOre;
+import violetcraft.block.BlockRollYellowOre;
+import violetcraft.block.BlockScarRedOre;
+import violetcraft.block.BlockVirenOre;
+import violetcraft.item.ItemCookedMoonRabbit;
+import violetcraft.item.ItemRabbitegg;
+import violetcraft.item.ItemRawMoonRabbit;
+import violetcraft.item.ItemVirenIngot;
+import violetcraft.item.ItemVirenSword;
+import violetcraft.item.ItemYukariParker;
 
 public class ItemRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
@@ -19,12 +27,6 @@ public class ItemRegistry {
     public static Block blueTopazOre;
     public static Block PinkSapphireOre;
     public static Block BlockVirenOre;
-    public static Block dimensionportal;
-    public static Block violetdift;
-    public static Block violetgrass;
-    public static Block violettallgrass;
-
-
 
     /***
      * Ingot
@@ -43,17 +45,17 @@ public class ItemRegistry {
     public static Item test;
     public static Item moonmeat_cooked;
     public static Item moonmeat_raw;
-    public static Item moonrabbit_tear;
     public static Item rabbitegg;
     /***
      * YukariParker
      */
     public static Item yukariParker;
+    /***
+     * egg
+     */
 
-    public static String string;
 
     public static void registry() {
-
         VirenIngot = new ItemVirenIngot();
         VirenSword = new ItemVirenSword();
 
@@ -65,14 +67,7 @@ public class ItemRegistry {
         yukariParker = new ItemYukariParker(Parker, 0, 1);
 
         rabbitegg = new ItemRabbitegg();
-        moonrabbit_tear = new ItemMoonRabbitTear();
         moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
         moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
-
-        dimensionportal = new BlockVioletPortal(Material.portal ,string);
-        violetdift = new VioletDift();
-        violetgrass = new BlockVioletGrass();
-        violettallgrass = new VioletGrass();
-
     }
 }
