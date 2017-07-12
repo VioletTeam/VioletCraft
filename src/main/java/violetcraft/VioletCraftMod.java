@@ -131,7 +131,7 @@ public class VioletCraftMod {
         violet = (new BiomeGenViolet(biomevioletID))
         .setColor(0x00ff00).setBiomeName("Violetplean");
         violet = (new BiomeGenVioletIce(biomevioletID2))
-                .setColor(0x00ff00).setBiomeName("Violetplean");
+                .setColor(0x00ff00).setBiomeName("VioletIce");
         VioletEntity.register(this);
         VioletEntity.addSpawns();
         proxy.registerRender();
