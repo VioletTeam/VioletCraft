@@ -5,13 +5,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.tileentity.TileEntityMusicGenerator;
 
-public class ContainerGenerator extends Container
+public class ContainerMusicGenerator extends Container
 {
-	private TileEntityGenerator tileEntityGenerator;
+	private TileEntityMusicGenerator tileEntityGenerator;
 
-	public ContainerGenerator(EntityPlayer player, TileEntityGenerator tileentity) {
+	public ContainerMusicGenerator(EntityPlayer player, TileEntityMusicGenerator tileentity) {
     	this.tileEntityGenerator = tileentity;
 
 		// InventorySampleで追加するインベントリ

@@ -18,8 +18,10 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import violetcraft.api.EnergyStorage;
+import violetcraft.api.IEnergyStorage;
 
-public class TileEntityGenerator extends TileEntity implements ISidedInventory
+public class TileEntityMusicGenerator extends TileEntity implements ISidedInventory
 {
 	//生成時間
 	public int generatorTime;
@@ -59,10 +61,13 @@ public class TileEntityGenerator extends TileEntity implements ISidedInventory
 
 //        this.amountEE = testEE(this.GeneratorItemStack[1]);
 
+        IEnergyStorage energyStorage = new EnergyStorage();
+
         if (this.generatorTime > 0)
         {
             --this.generatorTime;
-            this.generatorAmount += this.amountEE;
+            generatorAmount += this.amountEE;
+            energyStorage.inputEnergy(100, true);
         }
 
         if (this.generatorTime != 0 || this.GeneratorItemStack[1] != null)

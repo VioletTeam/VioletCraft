@@ -5,17 +5,19 @@ import org.lwjgl.opengl.GL11;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
-import violetcraft.inventory.ContainerGenerator;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.api.EnergyStorage;
+import violetcraft.api.IEnergyStorage;
+import violetcraft.inventory.ContainerMusicGenerator;
+import violetcraft.tileentity.TileEntityMusicGenerator;
 
 
-public class GuiGenerator extends GuiContainer
+public class GuiMusicGenerator extends GuiContainer
 {
 	private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/gui_generator.png");
-	private TileEntityGenerator tileEntityGenerator;
+	private TileEntityMusicGenerator tileEntityGenerator;
 
-	public GuiGenerator(EntityPlayer player, TileEntityGenerator tileentity) {
-        super(new ContainerGenerator(player, tileentity));
+	public GuiMusicGenerator(EntityPlayer player, TileEntityMusicGenerator tileentity) {
+        super(new ContainerMusicGenerator(player, tileentity));
         this.tileEntityGenerator = tileentity;
     }
 
@@ -35,7 +37,10 @@ public class GuiGenerator extends GuiContainer
     		fontRendererObj.drawString(Sta1 ,80 ,30 , 424342);
 
     		int ts = this.tileEntityGenerator.generatorAmount;
-    		String  Sta2 = String.valueOf(ts);
+            IEnergyStorage energyStorage = new EnergyStorage();
+            int Storage = energyStorage.getEnergyStored();
+
+    		String  Sta2 = String.valueOf(Storage);
     		fontRendererObj.drawString(Sta2 ,120 ,30 , 424342);
     	}
 	}

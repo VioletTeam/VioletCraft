@@ -12,14 +12,14 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
 import violetcraft.registry.MachineRegistry;
-import violetcraft.tiles.TileEntityGenerator;
+import violetcraft.tileentity.TileEntityMusicGenerator;
 
-public class BlockGenerator extends BlockContainer
+public class BlockMusicGenerator extends BlockContainer
 {
 
 	private static boolean field_149934_M;
 
-	public BlockGenerator()
+	public BlockMusicGenerator()
 	{
 		super(Material.rock);
 		setCreativeTab(VioletCraftMod.VioletCradtTab);
@@ -39,7 +39,7 @@ public class BlockGenerator extends BlockContainer
 //			return true;
 //		} else {
 			// GUIを開く。
-			TileEntityGenerator TileEntityGenerator = (TileEntityGenerator)world.getTileEntity(x, y, z);
+			TileEntityMusicGenerator TileEntityGenerator = (TileEntityMusicGenerator)world.getTileEntity(x, y, z);
 
             if (TileEntityGenerator != null)
             {
@@ -52,7 +52,7 @@ public class BlockGenerator extends BlockContainer
 
 	@Override
 	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-		return new TileEntityGenerator();
+		return new TileEntityMusicGenerator();
 	}
 
 	//ブロックが壊れた時の処理
@@ -60,7 +60,7 @@ public class BlockGenerator extends BlockContainer
 	@Override
 	public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6)
 	{
-		TileEntityGenerator tileentity = (TileEntityGenerator) par1World.getTileEntity(par2, par3, par4);
+		TileEntityMusicGenerator tileentity = (TileEntityMusicGenerator) par1World.getTileEntity(par2, par3, par4);
 
 		if (tileentity != null)
 		{
