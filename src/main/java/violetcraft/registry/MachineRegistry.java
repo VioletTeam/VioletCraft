@@ -1,7 +1,7 @@
 package violetcraft.registry;
 
 import net.minecraft.block.Block;
-import violetcraft.block.BlockGenerator;
+import violetcraft.block.BlockMusicGenerator;
 import violetcraft.item.ItemTestMachine;
 
 public class MachineRegistry
@@ -13,6 +13,6 @@ public class MachineRegistry
 	public static void registry()
 	{
 		TestMachine = new ItemTestMachine();
-		BlockGenerator = new BlockGenerator();
+		BlockGenerator = new BlockMusicGenerator();
 	}
 }
