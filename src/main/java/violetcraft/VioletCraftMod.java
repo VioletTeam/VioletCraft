@@ -102,7 +102,7 @@ public class VioletCraftMod {
      * @param event see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
-    public void Init(FMLPostInitializationEvent event) {
+    public void preInit(FMLPostInitializationEvent event) {
         BiomeGenBase violetplain = (new BiomeGenViolet(biomevioletID))
                 .setColor(0x00ff00).setBiomeName("Violetplean");
         BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
