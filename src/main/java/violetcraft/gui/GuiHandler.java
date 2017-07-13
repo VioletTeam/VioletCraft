@@ -7,8 +7,9 @@ import net.minecraft.world.World;
 import violetcraft.inventory.ContainerMusicGenerator;
 import violetcraft.inventory.ContainerTestMachine;
 import violetcraft.tileentity.TilEntityeTestMachine;
-import violetcraft.tileentity.TileEntityMusicGenerator;
 import violetcraft.tileentity.TileEntityGuiBlock;
+import violetcraft.tileentity.TileEntityMusicGenerator;
+
 
 public class GuiHandler implements IGuiHandler
 {

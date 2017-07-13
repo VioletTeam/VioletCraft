@@ -2,8 +2,9 @@ package violetcraft.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import violetcraft.tileentity.TilEntityeTestMachine;
-import violetcraft.tileentity.TileEntityMusicGenerator;
 import violetcraft.tileentity.TileEntityGuiBlock;
+import violetcraft.tileentity.TileEntityMusicGenerator;
+
 
 public class TileEntityRegistry
 {

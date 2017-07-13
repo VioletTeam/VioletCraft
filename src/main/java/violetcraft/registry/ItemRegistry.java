@@ -19,8 +19,8 @@ import violetcraft.item.ItemYukariParker;
 
 public class ItemRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
-    /**
-     * Block
+    /***
+     * Ore
      */
     public static Block RollYellowOre;
     public static Block ScarRedOre;
@@ -56,16 +56,14 @@ public class ItemRegistry {
 
 
     public static void registry() {
-    	// Block
+        VirenIngot = new ItemVirenIngot();
+        VirenSword = new ItemVirenSword();
+
         RollYellowOre = new BlockRollYellowOre();
         ScarRedOre = new BlockScarRedOre();
         blueTopazOre = new BlockBlueTopazOre();
         PinkSapphireOre = new BlockPinkSapphireOre();
         BlockVirenOre = new BlockVirenOre();
-
-        VirenIngot = new ItemVirenIngot();
-        VirenSword = new ItemVirenSword();
-
         yukariParker = new ItemYukariParker(Parker, 0, 1);
 
         rabbitegg = new ItemRabbitegg();

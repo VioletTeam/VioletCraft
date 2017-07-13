@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import violetcraft.tileentity.TileEntityMusicGenerator;
 
+
 public class ContainerMusicGenerator extends Container
 {
 	private TileEntityMusicGenerator tileEntityGenerator;
