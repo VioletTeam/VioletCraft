@@ -2,7 +2,6 @@ package violetcraft.world.biome;
 
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import net.minecraft.world.gen.structure.MapGenVillage;
 import violetcraft.entity.EntityMoonRabbit;
 import violetcraft.registry.ItemRegistry;
 

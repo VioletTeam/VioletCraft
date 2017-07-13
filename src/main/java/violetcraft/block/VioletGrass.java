@@ -1,4 +1,4 @@
-package violetcraft.block.dimension;
+package violetcraft.block;
 
 
 

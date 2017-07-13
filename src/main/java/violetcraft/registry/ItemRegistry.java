@@ -10,7 +10,7 @@ import violetcraft.block.*;
 import violetcraft.block.dimension.BlockVioletPortal;
 import violetcraft.block.dimension.BlockVioletGrass;
 import violetcraft.block.dimension.BlockVioletDift;
-import violetcraft.block.dimension.VioletGrass;
+import violetcraft.block.VioletGrass;
 import violetcraft.item.*;
 
 public class ItemRegistry {
