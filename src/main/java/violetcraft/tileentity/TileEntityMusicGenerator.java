@@ -18,8 +18,8 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
-import violetcraft.api.EnergyStorage;
-import violetcraft.api.IEnergyStorage;
+import violetcraft.api.cofh.api.energy.EnergyStorage;
+import violetcraft.api.cofh.api.energy.IEnergyStorage;
 
 public class TileEntityMusicGenerator extends TileEntity implements ISidedInventory
 {
@@ -59,15 +59,14 @@ public class TileEntityMusicGenerator extends TileEntity implements ISidedInvent
         boolean flag = this.generatorTime > 0;
         boolean flag1 = false;
 
-//        this.amountEE = testEE(this.GeneratorItemStack[1]);
-
-        IEnergyStorage energyStorage = new EnergyStorage();
+        IEnergyStorage energyStorage = new EnergyStorage(10000);
 
         if (this.generatorTime > 0)
         {
             --this.generatorTime;
-            generatorAmount += this.amountEE;
-            energyStorage.inputEnergy(100, true);
+            generatorAmount = energyStorage.receiveEnergy(100, true);
+//            		this.amountEE;
+
         }
 
         if (this.generatorTime != 0 || this.GeneratorItemStack[1] != null)
