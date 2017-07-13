@@ -16,12 +16,12 @@ import static net.minecraft.block.BlockPortal.func_149999_b;
 
 public class BlockVioletPortal extends Block {
 
-    public BlockVioletPortal(Material p_i45394_1_, String name) {
+    protected BlockVioletPortal(Material p_i45394_1_,String name) {
         super(p_i45394_1_);
         setBlockName(name);
         setBlockTextureName("violetcraft:violetportal");
-        setHardness(3.0F);
-        setResistance(2.0F);
+        setHardness(1.0F);
+        setResistance(1.0F);
         setStepSound(Block.soundTypeStone);
         setLightLevel(1.5F);
         setBlockName("violetportal");
