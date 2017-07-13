@@ -10,12 +10,7 @@ import violetcraft.block.BlockPinkSapphireOre;
 import violetcraft.block.BlockRollYellowOre;
 import violetcraft.block.BlockScarRedOre;
 import violetcraft.block.BlockVirenOre;
-import violetcraft.item.ItemCookedMoonRabbit;
-import violetcraft.item.ItemRabbitegg;
-import violetcraft.item.ItemRawMoonRabbit;
-import violetcraft.item.ItemVirenIngot;
-import violetcraft.item.ItemVirenSword;
-import violetcraft.item.ItemYukariParker;
+import violetcraft.item.*;
 
 public class ItemRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
@@ -45,6 +40,7 @@ public class ItemRegistry {
     public static Item test;
     public static Item moonmeat_cooked;
     public static Item moonmeat_raw;
+    public static Item moonrabbit_tear;
     public static Item rabbitegg;
     /***
      * YukariParker
@@ -69,5 +65,6 @@ public class ItemRegistry {
         rabbitegg = new ItemRabbitegg();
         moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
         moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
+        moonrabbit_tear = new ItemMoonRabbitTear();
     }
 }
