@@ -19,7 +19,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import violetcraft.api.cofh.api.energy.EnergyStorage;
+import violetcraft.api.cofh.api.energy.IEnergyReceiver;
 import violetcraft.api.cofh.api.energy.IEnergyStorage;
+import violetcraft.api.cofh.api.energy.TileEnergyHandler;
 
 public class TileEntityMusicGenerator extends TileEntity implements ISidedInventory
 {
@@ -32,6 +34,7 @@ public class TileEntityMusicGenerator extends TileEntity implements ISidedInvent
 	public int currentgeneratorAmount;
 	public int generatorCookTime;
 	public int amountEE;
+	public IEnergyStorage energyStorage = new EnergyStorage(10000, 10000, 10000);
 
 
 	private String field_145958_o;
@@ -59,12 +62,15 @@ public class TileEntityMusicGenerator extends TileEntity implements ISidedInvent
         boolean flag = this.generatorTime > 0;
         boolean flag1 = false;
 
-        IEnergyStorage energyStorage = new EnergyStorage(10000);
+        IEnergyReceiver test = new TileEnergyHandler();
 
         if (this.generatorTime > 0)
         {
             --this.generatorTime;
-            generatorAmount = energyStorage.receiveEnergy(100, true);
+
+
+            energyStorage.receiveEnergy(100, false);
+            generatorAmount = energyStorage.getEnergyStored();
 //            		this.amountEE;
 
         }
