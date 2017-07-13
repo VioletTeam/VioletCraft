@@ -1,9 +1,9 @@
 package violetcraft.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import violetcraft.tiles.TilEntityeTestMachine;
-import violetcraft.tiles.TileEntityGenerator;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tileentity.TilEntityeTestMachine;
+import violetcraft.tileentity.TileEntityGenerator;
+import violetcraft.tileentity.TileEntityGuiBlock;
 
 public class TileEntityRegistry
 {

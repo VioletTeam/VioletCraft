@@ -6,9 +6,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.inventory.ContainerGenerator;
 import violetcraft.inventory.ContainerTestMachine;
-import violetcraft.tiles.TilEntityeTestMachine;
-import violetcraft.tiles.TileEntityGenerator;
-import violetcraft.tiles.TileEntityGuiBlock;
+import violetcraft.tileentity.TilEntityeTestMachine;
+import violetcraft.tileentity.TileEntityGenerator;
+import violetcraft.tileentity.TileEntityGuiBlock;
 
 public class GuiHandler implements IGuiHandler
 {

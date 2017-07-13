@@ -8,7 +8,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import violetcraft.inventory.ContainerTestMachine;
-import violetcraft.tiles.TilEntityeTestMachine;
+import violetcraft.tileentity.TilEntityeTestMachine;
 
 @SideOnly(Side.CLIENT)
 public class GuiTestMachine extends GuiContainer
