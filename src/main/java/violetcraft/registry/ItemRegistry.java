@@ -6,11 +6,11 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.BlockBlueTopazOre;
-import violetcraft.block.BlockPinkSapphireOre;
-import violetcraft.block.BlockRollYellowOre;
-import violetcraft.block.BlockScarRedOre;
-import violetcraft.block.BlockVirenOre;
+import violetcraft.block.*;
+import violetcraft.block.dimension.BlockVioletPortal;
+import violetcraft.block.dimension.BlockVioletGrass;
+import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.dimension.VioletGrass;
 import violetcraft.item.*;
 
 public class ItemRegistry {
@@ -41,7 +41,7 @@ public class ItemRegistry {
     public static Item test;
     public static Item moonmeat_cooked;
     public static Item moonmeat_raw;
-    public static Item moonrabbit_tear;
+    public static Item moonrabbit_tear=new ItemMoonRabbitTear();
     public static Item rabbitegg;
     /***
      * YukariParker
@@ -50,6 +50,10 @@ public class ItemRegistry {
     /***
      * egg
      */
+    public static Block violetgrassblock;
+    public static Block violetgrass;
+    public static Block violetdift;
+    public static Block violetportal;
 
 
     public static void registry() {
@@ -64,8 +68,14 @@ public class ItemRegistry {
         yukariParker = new ItemYukariParker(Parker, 0, 1);
 
         rabbitegg = new ItemRabbitegg();
-        moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
-        moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
-        GameRegistry.registerItem(new ItemMoonRabbitTear(),"moonrabbit_tear");
+        moonmeat_cooked = new ItemCookedMoonRabbit(5, 6, true);
+        moonmeat_raw = new ItemRawMoonRabbit(3, 1, true);
+        GameRegistry.registerItem(moonrabbit_tear, "moonrabbit_tear");
+
+        //block
+        violetgrassblock=GameRegistry.registerBlock(new BlockVioletGrass(), "violet_grassblock");
+        violetgrass=GameRegistry.registerBlock(new VioletGrass(), "violet_grass");
+        violetdift=GameRegistry.registerBlock(new BlockVioletDift(), "violet_dift");
+        violetportal=GameRegistry.registerBlock(new BlockVioletPortal(), "violet_portal");
     }
 }

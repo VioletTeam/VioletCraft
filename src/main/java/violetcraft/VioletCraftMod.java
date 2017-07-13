@@ -13,6 +13,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.entity.VioletEntity;
 import violetcraft.gui.GuiBlock;
@@ -22,6 +24,9 @@ import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.registry.RecipeRegistry;
 import violetcraft.registry.TileEntityRegistry;
+import violetcraft.world.WorldProviderViolet;
+import violetcraft.world.biome.BiomeGenViolet;
+import violetcraft.world.biome.BiomeGenVioletIce;
 
 @Mod(modid		= VioletCraftMod.MOD_ID,
 	 name		= VioletCraftMod.MOD_NAME,
@@ -42,8 +47,14 @@ public class VioletCraftMod {
     public static ModMetadata metadata;
     public static Block BlockVirenOre;
 
+    BiomeIdManager idManager = new BiomeIdManager();
     // 独自ディメンションのID
-    public static int dimensionID = -5;
+    public static int dimensionID = -90;
+    public static int providerType = -61;
+
+
+    public static int biomevioletID = 80;
+    public static int biomevioletID2 = 81;
 
     public static final int GUI_ID = 0;
     public static Block GuiBlock;
@@ -79,16 +90,23 @@ public class VioletCraftMod {
 //       	BlockVirenOre = new BlockVirenOre();
 //    	GameRegistry.registerBlock(BlockVirenOre, "BlockVirenOre");
 //    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
+        DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
+        // 独自ディメンションを登録
+        DimensionManager.registerDimension(dimensionID, providerType);
     }
 
     /***
      * レシピの追加
      * 各種データ設定
      *
-     * @param eventplease see cpw.mods.fml.common.event.FMLInitializationEvent
+     * @param event see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
-    public void preInit(FMLPostInitializationEvent event) {
+    public void Init(FMLPostInitializationEvent event) {
+        BiomeGenBase violetplain = (new BiomeGenViolet(biomevioletID))
+                .setColor(0x00ff00).setBiomeName("Violetplean");
+        BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
+                .setColor(0x00ff00).setBiomeName("VioletIce");
         GuiBlock = new GuiBlock()
                 .setBlockTextureName("violetcraft:Gui_Block")
                 .setBlockName("GuiBlock")
