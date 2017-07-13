@@ -14,7 +14,6 @@ public class MoonRabbitTear extends Item {
         maxStackSize = 16;
         this.setTextureName("violetcraft:moonrabbit_tear");
 
-        GameRegistry.registerItem(this, name);
 
     }
 }

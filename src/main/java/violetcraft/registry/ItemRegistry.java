@@ -1,6 +1,7 @@
 package violetcraft.registry;
 
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -65,6 +66,6 @@ public class ItemRegistry {
         rabbitegg = new ItemRabbitegg();
         moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
         moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
-        moonrabbit_tear = new ItemMoonRabbitTear();
+        GameRegistry.registerItem(new ItemMoonRabbitTear(),"moonrabbit_tear");
     }
 }
