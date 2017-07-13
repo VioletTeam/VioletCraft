@@ -5,10 +5,9 @@ import org.lwjgl.opengl.GL11;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
-import violetcraft.api.cofh.api.energy.EnergyStorage;
-import violetcraft.api.cofh.api.energy.IEnergyStorage;
 import violetcraft.inventory.ContainerMusicGenerator;
 import violetcraft.tileentity.TileEntityMusicGenerator;
+
 
 
 
@@ -37,8 +36,8 @@ public class GuiMusicGenerator extends GuiContainer
     		String  Sta1 = String.valueOf(i1);
     		fontRendererObj.drawString(Sta1 ,80 ,30 , 424342);
 
-    		IEnergyStorage es = new EnergyStorage();
-    		String  Sta2 = String.valueOf(es.getEnergyStored());
+    		int ts = this.tileEntityGenerator.generatorAmount;
+    		String  Sta2 = String.valueOf(ts);
     		fontRendererObj.drawString(Sta2 ,120 ,30 , 424342);
     	}
 	}
