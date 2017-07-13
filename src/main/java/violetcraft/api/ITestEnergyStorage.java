@@ -6,7 +6,7 @@ package violetcraft.api;
  * @author hrose_kei
  *
  */
-public interface IEnergyStorage {
+public interface ITestEnergyStorage {
 
 	/**
 	 * エネルギーの受け取り

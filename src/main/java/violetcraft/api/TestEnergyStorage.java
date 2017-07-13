@@ -1,11 +1,30 @@
 package violetcraft.api;
 
-public class EnergyStorage implements IEnergyStorage{
+public class TestEnergyStorage implements ITestEnergyStorage{
 
 	protected int energy;
 	protected int capacity;
 	protected int maxInput;
 	protected int maxOutput;
+
+
+	public TestEnergyStorage(int capacity) {
+
+		this(capacity, capacity, capacity);
+	}
+
+
+	public TestEnergyStorage(int capacity, int maxTransfer) {
+
+		this(capacity, maxTransfer, maxTransfer);
+	}
+
+	public TestEnergyStorage(int capacity, int maxInput, int maxOutput) {
+
+		this.capacity = capacity;
+		this.maxInput = maxInput;
+		this.maxOutput = maxOutput;
+	}
 
 	/* IEnergyStorage */
 	@Override
