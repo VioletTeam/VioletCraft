@@ -21,8 +21,7 @@ public final class VioletCraftMod {
     public static final String MOD_NAME = "ViolentCraft";
     public static final String VERSION = "0.1.0.0";
     //Gui IDs
-    public static final int GUI_VIOLENT = 0;
-    public static final int GUI_GENERATOR = 1;
+    public static final int GUI_GENERATOR = 0;
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)

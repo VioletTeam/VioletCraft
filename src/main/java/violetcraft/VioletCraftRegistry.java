@@ -98,10 +98,16 @@ public final class VioletCraftRegistry {
         GameRegistry.registerTileEntity(TileGenerator.class, "TileGenerator");
 
         //Add Recipes
-        GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.VirenSword, 1), " x ", " x ", " y ", 'x', VioletCraftRegistry.VirenIngot, 'y', Items.stick);
-        GameRegistry.addRecipe(new ItemStack(VioletCraftRegistry.YukariParker),
+        GameRegistry.addRecipe(new ItemStack(VirenSword, 1), " x ", " x ", " y ", 'x', VirenIngot, 'y', Items.stick);
+        GameRegistry.addRecipe(new ItemStack(YukariParker),
                 "wbw", "blb", "wpw",
                 'b', new ItemStack(Items.dye, 1, 0), 'p', new ItemStack(Items.dye, 1, 9), 'l', Items.leather_chestplate, 'w', Blocks.wool);
+        GameRegistry.addRecipe(new ItemStack(VirenBlock, 1),
+                "xxx", "xxx", "xxx",
+                'x', VirenIngot);
+        GameRegistry.addRecipe(new ItemStack(VirenSword, 1),
+                " x ", " x ", " y ",
+                'x', VirenIngot, 'y', Items.stick);
 
         //Add Smelting Recipes
         GameRegistry.addSmelting(VioletCraftRegistry.VirenOre, new ItemStack(VioletCraftRegistry.VirenIngot), 0.1f);

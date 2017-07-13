@@ -11,14 +11,14 @@ public class ContainerGenerator extends Container
 {
 	private TileGenerator tileGenerator;
 
-	public ContainerGenerator(EntityPlayer player, TileGenerator tileentity) {
-		this.tileGenerator = tileentity;
+    public ContainerGenerator(EntityPlayer player, TileGenerator tileEntity) {
+        this.tileGenerator = tileEntity;
 
 		// InventorySampleで追加するインベントリ
     	// かまど上部スロット
-		this.addSlotToContainer(new Slot(tileentity, 0, 56, 17));
-		// かまど下部スロット
-		this.addSlotToContainer(new Slot(tileentity, 1, 56, 53));
+        this.addSlotToContainer(new Slot(tileEntity, 0, 56, 17));
+        // かまど下部スロット
+        this.addSlotToContainer(new Slot(tileEntity, 1, 56, 53));
 
 
 		int i;
@@ -51,67 +51,57 @@ public class ContainerGenerator extends Container
 
 		if (slot != null && slot.getHasStack())
 		{
-			ItemStack itemstack1 = slot.getStack();
-			itemstack = itemstack1.copy();
+            ItemStack itemStack1 = slot.getStack();
+            itemstack = itemStack1.copy();
 
 			//スロット番号が2の時
 			if (slotNumber == 1)
 			{
 				//アイテムの移動(スロット3～39へ)
-				if (!this.mergeItemStack(itemstack1, 3, 39, true))
-				{
-					return null;
+                if (!this.mergeItemStack(itemStack1, 3, 39, true)) {
+                    return null;
 				}
 
-				slot.onSlotChange(itemstack1, itemstack);
-			}
-			//スロット番号が0、1でない時
+                slot.onSlotChange(itemStack1, itemstack);
+            }
+            //スロット番号が0、1でない時
 			else if (slotNumber != 1 && slotNumber != 0)
 			{
-				if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
-				{
-					//アイテムの移動(スロット0～1へ)
-					if (!this.mergeItemStack(itemstack1, 0, 1, false))
-					{
-						return null;
+                if (FurnaceRecipes.smelting().getSmeltingResult(itemStack1) != null) {
+                    //アイテムの移動(スロット0～1へ)
+                    if (!this.mergeItemStack(itemStack1, 0, 1, false)) {
+                        return null;
 					}
-				} else if (!this.mergeItemStack(itemstack1, 29, 38, false)) {
-					//アイテムの移動(スロット1～2へ)
-					if (!this.mergeItemStack(itemstack1, 1, 2, false))
-					{
-						return null;
+                } else if (!this.mergeItemStack(itemStack1, 29, 38, false)) {
+                    //アイテムの移動(スロット1～2へ)
+                    if (!this.mergeItemStack(itemStack1, 1, 2, false)) {
+                        return null;
 					}
 				} else if (slotNumber >= 3 && slotNumber < 30) {
 					//アイテムの移動(スロット30～39へ)
-					if (!this.mergeItemStack(itemstack1, 30, 39, false))
-					{
-						return null;
+                    if (!this.mergeItemStack(itemStack1, 30, 39, false)) {
+                        return null;
 					}
-				}
-				else if (slotNumber >= 30 && slotNumber < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
-				{
-					return null;
+                } else if (slotNumber >= 30 && slotNumber < 39 && !this.mergeItemStack(itemStack1, 3, 30, false)) {
+                    return null;
 				}
 			}
 			//アイテムの移動(スロット3～39へ)
-			else if (!this.mergeItemStack(itemstack1, 3, 39, false))
-			{
-				return null;
+            else if (!this.mergeItemStack(itemStack1, 3, 39, false)) {
+                return null;
 			}
-			if (itemstack1.stackSize == 0)
-			{
-				slot.putStack(null);
+            if (itemStack1.stackSize == 0) {
+                slot.putStack(null);
 			}
 			else
 			{
 				slot.onSlotChanged();
 			}
-			if (itemstack1.stackSize == itemstack.stackSize)
-			{
-				return null;
+            if (itemStack1.stackSize == itemstack.stackSize) {
+                return null;
 			}
-			slot.onPickupFromSlot(entityPlayer, itemstack1);
-		}
-		return itemstack;
+            slot.onPickupFromSlot(entityPlayer, itemStack1);
+        }
+        return itemstack;
 	}
 }
