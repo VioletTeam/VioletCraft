@@ -11,8 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.event.terraingen.TerrainGen;
-import violetcraft.VioletCraftMod;
-import violetcraft.registry.ItemRegistry;
+import violetcraft.VioletCraftRegistry;
 import violetcraft.world.biome.tree.WorldGenVioletTrees;
 import violetcraft.world.biome.tree.WorldGenVioletTreesBase;
 
@@ -28,7 +27,7 @@ public class BlockVioletSapling extends BlockFlower {
         super(0);
         float var3 = 0.4F;
         this.setBlockBounds(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var3 * 2.0F, 0.5F + var3);
-        this.setCreativeTab(VioletCraftMod.VioletCradtTab);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("vc.violetSapling");
     }
 
@@ -37,7 +36,7 @@ public class BlockVioletSapling extends BlockFlower {
 
         Block block = par1World.getBlock(par2, par3 - 1, par4);
         return (par1World.getFullBlockLightValue(par2, par3, par4) >= 8 || par1World.canBlockSeeTheSky(par2, par3, par4)) &&
-                (block == ItemRegistry.violetgrassblock || block == ItemRegistry.violetdift);
+                (block == VioletCraftRegistry.VioletGrassBlock || block == VioletCraftRegistry.VioletDift);
 
     }
 
@@ -45,7 +44,7 @@ public class BlockVioletSapling extends BlockFlower {
     public boolean canBlockStay(World par1World, int par2, int par3, int par4) {
         Block block = par1World.getBlock(par2, par3 - 1, par4);
         return (par1World.getFullBlockLightValue(par2, par3, par4) >= 8 || par1World.canBlockSeeTheSky(par2, par3, par4)) &&
-                (block == ItemRegistry.violetgrassblock || block == ItemRegistry.violetdift);
+                (block == VioletCraftRegistry.VioletGrassBlock || block == VioletCraftRegistry.VioletDift);
 
     }
 

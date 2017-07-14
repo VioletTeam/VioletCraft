@@ -3,15 +3,13 @@ package violetcraft.block.dimension;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraftRegistry;
 
-public class BlockVioletDift extends Block
-{
-    public BlockVioletDift()
-    {
+public class BlockVioletDift extends Block {
+    public BlockVioletDift() {
         super(Material.ground);
 
-        setCreativeTab(VioletCraftMod.VioletCradtTab);
+        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("VioletDift");
         setBlockTextureName("violetcraft:violetdift");
         setHardness(0.5F);

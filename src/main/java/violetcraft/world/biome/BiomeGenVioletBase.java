@@ -4,8 +4,8 @@ package violetcraft.world.biome;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import violetcraft.VioletCraftRegistry;
 import violetcraft.entity.EntityMoonRabbit;
-import violetcraft.registry.ItemRegistry;
 import violetcraft.world.biome.tree.WorldGenVioletTrees;
 
 import java.util.Random;
@@ -16,8 +16,8 @@ public class BiomeGenVioletBase extends BiomeGenBase{
         super(localId);
         this.worldGeneratorTrees=new WorldGenVioletTrees(false);
 
-        this.topBlock = ItemRegistry.violetgrassblock;
-        this.fillerBlock = ItemRegistry.violetdift;
+        this.topBlock = VioletCraftRegistry.VioletGrassBlock;
+        this.fillerBlock = VioletCraftRegistry.VioletDift;
         this.spawnableMonsterList.clear();
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
@@ -26,7 +26,7 @@ public class BiomeGenVioletBase extends BiomeGenBase{
     }
     public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
     {
-        return new WorldGenVioletGrass(ItemRegistry.violetgrass,0);
+        return new WorldGenVioletGrass(VioletCraftRegistry.VioletGrass, 0);
     }
     /*メゾットがいじれないやつなので気をつけて*/
     @Override

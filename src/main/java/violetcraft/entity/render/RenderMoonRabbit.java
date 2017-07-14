@@ -1,10 +1,8 @@
 package violetcraft.entity.render;
 
-import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-import violetcraft.entity.EntityMoonRabbit;
 import violetcraft.entity.model.ModelMoonRabbit;
 
 

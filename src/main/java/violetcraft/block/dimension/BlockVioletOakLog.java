@@ -10,8 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
-import violetcraft.registry.ItemRegistry;
+import violetcraft.VioletCraftRegistry;
 
 import java.util.Random;
 
@@ -24,7 +23,14 @@ public class BlockVioletOakLog extends Block
     public BlockVioletOakLog()
     {
         super(Material.wood);
-        this.setCreativeTab(VioletCraftMod.VioletCradtTab);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+    }
+
+    /**
+     * returns a number between 0 and 3
+     */
+    public static int limitToValidMetadata(int par0) {
+        return par0 & 3;
     }
 
     /**
@@ -51,7 +57,7 @@ public class BlockVioletOakLog extends Block
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3)
     {
-        return Item.getItemFromBlock(ItemRegistry.violetoaklog);
+        return Item.getItemFromBlock(VioletCraftRegistry.VioletOakLog);
     }
 
     /**
@@ -136,15 +142,6 @@ public class BlockVioletOakLog extends Block
     {
         return par1 & 3;
     }
-
-    /**
-     * returns a number between 0 and 3
-     */
-    public static int limitToValidMetadata(int par0)
-    {
-        return par0 & 3;
-    }
-
 
     /**
      * Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage

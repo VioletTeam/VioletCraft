@@ -4,11 +4,9 @@ import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-import violetcraft.inventory.ContainerGenerator;
-import violetcraft.inventory.ContainerTestMachine;
-import violetcraft.tileentity.TilEntityeTestMachine;
-import violetcraft.tileentity.TileEntityGenerator;
-import violetcraft.tileentity.TileEntityGuiBlock;
+import violetcraft.VioletCraftMod;
+import violetcraft.tile.TileGenerator;
+import violetcraft.tile.TileGuiBlock;
 
 public class GuiHandler implements IGuiHandler
 {
@@ -20,19 +18,12 @@ public class GuiHandler implements IGuiHandler
 			return null;
 
     	TileEntity tileentity = world.getTileEntity(x, y, z);
-    	if(tileentity instanceof TilEntityeTestMachine) {
-    		return new ContainerTestMachine(player, (TilEntityeTestMachine) tileentity);
-    	}
-		if (tileentity instanceof TileEntityGuiBlock) {
-			return new ContainerViolet(player, (TileEntityGuiBlock) tileentity);
-		}
-        if (ID == 1) {
-        	return new ContainerGenerator(player, (TileEntityGenerator) tileentity);
+        if (tileentity instanceof TileGuiBlock) {
+            return new ContainerViolet(player, (TileGuiBlock) tileentity);
         }
-//		if (tileentity instanceof TileEntityGenerator) {
-//			return new ContainerGenerator(player, (TileEntityGenerator) tileentity);
-//		}
-
+        if (ID == VioletCraftMod.GUI_GENERATOR) {
+            return new ContainerGenerator(player, (TileGenerator) tileentity);
+        }
         return null;
     }
 
@@ -44,21 +35,14 @@ public class GuiHandler implements IGuiHandler
     		return null;
 
     	TileEntity tileentity = world.getTileEntity(x, y, z);
-    	if(tileentity instanceof TilEntityeTestMachine) {
-    		return new GuiTestMachine(player, (TilEntityeTestMachine) tileentity);
-    	}
 
-    	if (tileentity instanceof TileEntityGuiBlock) {
-    		return new GuiContainerViolet(player, (TileEntityGuiBlock) tileentity);
-    	}
-
-        if (ID == 1) {
-        	return new GuiGenerator(player, (TileEntityGenerator) tileentity);
+        if (tileentity instanceof TileGuiBlock) {
+            return new GuiViolet(player, (TileGuiBlock) tileentity);
         }
 
-//    	if (tileentity instanceof TileEntityGenerator) {
-//    		return new GuiGenerator(player, (TileEntityGenerator) tileentity);
-//    	}
+        if (ID == 1) {
+            return new GuiGenerator(player, (TileGenerator) tileentity);
+        }
     	return null;
 
 

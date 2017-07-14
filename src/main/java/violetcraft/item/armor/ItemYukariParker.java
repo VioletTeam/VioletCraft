@@ -1,25 +1,18 @@
-package violetcraft.item;
+package violetcraft.item.armor;
 
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraftRegistry;
 
 public class ItemYukariParker extends ItemArmor {
     public ItemYukariParker(ItemArmor.ArmorMaterial Parker, int p_i45325_2_, int p_i45325_3_) {
         super(Parker, p_i45325_2_, p_i45325_3_);
-        String name = "yukariparker";
-
-		setCreativeTab(VioletCraftMod.VioletCradtTab);
-        this.setUnlocalizedName(name);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setUnlocalizedName("vc.yukariParker");
         maxStackSize = 1;
-        this.setTextureName( "violetcraft:Yukariparker" );
-
-        GameRegistry.registerItem(this,name);
-
-        return;
+        this.setTextureName("violetcraft:yukari_parker");
     }
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)

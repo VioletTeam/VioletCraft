@@ -12,8 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
-import violetcraft.VioletCraftMod;
-import violetcraft.registry.ItemRegistry;
+import violetcraft.VioletCraftRegistry;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -32,7 +31,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
     {
         super(Material.leaves, false);
         this.setTickRandomly(true);
-        this.setCreativeTab(VioletCraftMod.VioletCradtTab);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         this.setGraphicsLevel(true);
         this.setBlockName("VioletLeave");
         this.setBlockTextureName("violetcraft:violetleave");
@@ -187,7 +186,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
     @Override
     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
-        if (par1World.canLightningStrikeAt(par2, par3 + 1, par4) && !par1World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4) && par5Random.nextInt(15) == 1)
+        if (par1World.canLightningStrikeAt(par2, par3 + 1, par4) && !World.doesBlockHaveSolidTopSurface(par1World, par2, par3 - 1, par4) && par5Random.nextInt(15) == 1)
         {
             double var6 = (par2 + par5Random.nextFloat());
             double var8 = par3 - 0.05D;
@@ -217,7 +216,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3)
     {
-        return Item.getItemFromBlock(ItemRegistry.violetsapling);
+        return Item.getItemFromBlock(VioletCraftRegistry.VioletSapling);
     }
 
     /**

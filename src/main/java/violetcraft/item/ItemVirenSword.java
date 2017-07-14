@@ -1,8 +1,5 @@
 package violetcraft.item;
 
-import java.util.List;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,37 +7,29 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.VioletCraftMod;
+import violetcraft.VioletCraftRegistry;
 
-public class ItemVirenSword extends ItemSword
-{
+import java.util.List;
+
+public class ItemVirenSword extends ItemSword {
+    //ToDo
     public static Item toolconf;
-	public static Item VirenSword;
 
     public static ToolMaterial TOOLCONF
-	 = EnumHelper.addToolMaterial("TOOLCONF",3,50,8F,10F,10)
-			.setRepairItem(new ItemStack(toolconf));
+            = EnumHelper.addToolMaterial("TOOLCONF", 3, 50, 8F, 10F, 10)
+            .setRepairItem(new ItemStack(toolconf));
 
-    public ItemVirenSword()
-    {
-    	super(TOOLCONF);
-
-		String name = "virensword";
-
-		setCreativeTab(VioletCraftMod.VioletCradtTab);
-	    this.setUnlocalizedName(name);
-	    maxStackSize = 1;
-	    this.setTextureName( "violetcraft:viren_sword" );
-
-	    GameRegistry.registerItem(this,name);
-
-	    return;
+    public ItemVirenSword() {
+        super(TOOLCONF);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setUnlocalizedName("vc.virenSword");
+        maxStackSize = 1;
+        this.setTextureName("violetcraft:viren_sword");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean advanced)
-    {
-        list.add("test text");
+    public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean advanced) {
+
     }
 }
