@@ -10,7 +10,7 @@ public class VioletBush extends BlockBush {
     public VioletBush() {
         super(Material.vine);
         setCreativeTab(VioletCraftRegistry.tabVioletCraft);
-        setBlockName("vc.violetBash");
+        setBlockName("VioletBash");
         setBlockTextureName("violetcraft:violetgrass");
         setStepSound(Block.soundTypeGrass);
         float f = 0.4F;

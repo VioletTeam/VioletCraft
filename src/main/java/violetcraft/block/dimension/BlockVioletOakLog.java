@@ -24,6 +24,8 @@ public class BlockVioletOakLog extends Block
     {
         super(Material.wood);
         this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setBlockName("VioletLog");
+        this.setStepSound(Block.soundTypeWood);
     }
 
     /**
@@ -131,7 +133,7 @@ public class BlockVioletOakLog extends Block
     public void registerBlockIcons(IIconRegister par1IconRegister)
     {
         this.blockIcon = par1IconRegister.registerIcon("violetcraft:violetoaklog");
-        this.iconTop = par1IconRegister.registerIcon("tofucraft:violetoaklog_top");
+        this.iconTop = par1IconRegister.registerIcon("violetcraft:violetoaklog_top");
     }
 
     /**

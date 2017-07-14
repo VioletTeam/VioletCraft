@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Random;
 
 public class BlockVioletSapling extends BlockFlower {
-    public static final String[] WOOD_TYPES = new String[]{"apricot", "tofu"};
+    public static final String[] WOOD_TYPES = new String[]{"violetoak"};
     private IIcon[] icons;
 
 
@@ -28,7 +28,8 @@ public class BlockVioletSapling extends BlockFlower {
         float var3 = 0.4F;
         this.setBlockBounds(0.5F - var3, 0.0F, 0.5F - var3, 0.5F + var3, var3 * 2.0F, 0.5F + var3);
         this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
-        setBlockName("vc.violetSapling");
+        setBlockName("VioletSapling");
+        setStepSound(Block.soundTypeGrass);
     }
 
     @Override
@@ -125,7 +126,7 @@ public class BlockVioletSapling extends BlockFlower {
     public void registerBlockIcons(IIconRegister par1IconRegister) {
         this.icons = new IIcon[WOOD_TYPES.length];
         for (int i = 0; i < WOOD_TYPES.length; ++i) {
-            this.icons[i] = par1IconRegister.registerIcon("tofucraft:sapling_" + WOOD_TYPES[i]);
+            this.icons[i] = par1IconRegister.registerIcon("violetcraft:sapling_" + WOOD_TYPES[i]);
         }
     }
 

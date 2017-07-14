@@ -35,6 +35,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
         this.setGraphicsLevel(true);
         this.setBlockName("VioletLeave");
         this.setBlockTextureName("violetcraft:violetleave");
+        setStepSound(Block.soundTypeGrass);
     }
 
     /**
@@ -227,6 +228,9 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
     {
         if (!par1World.isRemote)
         {
+            if(par1World.rand.nextInt(7)==0) {
+                this.dropBlockAsItem(par1World, par2, par3, par4, new ItemStack(VioletCraftRegistry.VioletSapling, 1));
+            }
             if (par1World.rand.nextInt(9) == 0)
             {
 

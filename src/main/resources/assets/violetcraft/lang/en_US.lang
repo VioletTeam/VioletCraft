@@ -27,8 +27,12 @@ entity.MoonRabbit.name=MoonRabbit
 itemGroup.violet_craft=Violet Craft
 tile.block_viren_block.name=Viren Block
 tile.VioletGrassBlock.name=VioletGrassBlock
-tile.VioletGrass.name=VioletGrass
+tile.VioletBush.name=VioletBush
 tile.VioletPortal.name=VioletPortal
 tile.VioletDift.name=VioletDift
+tile.VioletLeave.name=VioletLeave
+tile.VioletSapling.name=VioletSapling
+tile.VioletLog.name=VioletLog
+
 
 itemGroup.violettab=Violet Tab
