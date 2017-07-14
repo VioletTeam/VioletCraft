@@ -79,6 +79,6 @@ public class ItemRegistry {
         violetportal=GameRegistry.registerBlock(new BlockVioletPortal(), "violet_portal");
         violetleave=GameRegistry.registerBlock(new BlockVioletLeave(), "violet_leave");
         violetoaklog=GameRegistry.registerBlock(new BlockVioletOakLog(), "violet_log");
-        violetsapling=GameRegistry.registerBlock(new BlockVioletSapling(0), "violet_log");
+        violetsapling=GameRegistry.registerBlock(new BlockVioletSapling(), "violet_sanpling");
     }
 }

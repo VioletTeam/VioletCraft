@@ -21,6 +21,7 @@ public class BlockVioletSapling extends BlockFlower
     public static final String[] WOOD_TYPES = new String[] {"apricot", "tofu"};
     private IIcon[] icons;
 
+
     public BlockVioletSapling(int par1)
     {
         super(par1);
