@@ -138,7 +138,7 @@ public class EntityMoonRabbit extends EntityAnimal
             return super.attackEntityFrom(source, damage);
         }
     }
-    public boolean livingmob()
+    public boolean aliveMob()
     {
         return this.mobmethod;
     }
