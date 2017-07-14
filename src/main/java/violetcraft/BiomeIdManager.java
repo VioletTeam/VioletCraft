@@ -17,51 +17,42 @@ public class BiomeIdManager {
             new SearchPath(191, 128)
     };
 
-    public boolean isCompleted()
-    {
+    public boolean isCompleted() {
         return haveIdsAssigned;
     }
 
-    public int assignId(String confKey, Configuration conf)
-    {
+    public int assignId(String confKey, Configuration conf) {
         int id = -1;
 
 
-            return -1;
+        return -1;
 
     }
 
-    private int findUnusedId()
-    {
-        for (SearchPath path : searchPaths)
-        {
+    private int findUnusedId() {
+        for (SearchPath path : searchPaths) {
             int id = findUnusedIdRange(path.start, path.end);
             if (id != -1) return id;
         }
         return -1;
     }
 
-    private int findUnusedIdRange(int start, int end)
-    {
+    private int findUnusedIdRange(int start, int end) {
         boolean ascend = start < end;
-        for (int i = start; ascend && i <= end || !ascend && i >= end; i += ascend ? 1 : -1)
-        {
+        for (int i = start; ascend && i <= end || !ascend && i >= end; i += ascend ? 1 : -1) {
             BiomeGenBase biome = BiomeGenBase.getBiomeGenArray()[i];
-            if (biome == null && !assignedIds.contains(i))
-            {
+            if (biome == null && !assignedIds.contains(i)) {
                 return i;
             }
         }
         return -1;
     }
 
-    private class SearchPath
-    {
+    private class SearchPath {
         int start;
         int end;
 
-        public SearchPath(int start, int end)
-        {
+        public SearchPath(int start, int end) {
             this.start = start;
             this.end = end;
         }

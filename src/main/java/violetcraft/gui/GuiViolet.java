@@ -1,21 +1,18 @@
 package violetcraft.gui;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
-import violetcraft.tileentity.TileEntityGuiBlock;
+import org.lwjgl.opengl.GL11;
+import violetcraft.tile.TileGuiBlock;
 
-public class GuiContainerViolet extends GuiContainer
+public class GuiViolet extends GuiContainer
 {
-	private TileEntityGuiBlock tileEntity;
-
     private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/yukari_gui.png");
+    private TileGuiBlock tileEntity;
 
-    public GuiContainerViolet(EntityPlayer player, TileEntityGuiBlock tileEnttiy)
-    {
+    public GuiViolet(EntityPlayer player, TileGuiBlock tileEnttiy) {
         super(new ContainerViolet(player, tileEnttiy));
         this.tileEntity = tileEnttiy;
 		ySize = 222;
@@ -38,17 +35,4 @@ public class GuiContainerViolet extends GuiContainer
 		int l = (height - ySize) / 2;
 		this.drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
 	}
-
-//    @Override
-//    protected void drawGuiContainerBackgroundLayer(float partialTick, int mouseX, int mouseZ)
-//    {
-//        this.mc.renderEngine.bindTexture(TEXTURE);
-//        this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, xSize, ySize);
-//    }
-
-    /*GUIが開いている時にゲームの処理を止めるかどうか。*/
-//    @Override
-//    public boolean doesGuiPauseGame() {
-//        return false;
-//    }
 }

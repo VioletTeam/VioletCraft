@@ -1,11 +1,9 @@
 package violetcraft.item;
 
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,21 +11,16 @@ import net.minecraft.util.Facing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftMod;
 import violetcraft.entity.EntityMoonRabbit;
 
-public class ItemRabbitegg extends Item {
-    public ItemRabbitegg() {
-        String name = "moonrabbitegg";
+import static violetcraft.VioletCraftRegistry.tabVioletCraft;
 
-        this.setCreativeTab(VioletCraftMod.VioletCradtTab);
-        this.setUnlocalizedName(name);
+public class ItemRabbitEgg extends Item {
+    public ItemRabbitEgg() {
+        this.setCreativeTab(tabVioletCraft);
+        this.setUnlocalizedName("vc.rabbitEgg");
         maxStackSize = 16;
-        this.setTextureName("violetcraft:Rabbitegg");
-
-        GameRegistry.registerItem(this, name);
-
-        return;
+        this.setTextureName("violetcraft:rabbit_egg");
     }
 
     @Override
@@ -110,7 +103,7 @@ public class ItemRabbitegg extends Item {
         entityliving.setLocationAndAngles(x, y, z, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
         entityliving.rotationYawHead = entityliving.rotationYaw;
         entityliving.renderYawOffset = entityliving.rotationYaw;
-        entityliving.onSpawnWithEgg((IEntityLivingData) null);
+        entityliving.onSpawnWithEgg(null);
         world.spawnEntityInWorld(entityliving);
         entityliving.playLivingSound();
         return entityliving;

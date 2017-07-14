@@ -4,15 +4,7 @@ package violetcraft.entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAvoidEntity;
-import net.minecraft.entity.ai.EntityAIFollowParent;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAIMate;
-import net.minecraft.entity.ai.EntityAIPanic;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAITempt;
-import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.*;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityWolf;
@@ -23,7 +15,7 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import violetcraft.registry.ItemRegistry;
+import violetcraft.VioletCraftRegistry;
 
 public class EntityMoonRabbit extends EntityAnimal
 {
@@ -77,7 +69,7 @@ public class EntityMoonRabbit extends EntityAnimal
         if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0)
         {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.dropItem(ItemRegistry.moonrabbit_tear, 1);
+            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
         }
     }
@@ -93,27 +85,21 @@ public class EntityMoonRabbit extends EntityAnimal
     }
 
     /**MOBのドロップアイテムを返すメソッド*/
-    protected Item getDropItem()
-    {
-        return ItemRegistry.moonmeat_raw;
+    protected Item getDropItem() {
+        return VioletCraftRegistry.RawMoonMeat;
     }
 
-    protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel)
-    {
+    protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel) {
         int j = this.rand.nextInt(3) + this.rand.nextInt(1 + parLootingLevel);
         int k;
 
-        for (k = 0; k < j; ++k)
-        {
-            this.dropItem(ItemRegistry.moonmeat_raw, 1);
+        for (k = 0; k < j; ++k) {
+            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
         }
-        if (this.isBurning())
-        {
-            this.dropItem(ItemRegistry.moonmeat_cooked, 1);
-        }
-        else
-        {
-            this.dropItem(ItemRegistry.moonmeat_raw, 1);
+        if (this.isBurning()) {
+            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
+        } else {
+            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
         }
     }
 
