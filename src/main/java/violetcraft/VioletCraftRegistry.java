@@ -33,6 +33,12 @@ import violetcraft.tile.TileGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
+    // Creative Tab ====================================================================================================
+    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
+        public Item getTabIconItem() {
+            return VirenIngot;
+        }
+    };
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -44,12 +50,6 @@ public final class VioletCraftRegistry {
     public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
-    // Creative Tab ====================================================================================================
-    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
-        public Item getTabIconItem() {
-            return VirenIngot;
-        }
-    };
     // Tools ===========================================================================================================
     public static final Item VirenSword = new ItemVirenSword();
     // Armor ===========================================================================================================
