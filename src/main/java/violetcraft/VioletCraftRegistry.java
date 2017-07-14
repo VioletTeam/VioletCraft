@@ -37,19 +37,21 @@ import violetcraft.tile.TileGuiBlock;
 public final class VioletCraftRegistry {
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
+    public static final Item RollYellowIngot = null;
+    public static final Item ScarRedIngot = null;
+    public static final Item BLueTopaz = null;
+    public static final Item PinkSapphire = null;
+    // Item ============================================================================================================
+    public static final Item CookedMoonMeat = new ItemCookedMoonRabbit(5, 6, true);
+    public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
-    //@formatter:off
     // Creative Tab ====================================================================================================
     public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
         public Item getTabIconItem() {
             return VirenIngot;
         }
     };
-    public static final Item RollYellowIngot = null;
-    public static final Item ScarRedIngot = null;
-    public static final Item BLueTopaz = null;
-    public static final Item PinkSapphire = null;
     // Tools ===========================================================================================================
     public static final Item VirenSword = new ItemVirenSword();
     // Armor ===========================================================================================================
@@ -69,10 +71,6 @@ public final class VioletCraftRegistry {
     public static final Block BlueTopazOre = new BlockBlueTopazOre();
     public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
     public static final Block VirenOre = new BlockVirenOre();
-    // Item ============================================================================================================
-    public static Item CookedMoonMeat = new ItemCookedMoonRabbit(5, 6, true);
-    public static Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
-    //@formatter:on
 
     static void handlePreInit(FMLPreInitializationEvent event) {
         //Register Items
