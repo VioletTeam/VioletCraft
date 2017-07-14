@@ -27,7 +27,7 @@ import violetcraft.registry.ItemRegistry;
 
 public class EntityMoonRabbit extends EntityAnimal
 {
-    public boolean field_152118_bv;
+    public boolean mobmethod;
     public int timeUntilNextItem;
     public EntityMoonRabbit(World world) {
         super(world);
@@ -55,6 +55,7 @@ public class EntityMoonRabbit extends EntityAnimal
     {
         return true;
     }
+    /*Entityが子供を産むメゾット「*/
     @Override
     public EntityAgeable createChild(EntityAgeable p_90011_1_) {
         return new EntityMoonRabbit(this.worldObj);
@@ -69,10 +70,11 @@ public class EntityMoonRabbit extends EntityAnimal
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(6D);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10D);
     }
+    /*Entiyが涙を落とすメゾット*/
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
-        if (!this.worldObj.isRemote && !this.isChild() && !this.func_152116_bZ() && --this.timeUntilNextItem <= 0)
+        if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0)
         {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(ItemRegistry.moonrabbit_tear, 1);
@@ -80,9 +82,9 @@ public class EntityMoonRabbit extends EntityAnimal
         }
     }
 
-    public boolean isBreedingItem(ItemStack p_70877_1_)
+    public boolean isBreedingItem(ItemStack item)
     {
-        return p_70877_1_ != null && p_70877_1_.getItem() instanceof ItemSeeds;
+        return item != null && item.getItem() instanceof ItemSeeds;
     }
     /**MOBの属性を返すメソッド*/
     @Override
@@ -136,8 +138,8 @@ public class EntityMoonRabbit extends EntityAnimal
             return super.attackEntityFrom(source, damage);
         }
     }
-    public boolean func_152116_bZ()
+    public boolean aliveMob()
     {
-        return this.field_152118_bv;
+        return this.mobmethod;
     }
 }
