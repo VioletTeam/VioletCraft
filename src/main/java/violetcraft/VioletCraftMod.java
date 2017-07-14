@@ -11,8 +11,14 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.gui.GuiHandler;
+import violetcraft.world.WorldProviderViolet;
+import violetcraft.world.biome.BiomeGenViolet;
+import violetcraft.world.biome.BiomeGenVioletIce;
 
 @Mod(modid = VioletCraftMod.MOD_ID, name = VioletCraftMod.MOD_NAME, version = VioletCraftMod.VERSION, useMetadata = true)
 public final class VioletCraftMod {
@@ -28,6 +34,17 @@ public final class VioletCraftMod {
     public static VioletCraftMod INSTANCE;
     @Mod.Metadata
     public static ModMetadata metadata;
+    BiomeIdManager idManager = new BiomeIdManager();
+    // 独自ディメンションのID
+    public static int dimensionID = -90;
+    public static int providerType = -61;
+
+
+    public static int biomevioletID = 80;
+    public static int biomevioletID2 = 81;
+
+    public static final int GUI_ID = 0;
+    public static Block GuiBlock;
 
     /***
      * Configファイル読み込みと出力
@@ -52,21 +69,29 @@ public final class VioletCraftMod {
             cfg.save();
         }
         VioletCraftRegistry.handlePreInit(event);
+        DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
+        // 独自ディメンションを登録
+        DimensionManager.registerDimension(dimensionID, providerType);
     }
 
     /***
      * レシピの追加
      * 各種データ設定
-     * @param event please see cpw.mods.fml.common.event.FMLInitializationEvent
+     *
+      @param event see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
     @SuppressWarnings("unused")
     public void init(FMLInitializationEvent event) {
+        BiomeGenBase violetplain = (new BiomeGenViolet(biomevioletID))
+                .setColor(0x00ff00).setBiomeName("Violetplean");
+        BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
+                .setColor(0x00ff00).setBiomeName("VioletIce");
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         VioletCraftRegistry.handleInit(event);
     }
 
-    /***
+    /**
      * その他
      * 他のMod連携など
      * @param event please see cpw.mods.fml.common.event.FMLPostInitializationEvent
