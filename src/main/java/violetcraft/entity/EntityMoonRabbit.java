@@ -74,7 +74,7 @@ public class EntityMoonRabbit extends EntityAnimal
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
-        if (!this.worldObj.isRemote && !this.isChild() && !this.livingmob() && --this.timeUntilNextItem <= 0)
+        if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0)
         {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(ItemRegistry.moonrabbit_tear, 1);
