@@ -1,32 +1,21 @@
 package violetcraft.world.biome;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenerator;
-import violetcraft.entity.EntityMoonRabbit;
-import violetcraft.registry.ItemRegistry;
+
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.Random;
 
-
-public class BiomeGenViolet extends BiomeGenBase {
+public class BiomeGenViolet extends BiomeGenVioletBase {
     protected boolean generateLakes;
 
     public BiomeGenViolet(int localId) {
         super(localId);
-        this.topBlock = ItemRegistry.violetgrassblock;
-        this.fillerBlock = ItemRegistry.violetdift;
-        this.spawnableMonsterList.clear();
-        this.spawnableCreatureList.clear();
-        this.spawnableWaterCreatureList.clear();
-        this.spawnableCaveCreatureList.clear();
-        this.spawnableCreatureList.add(new SpawnListEntry(EntityMoonRabbit.class, 6, 1, 3));
         this.generateLakes = true;
     }
-
-
-    public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
+    @Override
+    public WorldGenAbstractTree func_150567_a(Random par1Random) // getRandomWorldGenForTrees
     {
-        return new WorldGenVioletGrass(ItemRegistry.violetgrass,0);
+        return this.worldGeneratorTrees;
     }
 
 }

@@ -2,7 +2,6 @@ package violetcraft.block;
 
 
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.material.Material;
@@ -24,6 +23,6 @@ public class VioletGrass extends BlockBush
     @Override
     protected boolean canPlaceBlockOn(Block parBlock)
     {
-        return parBlock == ItemRegistry.violetgrassblock;
+        return parBlock == ItemRegistry.violetgrassblock || parBlock == ItemRegistry.violetdift;
     }
 }

@@ -12,7 +12,6 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import sun.applet.Main;
 import violetcraft.registry.ItemRegistry;
 
 import java.util.ArrayList;
