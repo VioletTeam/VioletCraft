@@ -35,6 +35,7 @@ import violetcraft.tile.TileGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
+    //@formatter:off
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     // Ingot ===========================================================================================================
@@ -71,7 +72,8 @@ public final class VioletCraftRegistry {
     // Item ============================================================================================================
     public static Item CookedMoonMeat = new ItemCookedMoonRabbit(5, 6, true);
     public static Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
-
+    //@formatter:on
+    
     static void handlePreInit(FMLPreInitializationEvent event) {
         //Register Items
         registerItem(RawMoonMeat);
