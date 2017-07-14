@@ -16,6 +16,10 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
+import violetcraft.block.VioletBush;
+import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.dimension.BlockVioletGrass;
+import violetcraft.block.dimension.BlockVioletPortal;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
@@ -24,22 +28,18 @@ import violetcraft.block.ore.BlockScarRedOre;
 import violetcraft.entity.EntityMoonRabbit;
 import violetcraft.item.*;
 import violetcraft.item.armor.ItemYukariParker;
-import violetcraft.tiles.TileGenerator;
-import violetcraft.tiles.TileGuiBlock;
+import violetcraft.tile.TileGenerator;
+import violetcraft.tile.TileGuiBlock;
 
 /**
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
-    /***
-     * Material
-     */
+    //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
-    /***
-     * クリエイティブタブ
-     */
+    // Creative Tab ====================================================================================================
     public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
         public Item getTabIconItem() {
             return VirenIngot;
@@ -58,6 +58,10 @@ public final class VioletCraftRegistry {
     //Block ============================================================================================================
     public static final Block VirenBlock = new BlockVirenBlock();
     public static final Block Generator = new BlockGenerator();
+    public static final Block VioletGrassBlock = new BlockVioletGrass();
+    public static final Block VioletGrass = new VioletBush();
+    public static final Block VioletDift = new BlockVioletDift();
+    public static final Block VioletPortal = new BlockVioletPortal();
     // Ore =============================================================================================================
     public static final Block RollYellowOre = new BlockRollYellowOre();
     public static final Block ScarRedOre = new BlockScarRedOre();
@@ -84,6 +88,10 @@ public final class VioletCraftRegistry {
         //Register Blocks
         registerBlock(VirenBlock);
         registerBlock(Generator);
+        registerBlock(VioletGrassBlock);
+        registerBlock(VioletGrass);
+        registerBlock(VioletDift);
+        registerBlock(VioletPortal);
         //Register Ores
         registerBlock(VirenOre);
         registerBlock(ScarRedOre);
@@ -98,7 +106,9 @@ public final class VioletCraftRegistry {
         GameRegistry.registerTileEntity(TileGenerator.class, "TileGenerator");
 
         //Add Recipes
-        GameRegistry.addRecipe(new ItemStack(VirenSword, 1), " x ", " x ", " y ", 'x', VirenIngot, 'y', Items.stick);
+        GameRegistry.addRecipe(new ItemStack(VirenSword, 1),
+                " x ", " x ", " y ", 'x',
+                VirenIngot, 'y', Items.stick);
         GameRegistry.addRecipe(new ItemStack(YukariParker),
                 "wbw", "blb", "wpw",
                 'b', new ItemStack(Items.dye, 1, 0), 'p', new ItemStack(Items.dye, 1, 9), 'l', Items.leather_chestplate, 'w', Blocks.wool);

@@ -11,7 +11,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
 import violetcraft.VioletCraftRegistry;
-import violetcraft.tiles.TileGenerator;
+import violetcraft.tile.TileGenerator;
 
 public class BlockGenerator extends BlockContainer
 {

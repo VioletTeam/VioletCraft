@@ -5,7 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
-import violetcraft.tiles.TileGuiBlock;
+import violetcraft.tile.TileGuiBlock;
 
 public class GuiViolet extends GuiContainer
 {

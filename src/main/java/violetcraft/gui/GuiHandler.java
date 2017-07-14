@@ -5,8 +5,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
-import violetcraft.tiles.TileGenerator;
-import violetcraft.tiles.TileGuiBlock;
+import violetcraft.tile.TileGenerator;
+import violetcraft.tile.TileGuiBlock;
 
 public class GuiHandler implements IGuiHandler
 {

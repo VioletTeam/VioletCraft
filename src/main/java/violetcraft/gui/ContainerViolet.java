@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import violetcraft.tiles.TileGuiBlock;
+import violetcraft.tile.TileGuiBlock;
 
 public class ContainerViolet extends Container
 {

@@ -28,13 +28,13 @@ public final class VioletCraftMod {
     public static final String VERSION = "0.1.0.0";
     //Gui IDs
     public static final int GUI_GENERATOR = 0;
+    public static final int GUI_ID = 0;
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)
     public static VioletCraftMod INSTANCE;
     @Mod.Metadata
     public static ModMetadata metadata;
-    BiomeIdManager idManager = new BiomeIdManager();
     // 独自ディメンションのID
     public static int dimensionID = -90;
     public static int providerType = -61;
@@ -42,9 +42,8 @@ public final class VioletCraftMod {
 
     public static int biomevioletID = 80;
     public static int biomevioletID2 = 81;
-
-    public static final int GUI_ID = 0;
     public static Block GuiBlock;
+    BiomeIdManager idManager = new BiomeIdManager();
 
     /***
      * Configファイル読み込みと出力
@@ -78,7 +77,7 @@ public final class VioletCraftMod {
      * レシピの追加
      * 各種データ設定
      *
-      @param event see cpw.mods.fml.common.event.FMLInitializationEvent
+     @param event see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
     @SuppressWarnings("unused")

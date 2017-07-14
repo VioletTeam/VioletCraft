@@ -13,7 +13,6 @@ import violetcraft.VioletCraftMod;
 import violetcraft.world.VioletTeleporter;
 
 
-
 public class BlockVioletPortal extends Block {
     private IIcon[] iicon = new IIcon[2];
 
@@ -29,7 +28,9 @@ public class BlockVioletPortal extends Block {
     }
 
 
-    /** 硬さを返す。 */
+    /**
+     * 硬さを返す。
+     */
     @Override
     public float getBlockHardness(World world, int x, int y, int z) {
 
@@ -37,7 +38,9 @@ public class BlockVioletPortal extends Block {
     }
 
 
-    /** 右クリックされたときの処理。 */
+    /**
+     * 右クリックされたときの処理。
+     */
     @Override
     public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
         // 現在地が独自ディメンション以外
