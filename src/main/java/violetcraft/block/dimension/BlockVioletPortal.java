@@ -13,7 +13,7 @@ import violetcraft.world.VioletTeleporter;
 
 
 public class BlockVioletPortal extends Block {
-    public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
+    public static final int[][] field_150001_a = new int[][]{new int[0], {3, 1}, {2, 0}};
 
     public BlockVioletPortal() {
         super(Material.portal);

@@ -4,7 +4,6 @@ package violetcraft.world.biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import violetcraft.VioletCraftRegistry;
-import violetcraft.entity.EntityMoonRabbit;
 
 import java.util.Random;
 
@@ -16,10 +15,11 @@ public class BiomeGenViolet extends BiomeGenVioletBase {
         this.generateLakes = true;
         this.treesPerChunk = 5;
     }
-    public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_)
-    {
+
+    public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_) {
         return new WorldGenVioletGrass(VioletCraftRegistry.VioletGrass, 0);
     }
+
     @Override
     public WorldGenAbstractTree func_150567_a(Random par1Random) // getRandomWorldGenForTrees
     {

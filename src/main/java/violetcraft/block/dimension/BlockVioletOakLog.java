@@ -15,13 +15,11 @@ import violetcraft.VioletCraftRegistry;
 import java.util.Random;
 
 
-public class BlockVioletOakLog extends Block
-{
+public class BlockVioletOakLog extends Block {
 
     private IIcon iconTop;
 
-    public BlockVioletOakLog()
-    {
+    public BlockVioletOakLog() {
         super(Material.wood);
         this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         this.setBlockName("VioletLog");
@@ -41,8 +39,7 @@ public class BlockVioletOakLog extends Block
      * The type of render function that is called for this block
      */
     @Override
-    public int getRenderType()
-    {
+    public int getRenderType() {
         return 31;
     }
 
@@ -50,8 +47,7 @@ public class BlockVioletOakLog extends Block
      * Returns the quantity of items to drop on block destruction.
      */
     @Override
-    public int quantityDropped(Random par1Random)
-    {
+    public int quantityDropped(Random par1Random) {
         return 1;
     }
 
@@ -59,8 +55,7 @@ public class BlockVioletOakLog extends Block
      * Returns the ID of the items to drop on destruction.
      */
     @Override
-    public Item getItemDropped(int par1, Random par2Random, int par3)
-    {
+    public Item getItemDropped(int par1, Random par2Random, int par3) {
         return Item.getItemFromBlock(VioletCraftRegistry.VioletOakLog);
     }
 
@@ -68,19 +63,14 @@ public class BlockVioletOakLog extends Block
      * ejects contained items into the world, and notifies neighbours of an update, as appropriate
      */
     @Override
-    public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6)
-    {
+    public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6) {
         byte var7 = 4;
         int var8 = var7 + 1;
 
-        if (par1World.checkChunksExist(par2 - var8, par3 - var8, par4 - var8, par2 + var8, par3 + var8, par4 + var8))
-        {
-            for (int var9 = -var7; var9 <= var7; ++var9)
-            {
-                for (int var10 = -var7; var10 <= var7; ++var10)
-                {
-                    for (int var11 = -var7; var11 <= var7; ++var11)
-                    {
+        if (par1World.checkChunksExist(par2 - var8, par3 - var8, par4 - var8, par2 + var8, par3 + var8, par4 + var8)) {
+            for (int var9 = -var7; var9 <= var7; ++var9) {
+                for (int var10 = -var7; var10 <= var7; ++var10) {
+                    for (int var11 = -var7; var11 <= var7; ++var11) {
                         Block var12 = par1World.getBlock(par2 + var9, par3 + var10, par4 + var11);
                         var12.beginLeavesDecay(par1World, par2 + var9, par3 + var10, par4 + var11);
                     }
@@ -93,13 +83,11 @@ public class BlockVioletOakLog extends Block
      * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
      */
     @Override
-    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
-    {
+    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9) {
         int var10 = par9 & 3;
         byte var11 = 0;
 
-        switch (par5)
-        {
+        switch (par5) {
             case 0:
             case 1:
                 var11 = 0;
@@ -120,8 +108,7 @@ public class BlockVioletOakLog extends Block
      * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
      */
     @Override
-    public IIcon getIcon(int par1, int par2)
-    {
+    public IIcon getIcon(int par1, int par2) {
         int var3 = par2 & 12;
         int var4 = par2 & 3;
         return var3 == 0 && (par1 == 1 || par1 == 0) ? this.iconTop
@@ -132,8 +119,7 @@ public class BlockVioletOakLog extends Block
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void registerBlockIcons(IIconRegister par1IconRegister)
-    {
+    public void registerBlockIcons(IIconRegister par1IconRegister) {
         this.blockIcon = par1IconRegister.registerIcon("violetcraft:violetoaklog");
         this.iconTop = par1IconRegister.registerIcon("violetcraft:violetoaklog_top");
     }
@@ -142,8 +128,7 @@ public class BlockVioletOakLog extends Block
      * Determines the damage on the item the block drops. Used in cloth and wood.
      */
     @Override
-    public int damageDropped(int par1)
-    {
+    public int damageDropped(int par1) {
         return par1 & 3;
     }
 
@@ -152,20 +137,17 @@ public class BlockVioletOakLog extends Block
      * and is ignored for blocks register do not support subtypes. Blocks register cannot be harvested should return null.
      */
     @Override
-    protected ItemStack createStackedBlock(int par1)
-    {
+    protected ItemStack createStackedBlock(int par1) {
         return new ItemStack(this, 1, limitToValidMetadata(par1));
     }
 
     @Override
-    public boolean canSustainLeaves(IBlockAccess world, int x, int y, int z)
-    {
+    public boolean canSustainLeaves(IBlockAccess world, int x, int y, int z) {
         return true;
     }
 
     @Override
-    public boolean isWood(IBlockAccess world, int x, int y, int z)
-    {
+    public boolean isWood(IBlockAccess world, int x, int y, int z) {
         return true;
     }
 }

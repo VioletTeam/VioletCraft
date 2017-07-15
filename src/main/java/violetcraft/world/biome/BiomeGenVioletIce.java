@@ -1,10 +1,6 @@
 package violetcraft.world.biome;
 
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenerator;
-import violetcraft.VioletCraftRegistry;
-import violetcraft.entity.EntityMoonRabbit;
 
 import java.util.Random;
 

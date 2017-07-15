@@ -26,7 +26,9 @@ public class VioletTeleporter extends Teleporter {
 
     private final WorldServer worldServerInstance;
 
-    /** A private Random() function in Teleporter */
+    /**
+     * A private Random() function in Teleporter
+     */
     private final Random random;
 
     private final LongHashMap destinationCoordinateCache = new LongHashMap();
