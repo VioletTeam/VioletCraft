@@ -35,6 +35,8 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable
         this.setGraphicsLevel(true);
         this.setBlockName("VioletLeave");
         this.setBlockTextureName("violetcraft:violetleave");
+        this.setHardness(0.2F);
+        this.setResistance(1.3F);
         setStepSound(Block.soundTypeGrass);
     }
 

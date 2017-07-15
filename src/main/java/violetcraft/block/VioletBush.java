@@ -18,7 +18,7 @@ public class VioletBush extends BlockBush {
     }
 
     @Override
-    protected boolean canPlaceBlockOn(Block parBlock) {
-        return parBlock == VioletCraftRegistry.VioletGrassBlock;
+    protected boolean canPlaceBlockOn(Block parBlock){
+        return  parBlock == VioletCraftRegistry.VioletGrassBlock || parBlock == VioletCraftRegistry.VioletDift;
     }
 }

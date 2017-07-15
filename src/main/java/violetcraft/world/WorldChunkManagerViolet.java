@@ -39,11 +39,8 @@ public class WorldChunkManagerViolet extends WorldChunkManager {
 
     {
         for (int i = 0; i < 256; ++i) {
-            if (i % 2 == 0) {
-                biomeList[i] = plainviolet;
-            } else if (i % 2 == 1) {
-                biomeList[i] = iceviolet;
-            }
+            biomeList[i] = plainviolet;
+            biomeList[i] = iceviolet;
         }
     }
 

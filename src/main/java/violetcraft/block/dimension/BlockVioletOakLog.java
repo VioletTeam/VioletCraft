@@ -25,6 +25,8 @@ public class BlockVioletOakLog extends Block
         super(Material.wood);
         this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         this.setBlockName("VioletLog");
+        this.setHardness(2F);
+        this.setResistance(12F);
         this.setStepSound(Block.soundTypeWood);
     }
 
