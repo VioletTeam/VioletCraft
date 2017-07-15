@@ -69,7 +69,7 @@ public class EntityMoonRabbit extends EntityAnimal
         super.onLivingUpdate();
         if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0) {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
+            this.dropItem(VioletCraftRegistry.RabbitTear, 1);
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
         }
     }
