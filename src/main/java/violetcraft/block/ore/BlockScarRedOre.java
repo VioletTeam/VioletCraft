@@ -4,10 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftRegistry;
 
-public class BlockScarRedOre extends Block
-{
+public class BlockScarRedOre extends Block {
     public BlockScarRedOre() {
-		super(Material.rock);
+        super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("vc.scarRedOre");
@@ -18,5 +17,5 @@ public class BlockScarRedOre extends Block
         setLightOpacity(1);
         setLightLevel(0F);
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
-	}
+    }
 }

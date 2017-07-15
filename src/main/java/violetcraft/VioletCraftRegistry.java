@@ -17,9 +17,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
 import violetcraft.block.VioletBush;
-import violetcraft.block.dimension.BlockVioletDift;
-import violetcraft.block.dimension.BlockVioletGrass;
-import violetcraft.block.dimension.BlockVioletPortal;
+import violetcraft.block.dimension.*;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
@@ -35,6 +33,12 @@ import violetcraft.tile.TileGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
+    // Creative Tab ====================================================================================================
+    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
+        public Item getTabIconItem() {
+            return VirenIngot;
+        }
+    };
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -46,12 +50,6 @@ public final class VioletCraftRegistry {
     public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
-    // Creative Tab ====================================================================================================
-    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
-        public Item getTabIconItem() {
-            return VirenIngot;
-        }
-    };
     // Tools ===========================================================================================================
     public static final Item VirenSword = new ItemVirenSword();
     // Armor ===========================================================================================================
@@ -65,6 +63,9 @@ public final class VioletCraftRegistry {
     public static final Block VioletGrass = new VioletBush();
     public static final Block VioletDift = new BlockVioletDift();
     public static final Block VioletPortal = new BlockVioletPortal();
+    public static final Block VioletSapling = new BlockVioletSapling();
+    public static final Block VioletLeave = new BlockVioletLeave();
+    public static final Block VioletOakLog = new BlockVioletOakLog();
     // Ore =============================================================================================================
     public static final Block RollYellowOre = new BlockRollYellowOre();
     public static final Block ScarRedOre = new BlockScarRedOre();
@@ -92,6 +93,9 @@ public final class VioletCraftRegistry {
         registerBlock(VioletGrass);
         registerBlock(VioletDift);
         registerBlock(VioletPortal);
+        registerBlock(VioletSapling);
+        registerBlock(VioletLeave);
+        registerBlock(VioletOakLog);
         //Register Ores
         registerBlock(VirenOre);
         registerBlock(ScarRedOre);

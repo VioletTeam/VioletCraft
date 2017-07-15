@@ -16,10 +16,10 @@ public class ContainerViolet extends Container
 	private static final int index2 = 81;
 	/** このコンテナの全体のスロット数 */
 	private static final int index3 = 90;
-	private TileGuiBlock tileEntity;
+    private TileGuiBlock tileEntity;
 
-	public ContainerViolet(EntityPlayer player, TileGuiBlock tileEntity) {
-		// スロットを設定する。
+    public ContainerViolet(EntityPlayer player, TileGuiBlock tileEntity) {
+        // スロットを設定する。
 		this.tileEntity = tileEntity;
 		for (int iy = 0; iy < 6; iy++) {
 			for (int ix = 0; ix < 9; ix++) {
@@ -63,8 +63,8 @@ public class ContainerViolet extends Container
 			}
 
 			if (itemStack1.stackSize == 0) {
-				slot.putStack(null);
-			} else {
+                slot.putStack(null);
+            } else {
 				slot.onSlotChanged();
 			}
 			if (itemStack1.stackSize == itemStack.stackSize) {

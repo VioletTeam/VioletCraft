@@ -47,6 +47,7 @@ public class EntityMoonRabbit extends EntityAnimal
     {
         return true;
     }
+
     /*Entityが子供を産むメゾット「*/
     @Override
     public EntityAgeable createChild(EntityAgeable p_90011_1_) {
@@ -62,12 +63,11 @@ public class EntityMoonRabbit extends EntityAnimal
         this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(6D);
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10D);
     }
+
     /*Entiyが涙を落とすメゾット*/
-    public void onLivingUpdate()
-    {
+    public void onLivingUpdate() {
         super.onLivingUpdate();
-        if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0)
-        {
+        if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0) {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
             this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
@@ -124,6 +124,7 @@ public class EntityMoonRabbit extends EntityAnimal
             return super.attackEntityFrom(source, damage);
         }
     }
+
     public boolean aliveMob()
     {
         return this.mobmethod;

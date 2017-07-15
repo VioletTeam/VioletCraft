@@ -10,31 +10,31 @@ import violetcraft.tile.TileGenerator;
 public class GuiGenerator extends GuiContainer
 {
 	private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/gui_generator.png");
-	private TileGenerator tileGenerator;
+    private TileGenerator tileGenerator;
 
-	public GuiGenerator(EntityPlayer player, TileGenerator tileentity) {
-		super(new ContainerGenerator(player, tileentity));
-		this.tileGenerator = tileentity;
-	}
+    public GuiGenerator(EntityPlayer player, TileGenerator tileentity) {
+        super(new ContainerGenerator(player, tileentity));
+        this.tileGenerator = tileentity;
+    }
 
     /*GUIの文字等の描画処理*/
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseZ) {
     	fontRendererObj.drawString("GuiGenerator", 58, 6, 0x404040);
     	fontRendererObj.drawString("Inventory", 8, (ySize - 96) + 2, 0x404040);
-		if (this.tileGenerator.isBurning()) {
-			int i1 = this.tileGenerator.getBurnTimeRemainingScaled(60) / 200;
-			String Sta = String.valueOf(i1);
-			fontRendererObj.drawString(Sta ,8 ,40 , 424342);
+        if (this.tileGenerator.isBurning()) {
+            int i1 = this.tileGenerator.getBurnTimeRemainingScaled(60) / 200;
+            String Sta = String.valueOf(i1);
+            fontRendererObj.drawString(Sta, 8, 40, 424342);
 
-			i1 = this.tileGenerator.getCookProgressScaled(60);
-			String Sta1 = String.valueOf(i1);
-			fontRendererObj.drawString(Sta1 ,80 ,30 , 424342);
+            i1 = this.tileGenerator.getCookProgressScaled(60);
+            String Sta1 = String.valueOf(i1);
+            fontRendererObj.drawString(Sta1, 80, 30, 424342);
 
-			int ts = this.tileGenerator.generatorAmount;
-			String Sta2 = String.valueOf(ts);
-			fontRendererObj.drawString(Sta2 ,120 ,30 , 424342);
-    	}
+            int ts = this.tileGenerator.generatorAmount;
+            String Sta2 = String.valueOf(ts);
+            fontRendererObj.drawString(Sta2, 120, 30, 424342);
+        }
 	}
 
     @Override
@@ -49,12 +49,12 @@ public class GuiGenerator extends GuiContainer
         int l = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
 
-		if (this.tileGenerator.isBurning()) {
-			int i1 = this.tileGenerator.getBurnTimeRemainingScaled(13);
-			this.drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
+        if (this.tileGenerator.isBurning()) {
+            int i1 = this.tileGenerator.getBurnTimeRemainingScaled(13);
+            this.drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
 //            i1 = this.tileGenerator.getCookProgressScaled(24);
-			this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
-		}
+            this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
+        }
     }
 
 }

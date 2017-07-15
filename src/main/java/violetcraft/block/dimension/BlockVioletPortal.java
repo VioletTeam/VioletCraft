@@ -6,7 +6,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.management.ServerConfigurationManager;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import violetcraft.VioletCraftMod;
@@ -14,12 +13,12 @@ import violetcraft.world.VioletTeleporter;
 
 
 public class BlockVioletPortal extends Block {
-    private IIcon[] iicon = new IIcon[2];
+    public static final int[][] field_150001_a = new int[][]{new int[0], {3, 1}, {2, 0}};
 
     public BlockVioletPortal() {
         super(Material.portal);
-        this.setHardness(25.0F);
-        this.setResistance(300.0F);
+        this.setHardness(50.0F);
+        this.setResistance(3000.0F);
         this.setStepSound(soundTypePiston);
         this.setHarvestLevel("pickaxe", 2);
         this.setLightLevel(1.0F);
@@ -66,14 +65,13 @@ public class BlockVioletPortal extends Block {
                 EntityPlayerMP entityPlayerMP = (EntityPlayerMP) p_149727_5_;
                 ServerConfigurationManager serverConfigurationManager = entityPlayerMP.mcServer.getConfigurationManager();
 
+                WorldServer worldServer = entityPlayerMP.mcServer.worldServerForDimension(0);
                 entityPlayerMP.timeUntilPortal = 10;
 
                 // 独自ディメンションからはオーバーワールドに移動
-                serverConfigurationManager.transferPlayerToDimension(entityPlayerMP, 0);
+                serverConfigurationManager.transferPlayerToDimension(entityPlayerMP, 0, new VioletTeleporter(worldServer));
             }
         }
         return true;
     }
-
-
 }

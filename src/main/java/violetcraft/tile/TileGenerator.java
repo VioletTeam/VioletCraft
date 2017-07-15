@@ -92,46 +92,46 @@ public class TileGenerator extends TileEntity implements ISidedInventory
 	        }
 	}
 
-	public boolean isBurning() {
-		return this.generatorTime > 0;
-	}
+    public boolean isBurning() {
+        return this.generatorTime > 0;
+    }
 
-	@SideOnly(Side.CLIENT)
-	public int getBurnTimeRemainingScaled(int p_145955_1_) {
-		if (this.currentItemBurnTime == 0) {
-			this.currentItemBurnTime = 200;
-		}
+    @SideOnly(Side.CLIENT)
+    public int getBurnTimeRemainingScaled(int p_145955_1_) {
+        if (this.currentItemBurnTime == 0) {
+            this.currentItemBurnTime = 200;
+        }
 
-		return this.generatorTime * p_145955_1_ / this.currentItemBurnTime;
-	}
+        return this.generatorTime * p_145955_1_ / this.currentItemBurnTime;
+    }
 
-	public void updateEntity() {
-		boolean flag = this.generatorTime > 0;
-		boolean flag1 = false;
+    public void updateEntity() {
+        boolean flag = this.generatorTime > 0;
+        boolean flag1 = false;
 
 //        this.amountEE = testEE(this.GeneratorItemStack[1]);
 
-		if (this.generatorTime > 0) {
-			--this.generatorTime;
-			this.generatorAmount += this.amountEE;
-		}
+        if (this.generatorTime > 0) {
+            --this.generatorTime;
+            this.generatorAmount += this.amountEE;
+        }
 
-		if (this.generatorTime != 0 || this.GeneratorItemStack[1] != null) {
-			if (this.generatorTime == 0) {
-				this.currentItemBurnTime = this.generatorTime = getItemBurnTime(this.GeneratorItemStack[1]);
-				this.amountEE = testEE(this.GeneratorItemStack[1]);
-				if (this.generatorTime > 0) {
-					if (this.GeneratorItemStack[1] != null) {
-						//燃料アイテムの1減少
-						--this.GeneratorItemStack[1].stackSize;
-						if (this.GeneratorItemStack[1].stackSize == 0) {
-							this.GeneratorItemStack[1] = GeneratorItemStack[1].getItem().getContainerItem(GeneratorItemStack[1]);
-						}
-					}
-				}
-			}
-		}
-	}
+        if (this.generatorTime != 0 || this.GeneratorItemStack[1] != null) {
+            if (this.generatorTime == 0) {
+                this.currentItemBurnTime = this.generatorTime = getItemBurnTime(this.GeneratorItemStack[1]);
+                this.amountEE = testEE(this.GeneratorItemStack[1]);
+                if (this.generatorTime > 0) {
+                    if (this.GeneratorItemStack[1] != null) {
+                        //燃料アイテムの1減少
+                        --this.GeneratorItemStack[1].stackSize;
+                        if (this.GeneratorItemStack[1].stackSize == 0) {
+                            this.GeneratorItemStack[1] = GeneratorItemStack[1].getItem().getContainerItem(GeneratorItemStack[1]);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     public void readFromNBT(NBTTagCompound p_145839_1_)
     {

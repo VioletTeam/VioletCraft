@@ -31,16 +31,13 @@ public class WorldChunkManagerViolet extends WorldChunkManager {
     private List biomesToSpawnIn;
     private BiomeGenBase plainviolet = (new BiomeGenViolet(biomevioletID));
     private BiomeGenBase iceviolet = (new BiomeGenVioletIce(biomevioletID2));
-    // 独自ディメンションにはメサとキノコバイオームのみ
+    // 独自ディメンションにはvioletのバイオームのみ
     private ArrayList<BiomeGenBase> allowedBiomes = new ArrayList<BiomeGenBase>(Arrays.asList(plainviolet, iceviolet));
 
     {
         for (int i = 0; i < 256; ++i) {
-            if (i % 2 == 0) {
-                biomeList[i] = plainviolet;
-            } else if (i % 2 == 1) {
-                biomeList[i] = iceviolet;
-            }
+            biomeList[i] = plainviolet;
+            biomeList[i] = iceviolet;
         }
     }
 

@@ -1,34 +1,24 @@
 package violetcraft.world.biome;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenerator;
-import violetcraft.VioletCraftRegistry;
-import violetcraft.entity.EntityMoonRabbit;
+import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
 import java.util.Random;
 
 
-public class BiomeGenVioletIce extends BiomeGenBase {
-    protected boolean worldGeneratorTrees;
+public class BiomeGenVioletIce extends BiomeGenVioletBase {
     protected boolean generateLakes;
 
 
     public BiomeGenVioletIce(int localId) {
         super(localId);
-        this.topBlock = VioletCraftRegistry.VioletGrassBlock;
-        this.fillerBlock = VioletCraftRegistry.VioletDift;
-        this.spawnableMonsterList.clear();
-        this.spawnableCreatureList.clear();
-        this.spawnableWaterCreatureList.clear();
-        this.spawnableCaveCreatureList.clear();
-        this.spawnableCreatureList.add(new BiomeGenBase.SpawnListEntry(EntityMoonRabbit.class, 3, 1, 3));
-        this.generateLakes = true;
         this.enableSnow = true;
-        this.worldGeneratorTrees = true;
+        this.treesPerChunk = 8;
     }
 
 
-    public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_) {
-        return new WorldGenVioletGrass(VioletCraftRegistry.VioletGrass, 0);
+    @Override
+    public WorldGenAbstractTree func_150567_a(Random par1Random) // getRandomWorldGenForTrees
+    {
+        return this.worldGeneratorTrees;
     }
 }

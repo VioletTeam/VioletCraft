@@ -16,33 +16,32 @@ import violetcraft.tile.TileGenerator;
 public class BlockGenerator extends BlockContainer
 {
 
-	public BlockGenerator()
-	{
-		super(Material.rock);
-		this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
-		this.setBlockName("vc.generator");
-		this.setBlockTextureName("violetcraft:generator");
-		this.setHardness(1.0F);
-		this.setResistance(10.0F);
-		this.setHarvestLevel("pickaxe", 3);
-		this.setLightLevel(0);
-	}
+	public BlockGenerator() {
+        super(Material.rock);
+        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setBlockName("vc.generator");
+        this.setBlockTextureName("violetcraft:generator");
+        this.setHardness(1.0F);
+        this.setResistance(10.0F);
+        this.setHarvestLevel("pickaxe", 3);
+        this.setLightLevel(0);
+    }
 
-	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
-		int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
-		TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
-		if (p_149931_0_) {
+    public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
+        int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
+        TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
+        if (p_149931_0_) {
             p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
         } else {
             p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
         }
-		p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
+        p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
 
-		if (tileentity != null) {
-			tileentity.validate();
-			p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
-		}
-	}
+        if (tileentity != null) {
+            tileentity.validate();
+            p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
+        }
+    }
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
@@ -50,8 +49,8 @@ public class BlockGenerator extends BlockContainer
 
         if (tileGenerator != null)
             {
-				player.openGui(VioletCraftMod.INSTANCE, VioletCraftMod.GUI_GENERATOR, world, x, y, z);
-			}
+                player.openGui(VioletCraftMod.INSTANCE, VioletCraftMod.GUI_GENERATOR, world, x, y, z);
+            }
 
 			return true;
 //		}

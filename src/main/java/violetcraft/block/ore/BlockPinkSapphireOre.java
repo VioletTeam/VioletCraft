@@ -4,10 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftRegistry;
 
-public class BlockPinkSapphireOre extends Block
-{
+public class BlockPinkSapphireOre extends Block {
     public BlockPinkSapphireOre() {
-		super(Material.rock);
+        super(Material.rock);
 
         setCreativeTab(VioletCraftRegistry.tabVioletCraft);
         setBlockName("vv.pinkSapphireOre");
@@ -18,5 +17,5 @@ public class BlockPinkSapphireOre extends Block
         setLightOpacity(1);
         setLightLevel(0F);
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
-	}
+    }
 }
