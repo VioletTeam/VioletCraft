@@ -10,7 +10,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-import violetcraft.VioletCraftMod;
 import violetcraft.world.biome.BiomeGenViolet;
 import violetcraft.world.biome.BiomeGenVioletIce;
 
@@ -22,30 +21,23 @@ import java.util.Random;
 
 public class WorldChunkManagerViolet extends WorldChunkManager {
 
+    public static final BiomeGenBase[] biomeList = new BiomeGenBase[256];
+    public static int biomevioletID = 80;
+    public static int biomevioletID2 = 81;
     // WorldChunkManagerのプライベート変数にはアクセスできないので専用の変数を作成
     private GenLayer genBiomes;
     private GenLayer biomeIndexLayer;
     private BiomeCache biomeCache;
     private List biomesToSpawnIn;
-
-    public static int biomevioletID = 80;
-    public static int biomevioletID2 = 81;
-
     private BiomeGenBase plainviolet = (new BiomeGenViolet(biomevioletID));
     private BiomeGenBase iceviolet = (new BiomeGenVioletIce(biomevioletID2));
-    // 独自ディメンションにはメサとキノコバイオームのみ
-    private ArrayList<BiomeGenBase> allowedBiomes = new ArrayList<BiomeGenBase>(Arrays.asList(plainviolet,iceviolet));
-
-    public static final BiomeGenBase[] biomeList = new BiomeGenBase[256];
-
+    // 独自ディメンションにはvioletのバイオームのみ
+    private ArrayList<BiomeGenBase> allowedBiomes = new ArrayList<BiomeGenBase>(Arrays.asList(plainviolet, iceviolet));
 
     {
         for (int i = 0; i < 256; ++i) {
-            if (i % 2 == 0) {
-                biomeList[i] = plainviolet;
-            } else if (i % 2 == 1) {
-                biomeList[i] = iceviolet;
-            }
+            biomeList[i] = plainviolet;
+            biomeList[i] = iceviolet;
         }
     }
 

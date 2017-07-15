@@ -6,11 +6,13 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.*;
-import violetcraft.block.dimension.BlockVioletPortal;
-import violetcraft.block.dimension.BlockVioletGrass;
-import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.BlockVirenOre;
 import violetcraft.block.VioletGrass;
+import violetcraft.block.dimension.*;
+import violetcraft.block.ore.BlockBlueTopazOre;
+import violetcraft.block.ore.BlockPinkSapphireOre;
+import violetcraft.block.ore.BlockRollYellowOre;
+import violetcraft.block.ore.BlockScarRedOre;
 import violetcraft.item.*;
 
 public class ItemRegistry {
@@ -48,12 +50,16 @@ public class ItemRegistry {
      */
     public static Item yukariParker;
     /***
-     * egg
+     * dimension
      */
-    public static Block violetgrassblock;
     public static Block violetgrass;
+    public static Block violetgrassblock;
     public static Block violetdift;
     public static Block violetportal;
+    public static Block VioletSapling;
+    public static Block VioletLeave;
+    public static Block VioletOakLog;
+
 
 
     public static void registry() {
@@ -77,5 +83,8 @@ public class ItemRegistry {
         violetgrass=GameRegistry.registerBlock(new VioletGrass(), "violet_grass");
         violetdift=GameRegistry.registerBlock(new BlockVioletDift(), "violet_dift");
         violetportal=GameRegistry.registerBlock(new BlockVioletPortal(), "violet_portal");
+        VioletLeave = GameRegistry.registerBlock(new BlockVioletLeave(), "violet_leave");
+        VioletOakLog = GameRegistry.registerBlock(new BlockVioletOakLog(), "violet_log");
+        VioletSapling = GameRegistry.registerBlock(new BlockVioletSapling(), "violet_sapling");
     }
 }

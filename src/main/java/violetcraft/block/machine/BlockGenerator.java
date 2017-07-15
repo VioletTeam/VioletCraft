@@ -1,4 +1,4 @@
-package violetcraft.block;
+package violetcraft.block.machine;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -14,37 +14,45 @@ import violetcraft.VioletCraftMod;
 import violetcraft.registry.MachineRegistry;
 import violetcraft.tileentity.TileEntityGenerator;
 
+
 public class BlockGenerator extends BlockContainer
 {
 
-	private static boolean field_149934_M;
-
-	public BlockGenerator()
-	{
+	public BlockGenerator() {
 		super(Material.rock);
-		setCreativeTab(VioletCraftMod.VioletCradtTab);
-    	this.setBlockName("VC.BlockGenerator");
-	    this.setBlockTextureName("violetcraft:Block_Generator");
+		this.setCreativeTab(VioletCraftMod.VioletCradtTab);
+		this.setBlockName("vc.generator");
+		this.setBlockTextureName("violetcraft:generator");
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setLightLevel(0);
+		GameRegistry.registerBlock(this, "generator");
+	}
 
-		GameRegistry.registerBlock(this, "BlockGenerator");
+	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
+		int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
+		TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
+		if (p_149931_0_) {
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.blockGenerator);
+		} else {
+			p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.blockGenerator);
+		}
+		p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
+
+		if (tileentity != null) {
+			tileentity.validate();
+			p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
+		}
 	}
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
-//		if (world.isRemote) {
-//			return true;
-//		} else {
-			// GUIを開く。
-			TileEntityGenerator TileEntityGenerator = (TileEntityGenerator)world.getTileEntity(x, y, z);
+		TileEntityGenerator tileEntityGenerator = (TileEntityGenerator) world.getTileEntity(x, y, z);
 
-            if (TileEntityGenerator != null)
-            {
-            	player.openGui(VioletCraftMod.INSTANCE, 1, world, x, y, z);
-            }
+		if (tileEntityGenerator != null) {
+				player.openGui(VioletCraftMod.INSTANCE, VioletCraftMod.GUI_ID, world, x, y, z);
+		}
 
 			return true;
 //		}
@@ -107,29 +115,4 @@ public class BlockGenerator extends BlockContainer
 
 		super.breakBlock(par1World, par2, par3, par4, par5, par6);
 	}
-
-	public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_)
-    {
-        int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
-        TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
-        field_149934_M = true;
-
-        if (p_149931_0_)
-        {
-        	p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
-        }
-        else
-        {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, MachineRegistry.TestMachine);
-        }
-
-        field_149934_M = false;
-        p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
-
-        if (tileentity != null)
-        {
-            tileentity.validate();
-            p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
-        }
-    }
 }

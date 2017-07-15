@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.management.ServerConfigurationManager;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
@@ -37,6 +38,10 @@ public class BlockVioletPortal extends Block {
     }
 
 
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_) {
+        return null;
+    }
+
     /** 右クリックされたときの処理。 */
     @Override
     public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_) {
@@ -62,11 +67,12 @@ public class BlockVioletPortal extends Block {
                 // １行で書くと長過ぎるので一旦ローカル変数に格納
                 EntityPlayerMP entityPlayerMP = (EntityPlayerMP) p_149727_5_;
                 ServerConfigurationManager serverConfigurationManager = entityPlayerMP.mcServer.getConfigurationManager();
+                WorldServer worldServer = entityPlayerMP.mcServer.worldServerForDimension(VioletCraftMod.dimensionID);
 
                 entityPlayerMP.timeUntilPortal = 10;
 
                 // 独自ディメンションからはオーバーワールドに移動
-                serverConfigurationManager.transferPlayerToDimension(entityPlayerMP, 0);
+                serverConfigurationManager.transferPlayerToDimension(entityPlayerMP, 0, new VioletTeleporter(worldServer));
             }
         }
         return true;

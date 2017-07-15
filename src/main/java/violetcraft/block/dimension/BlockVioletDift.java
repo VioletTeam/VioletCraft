@@ -1,15 +1,12 @@
 package violetcraft.block.dimension;
 
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftMod;
 
-public class BlockVioletDift extends Block
-{
-    public BlockVioletDift()
-    {
+public class BlockVioletDift extends Block {
+    public BlockVioletDift() {
         super(Material.ground);
 
         setCreativeTab(VioletCraftMod.VioletCradtTab);
