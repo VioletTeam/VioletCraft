@@ -11,7 +11,14 @@ import violetcraft.block.BlockPinkSapphireOre;
 import violetcraft.block.BlockRollYellowOre;
 import violetcraft.block.BlockScarRedOre;
 import violetcraft.block.BlockVirenOre;
-import violetcraft.item.*;
+import violetcraft.item.ItemCookedMoonRabbit;
+import violetcraft.item.ItemMoonRabbitTear;
+import violetcraft.item.ItemRabbitegg;
+import violetcraft.item.ItemRawMoonRabbit;
+import violetcraft.item.ItemVirenIngot;
+import violetcraft.item.ItemVirenScythe;
+import violetcraft.item.ItemVirenSword;
+import violetcraft.item.ItemYukariParker;
 
 public class ItemRegistry {
     public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
@@ -36,25 +43,24 @@ public class ItemRegistry {
     /***
      * Item
      */
-
     public static Item VirenSword;
+	public static Item ItemVirenScythe;
     public static Item test;
     public static Item moonmeat_cooked;
     public static Item moonmeat_raw;
     public static Item moonrabbit_tear;
     public static Item rabbitegg;
+
     /***
      * YukariParker
      */
     public static Item yukariParker;
-    /***
-     * egg
-     */
-
 
     public static void registry() {
         VirenIngot = new ItemVirenIngot();
+
         VirenSword = new ItemVirenSword();
+        GameRegistry.registerItem(new ItemVirenScythe(Item.ToolMaterial.EMERALD), "viren_scythe");
 
         RollYellowOre = new BlockRollYellowOre();
         ScarRedOre = new BlockScarRedOre();
