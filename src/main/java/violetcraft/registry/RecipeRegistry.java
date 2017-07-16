@@ -1,5 +1,7 @@
 package violetcraft.registry;
 
+import static violetcraft.registry.BlockRegistry.VioletOakLog;
+import static violetcraft.registry.BlockRegistry.VioletOakPlank;
 import static violetcraft.registry.ItemRegistry.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -7,6 +9,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+import violetcraft.block.dimension.BlockVioletOakPlank;
 
 public class RecipeRegistry {
 
@@ -24,6 +28,9 @@ public class RecipeRegistry {
 		GameRegistry.addRecipe(new ItemStack(ItemRegistry.VirenSword, 1),
 				" x ", " x ", " y ",
 				'x', VirenIngot, 'y', Items.stick);
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.VioletOakPlank, 4),
+
+				VioletOakLog);
 
 		//Add Smelting Recipes
 		GameRegistry.addSmelting(BlockRegistry.VirenOre, new ItemStack(VirenIngot), 0.1f);
@@ -38,5 +45,8 @@ public class RecipeRegistry {
 				return 0;
 			}
 		});
+		//oreDictionary
+		OreDictionary.registerOre("logWood",VioletOakLog);
+		OreDictionary.registerOre("plankWood",VioletOakPlank);
 	}
 }

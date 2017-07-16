@@ -5,12 +5,7 @@ import net.minecraft.block.Block;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
 import violetcraft.block.VioletBush;
-import violetcraft.block.dimension.BlockVioletDift;
-import violetcraft.block.dimension.BlockVioletGrass;
-import violetcraft.block.dimension.BlockVioletLeave;
-import violetcraft.block.dimension.BlockVioletOakLog;
-import violetcraft.block.dimension.BlockVioletPortal;
-import violetcraft.block.dimension.BlockVioletSapling;
+import violetcraft.block.dimension.*;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
@@ -29,6 +24,7 @@ public class BlockRegistry {
     public static final Block VioletSapling = new BlockVioletSapling();
     public static final Block VioletLeave = new BlockVioletLeave();
     public static final Block VioletOakLog = new BlockVioletOakLog();
+    public static final Block VioletOakPlank = new BlockVioletOakPlank();
     // Ore =============================================================================================================
     public static final Block RollYellowOre = new BlockRollYellowOre();
     public static final Block ScarRedOre = new BlockScarRedOre();
@@ -47,6 +43,7 @@ public class BlockRegistry {
         registerBlock(VioletSapling);
         registerBlock(VioletLeave);
         registerBlock(VioletOakLog);
+        registerBlock(VioletOakPlank);
         //Register Ores
         registerBlock(VirenOre);
         registerBlock(ScarRedOre);
