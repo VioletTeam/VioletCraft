@@ -33,12 +33,6 @@ import violetcraft.tile.TileGuiBlock;
  * @author C6H2Cl2
  */
 public final class VioletCraftRegistry {
-    // Creative Tab ====================================================================================================
-    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
-        public Item getTabIconItem() {
-            return VirenIngot;
-        }
-    };
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -50,12 +44,20 @@ public final class VioletCraftRegistry {
     public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
+    // Creative Tab ====================================================================================================
+    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
+        public Item getTabIconItem() {
+            return VirenIngot;
+        }
+    };
     // Tools ===========================================================================================================
     public static final Item VirenSword = new ItemVirenSword();
     // Armor ===========================================================================================================
     public static final Item YukariParker = new ItemYukariParker(Parker, 0, 1);
     // Egg =============================================================================================================
     public static final Item RabbitEgg = new ItemRabbitEgg();
+    // Tear =============================================================================================================
+    public static final Item RabbitTear = new ItemMoonRabbitTear();
     //Block ============================================================================================================
     public static final Block VirenBlock = new BlockVirenBlock();
     public static final Block Generator = new BlockGenerator();
@@ -85,7 +87,8 @@ public final class VioletCraftRegistry {
         registerItem(YukariParker);
         //Register Eggs
         registerItem(RabbitEgg);
-
+        //Register Tear
+        registerItem(RabbitTear);
         //Register Blocks
         registerBlock(VirenBlock);
         registerBlock(Generator);
