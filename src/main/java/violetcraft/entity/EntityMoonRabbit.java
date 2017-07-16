@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftRegistry;
+import violetcraft.registry.ItemRegistry;
 
 public class EntityMoonRabbit extends EntityAnimal
 {
@@ -69,7 +70,7 @@ public class EntityMoonRabbit extends EntityAnimal
         super.onLivingUpdate();
         if (!this.worldObj.isRemote && !this.isChild() && !this.aliveMob() && --this.timeUntilNextItem <= 0) {
             this.playSound("mob.chicken.plop", 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-            this.dropItem(VioletCraftRegistry.RabbitTear, 1);
+            this.dropItem(ItemRegistry.RabbitTear, 1);
             this.timeUntilNextItem = this.rand.nextInt(6000) + 6000;
         }
     }
