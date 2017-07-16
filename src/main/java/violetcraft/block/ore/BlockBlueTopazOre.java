@@ -2,12 +2,12 @@ package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class BlockBlueTopazOre extends Block {
     public BlockBlueTopazOre() {
         super(Material.rock);
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vc.blueTopazOre");
         setBlockTextureName("violetcraft:blue_topaz_ore");
         setHardness(1.5F);

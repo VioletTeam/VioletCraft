@@ -1,5 +1,7 @@
 package violetcraft.block.dimension;
 
+import java.util.Random;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -9,9 +11,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.Random;
+import violetcraft.VioletCraftMod;
+import violetcraft.registry.BlockRegistry;
 
 
 public class BlockVioletGrass extends Block {
@@ -22,7 +23,7 @@ public class BlockVioletGrass extends Block {
     public BlockVioletGrass() {
         super(Material.grass);
         String name = "VioletGrassBlock";
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockTextureName("violetcraft:violetdift");
         setBlockName(name);
         setHardness(0.5F);
@@ -32,13 +33,13 @@ public class BlockVioletGrass extends Block {
 
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_) {
-        return p_149691_1_ == 1 ? this.field_149991_b : (p_149691_1_ == 0 ? VioletCraftRegistry.VioletDift.getBlockTextureFromSide(p_149691_1_) : this.blockIcon);
+        return p_149691_1_ == 1 ? this.field_149991_b : (p_149691_1_ == 0 ? BlockRegistry.VioletDift.getBlockTextureFromSide(p_149691_1_) : this.blockIcon);
     }
 
     public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_) {
         if (!p_149674_1_.isRemote) {
             if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) < 4 && p_149674_1_.getBlockLightOpacity(p_149674_2_, p_149674_3_ + 1, p_149674_4_) > 2) {
-                p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, VioletCraftRegistry.VioletDift);
+                p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, BlockRegistry.VioletDift);
             } else if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) >= 9) {
                 for (int l = 0; l < 4; ++l) {
                     int i1 = p_149674_2_ + p_149674_5_.nextInt(3) - 1;
@@ -46,8 +47,8 @@ public class BlockVioletGrass extends Block {
                     int k1 = p_149674_4_ + p_149674_5_.nextInt(3) - 1;
                     Block block = p_149674_1_.getBlock(i1, j1 + 1, k1);
 
-                    if (p_149674_1_.getBlock(i1, j1, k1) == VioletCraftRegistry.VioletDift && p_149674_1_.getBlockMetadata(i1, j1, k1) == 0 && p_149674_1_.getBlockLightValue(i1, j1 + 1, k1) >= 4 && p_149674_1_.getBlockLightOpacity(i1, j1 + 1, k1) <= 2) {
-                        p_149674_1_.setBlock(i1, j1, k1, VioletCraftRegistry.VioletGrassBlock);
+                    if (p_149674_1_.getBlock(i1, j1, k1) == BlockRegistry.VioletDift && p_149674_1_.getBlockMetadata(i1, j1, k1) == 0 && p_149674_1_.getBlockLightValue(i1, j1 + 1, k1) >= 4 && p_149674_1_.getBlockLightOpacity(i1, j1 + 1, k1) <= 2) {
+                        p_149674_1_.setBlock(i1, j1, k1, BlockRegistry.VioletGrassBlock);
                     }
                 }
             }
@@ -55,7 +56,7 @@ public class BlockVioletGrass extends Block {
     }
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
-        return VioletCraftRegistry.VioletDift.getItemDropped(0, p_149650_2_, p_149650_3_);
+        return BlockRegistry.VioletDift.getItemDropped(0, p_149650_2_, p_149650_3_);
     }
 
     @SideOnly(Side.CLIENT)
@@ -63,7 +64,7 @@ public class BlockVioletGrass extends Block {
         if (p_149673_5_ == 1) {
             return this.field_149991_b;
         } else if (p_149673_5_ == 0) {
-            return VioletCraftRegistry.VioletDift.getBlockTextureFromSide(p_149673_5_);
+            return BlockRegistry.VioletDift.getBlockTextureFromSide(p_149673_5_);
         } else {
             Material material = p_149673_1_.getBlock(p_149673_2_, p_149673_3_ + 1, p_149673_4_).getMaterial();
             return material != Material.snow && material != Material.craftedSnow ? this.blockIcon : this.field_149991_b;

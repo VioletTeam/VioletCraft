@@ -2,7 +2,7 @@ package violetcraft.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class BlockVirenBlock extends Block {
 
@@ -12,7 +12,7 @@ public class BlockVirenBlock extends Block {
     public BlockVirenBlock()
     {
     	super(Material.rock);
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vc.virenBlock");
         setBlockTextureName("violetcraft:viren_block");
         setHardness(1.5F);

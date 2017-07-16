@@ -1,5 +1,8 @@
 package violetcraft.block.dimension;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -12,10 +15,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.ArrayList;
-import java.util.Random;
+import violetcraft.VioletCraftMod;
+import violetcraft.registry.BlockRegistry;
 
 
 public class BlockVioletLeave extends BlockLeavesBase implements IShearable {
@@ -30,7 +31,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable {
     public BlockVioletLeave() {
         super(Material.leaves, false);
         this.setTickRandomly(true);
-        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setGraphicsLevel(true);
         this.setBlockName("VioletLeave");
         this.setBlockTextureName("violetcraft:violetleave");
@@ -181,7 +182,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable {
      */
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3) {
-        return Item.getItemFromBlock(VioletCraftRegistry.VioletSapling);
+        return Item.getItemFromBlock(BlockRegistry.VioletSapling);
     }
 
     /**
@@ -191,7 +192,7 @@ public class BlockVioletLeave extends BlockLeavesBase implements IShearable {
     public void dropBlockAsItemWithChance(World par1World, int par2, int par3, int par4, int par5, float par6, int par7) {
         if (!par1World.isRemote) {
             if (par1World.rand.nextInt(7) == 0) {
-                this.dropBlockAsItem(par1World, par2, par3, par4, new ItemStack(VioletCraftRegistry.VioletSapling, 1));
+                this.dropBlockAsItem(par1World, par2, par3, par4, new ItemStack(BlockRegistry.VioletSapling, 1));
             }
             if (par1World.rand.nextInt(9) == 0) {
 

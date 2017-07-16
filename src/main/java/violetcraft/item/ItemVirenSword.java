@@ -1,5 +1,7 @@
 package violetcraft.item;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
@@ -7,9 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.List;
+import violetcraft.VioletCraftMod;
 
 public class ItemVirenSword extends ItemSword {
     //ToDo
@@ -21,7 +21,7 @@ public class ItemVirenSword extends ItemSword {
 
     public ItemVirenSword() {
         super(TOOLCONF);
-        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setUnlocalizedName("vc.virenSword");
         maxStackSize = 1;
         this.setTextureName("violetcraft:viren_sword");

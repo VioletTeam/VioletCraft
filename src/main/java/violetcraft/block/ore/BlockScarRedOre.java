@@ -2,13 +2,13 @@ package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class BlockScarRedOre extends Block {
     public BlockScarRedOre() {
         super(Material.rock);
 
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vc.scarRedOre");
         setBlockTextureName("violetcraft:scar_red_ore");
         setHardness(1.5F);

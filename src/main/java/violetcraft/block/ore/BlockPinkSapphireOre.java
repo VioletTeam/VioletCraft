@@ -2,13 +2,13 @@ package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class BlockPinkSapphireOre extends Block {
     public BlockPinkSapphireOre() {
         super(Material.rock);
 
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vv.pinkSapphireOre");
         setBlockTextureName("violetcraft:pink_sapphire_ore");
         setHardness(1.5F);

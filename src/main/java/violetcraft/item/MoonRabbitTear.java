@@ -2,13 +2,13 @@ package violetcraft.item;
 
 
 import net.minecraft.item.Item;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class MoonRabbitTear extends Item {
     public MoonRabbitTear() {
         String name = "moonrabbit_tear";
 
-        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setUnlocalizedName(name);
         maxStackSize = 16;
         this.setTextureName("violetcraft:moonrabbit_tear");

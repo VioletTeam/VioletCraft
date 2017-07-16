@@ -1,14 +1,14 @@
 package violetcraft.block;
 
+import java.util.Random;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.Random;
+import violetcraft.VioletCraftMod;
 
 public class BlockVirenOre extends Block
 {
@@ -21,7 +21,7 @@ public class BlockVirenOre extends Block
     public BlockVirenOre()
     {
     	super(Material.rock);
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vc.virenOre");
         setBlockTextureName("violetcraft:viren_ore");
         setHardness(1.5F);

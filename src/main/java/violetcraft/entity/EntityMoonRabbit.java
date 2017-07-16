@@ -4,7 +4,15 @@ package violetcraft.entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.*;
+import net.minecraft.entity.ai.EntityAIAvoidEntity;
+import net.minecraft.entity.ai.EntityAIFollowParent;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAIMate;
+import net.minecraft.entity.ai.EntityAIPanic;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAITempt;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityWolf;
@@ -15,7 +23,6 @@ import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftRegistry;
 import violetcraft.registry.ItemRegistry;
 
 public class EntityMoonRabbit extends EntityAnimal
@@ -87,7 +94,7 @@ public class EntityMoonRabbit extends EntityAnimal
 
     /**MOBのドロップアイテムを返すメソッド*/
     protected Item getDropItem() {
-        return VioletCraftRegistry.RawMoonMeat;
+        return ItemRegistry.RawMoonMeat;
     }
 
     protected void dropFewItems(boolean parRecentlyHit, int parLootingLevel) {
@@ -95,12 +102,12 @@ public class EntityMoonRabbit extends EntityAnimal
         int k;
 
         for (k = 0; k < j; ++k) {
-            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
+            this.dropItem(ItemRegistry.RawMoonMeat, 1);
         }
         if (this.isBurning()) {
-            this.dropItem(VioletCraftRegistry.CookedMoonMeat, 1);
+            this.dropItem(ItemRegistry.CookedMoonMeat, 1);
         } else {
-            this.dropItem(VioletCraftRegistry.RawMoonMeat, 1);
+            this.dropItem(ItemRegistry.RawMoonMeat, 1);
         }
     }
 

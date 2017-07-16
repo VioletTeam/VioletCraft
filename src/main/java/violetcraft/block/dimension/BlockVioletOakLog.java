@@ -1,5 +1,7 @@
 package violetcraft.block.dimension;
 
+import java.util.Random;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -10,9 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.Random;
+import violetcraft.VioletCraftMod;
+import violetcraft.registry.BlockRegistry;
 
 
 public class BlockVioletOakLog extends Block {
@@ -21,7 +22,7 @@ public class BlockVioletOakLog extends Block {
 
     public BlockVioletOakLog() {
         super(Material.wood);
-        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setBlockName("VioletLog");
         this.setHardness(2F);
         this.setResistance(12F);
@@ -56,7 +57,7 @@ public class BlockVioletOakLog extends Block {
      */
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3) {
-        return Item.getItemFromBlock(VioletCraftRegistry.VioletOakLog);
+        return Item.getItemFromBlock(BlockRegistry.VioletOakLog);
     }
 
     /**

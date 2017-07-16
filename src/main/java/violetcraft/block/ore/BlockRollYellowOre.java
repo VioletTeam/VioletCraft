@@ -2,13 +2,13 @@ package violetcraft.block.ore;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
 
 public class BlockRollYellowOre extends Block {
     public BlockRollYellowOre() {
         super(Material.rock);
 
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("vc.rollYellowOre");
         setBlockTextureName("violetcraft:roll_yellow_ore");
         setHardness(1.5F);

@@ -10,7 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.registry.BlockRegistry;
 import violetcraft.tile.TileGenerator;
 
 public class BlockGenerator extends BlockContainer
@@ -18,7 +18,7 @@ public class BlockGenerator extends BlockContainer
 
 	public BlockGenerator() {
         super(Material.rock);
-        this.setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setBlockName("vc.generator");
         this.setBlockTextureName("violetcraft:generator");
         this.setHardness(1.0F);
@@ -31,9 +31,9 @@ public class BlockGenerator extends BlockContainer
         int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
         TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
         if (p_149931_0_) {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
+            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, BlockRegistry.Generator);
         } else {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, VioletCraftRegistry.Generator);
+            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, BlockRegistry.Generator);
         }
         p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
 

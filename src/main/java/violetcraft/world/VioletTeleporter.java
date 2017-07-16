@@ -1,6 +1,11 @@
 package violetcraft.world;
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
@@ -12,16 +17,11 @@ import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import violetcraft.registry.BlockRegistry;
 
 public class VioletTeleporter extends Teleporter {
-    public static final Block frameBlock = VioletCraftRegistry.ScarRedOre;
-    public static final Block portalBlock = VioletCraftRegistry.VioletPortal;
+    public static final Block frameBlock = BlockRegistry.ScarRedOre;
+    public static final Block portalBlock = BlockRegistry.VioletPortal;
     public static final int[] frameMetaTable = new int[]{4, 2, 5, 3};
 
     private final WorldServer worldServerInstance;

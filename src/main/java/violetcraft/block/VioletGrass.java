@@ -5,14 +5,15 @@ package violetcraft.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.material.Material;
-import violetcraft.VioletCraftRegistry;
+import violetcraft.VioletCraftMod;
+import violetcraft.registry.BlockRegistry;
 
 public class VioletGrass extends BlockBush
 {
     public VioletGrass()
     {
         super(Material.vine);
-        setCreativeTab(VioletCraftRegistry.tabVioletCraft);
+        setCreativeTab(VioletCraftMod.tabVioletCraft);
         setBlockName("VioletGrass");
         setBlockTextureName("violetcraft:violetgrass");
         setStepSound(Block.soundTypeGrass);
@@ -22,6 +23,6 @@ public class VioletGrass extends BlockBush
     @Override
     protected boolean canPlaceBlockOn(Block block)
     {
-        return block == VioletCraftRegistry.VioletGrassBlock || block == VioletCraftRegistry.VioletDift;
+        return block == BlockRegistry.VioletGrassBlock || block == BlockRegistry.VioletDift;
     }
 }
