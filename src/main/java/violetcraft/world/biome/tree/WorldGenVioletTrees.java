@@ -1,21 +1,21 @@
 package violetcraft.world.biome.tree;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.Random;
+import violetcraft.registry.BlockRegistry;
 
 
 public class WorldGenVioletTrees extends WorldGenVioletTreesBase {
     public WorldGenVioletTrees(boolean par1) {
-        super(par1, 4, VioletCraftRegistry.VioletOakLog, 0, VioletCraftRegistry.VioletLeave, 2, false);
+        super(par1, 4, BlockRegistry.VioletOakLog, 0, BlockRegistry.VioletLeave, 2, false);
     }
 
     @Override
     public boolean isSoil(Block block, World world, int x, int y, int z) {
-        return block == VioletCraftRegistry.VioletGrassBlock
-                || block == VioletCraftRegistry.VioletDift;
+        return block == BlockRegistry.VioletGrassBlock
+                || block == BlockRegistry.VioletDift;
     }
 
     @Override

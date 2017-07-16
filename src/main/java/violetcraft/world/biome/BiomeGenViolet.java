@@ -1,11 +1,11 @@
 package violetcraft.world.biome;
 
 
+import java.util.Random;
+
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import violetcraft.VioletCraftRegistry;
-
-import java.util.Random;
+import violetcraft.registry.BlockRegistry;
 
 public class BiomeGenViolet extends BiomeGenVioletBase {
     protected boolean generateLakes;
@@ -17,7 +17,7 @@ public class BiomeGenViolet extends BiomeGenVioletBase {
     }
 
     public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_) {
-        return new WorldGenVioletGrass(VioletCraftRegistry.VioletGrass, 0);
+        return new WorldGenVioletGrass(BlockRegistry.VioletGrass, 0);
     }
 
     @Override

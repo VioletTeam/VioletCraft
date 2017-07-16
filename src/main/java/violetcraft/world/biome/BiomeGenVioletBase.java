@@ -1,14 +1,14 @@
 package violetcraft.world.biome;
 
 
+import java.util.Random;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenerator;
-import violetcraft.VioletCraftRegistry;
 import violetcraft.entity.EntityMoonRabbit;
+import violetcraft.registry.BlockRegistry;
 import violetcraft.world.biome.tree.WorldGenVioletTrees;
-
-import java.util.Random;
 
 public class BiomeGenVioletBase extends BiomeGenBase {
     public int treesPerChunk;
@@ -19,8 +19,8 @@ public class BiomeGenVioletBase extends BiomeGenBase {
         this.worldGeneratorTrees = new WorldGenVioletTrees(false);
         this.treesPerChunk = 0;
 
-        this.topBlock = VioletCraftRegistry.VioletGrassBlock;
-        this.fillerBlock = VioletCraftRegistry.VioletDift;
+        this.topBlock = BlockRegistry.VioletGrassBlock;
+        this.fillerBlock = BlockRegistry.VioletDift;
         this.spawnableMonsterList.clear();
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
@@ -29,7 +29,7 @@ public class BiomeGenVioletBase extends BiomeGenBase {
     }
 
     public WorldGenerator getRandomWorldGenForGrass(Random p_76730_1_) {
-        return new WorldGenVioletGrass(VioletCraftRegistry.VioletGrass, 0);
+        return new WorldGenVioletGrass(BlockRegistry.VioletGrass, 0);
     }
 
     /*メゾットがいじれないやつなので気をつけて*/
