@@ -18,6 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
+import violetcraft.generator.VioletCraftOreGenerator;
 import violetcraft.gui.GuiHandler;
 import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.ItemRegistry;
@@ -100,7 +101,9 @@ public final class VioletCraftMod {
                 .setColor(0x00ff00).setBiomeName("Violetplean");
         BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
                 .setColor(0x00ff00).setBiomeName("VioletIce");
-        GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
+
+        //　VioletCraft関連鉱石の生成
+        GameRegistry.registerWorldGenerator(new VioletCraftOreGenerator(), 0);
     }
 
     /**
