@@ -23,6 +23,7 @@ import violetcraft.gui.GuiHandler;
 import violetcraft.registry.BlockRegistry;
 import violetcraft.registry.ItemRegistry;
 import violetcraft.registry.RecipeRegistry;
+import violetcraft.registry.VioletEntity;
 import violetcraft.world.WorldProviderViolet;
 import violetcraft.world.biome.BiomeGenViolet;
 import violetcraft.world.biome.BiomeGenVioletIce;
@@ -83,6 +84,8 @@ public final class VioletCraftMod {
         BlockRegistry.addBlockRegistry();
         ItemRegistry.addItemRegistry();
         RecipeRegistry.addRecipeRegistry();
+        VioletEntity.register(this);
+        VioletEntity.addSpawns();
 
         DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
         // 独自ディメンションを登録

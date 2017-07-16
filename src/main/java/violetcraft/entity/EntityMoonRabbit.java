@@ -101,6 +101,8 @@ public class EntityMoonRabbit extends EntityAnimal
         int j = this.rand.nextInt(3) + this.rand.nextInt(1 + parLootingLevel);
         int k;
 
+
+
         for (k = 0; k < j; ++k) {
             this.dropItem(ItemRegistry.RawMoonMeat, 1);
         }
@@ -109,6 +111,7 @@ public class EntityMoonRabbit extends EntityAnimal
         } else {
             this.dropItem(ItemRegistry.RawMoonMeat, 1);
         }
+
     }
 
 
