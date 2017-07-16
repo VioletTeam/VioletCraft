@@ -1,24 +1,9 @@
 package violetcraft.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.BlockVirenBlock;
-import violetcraft.block.BlockVirenOre;
-import violetcraft.block.VioletBush;
-import violetcraft.block.dimension.BlockVioletDift;
-import violetcraft.block.dimension.BlockVioletGrass;
-import violetcraft.block.dimension.BlockVioletLeave;
-import violetcraft.block.dimension.BlockVioletOakLog;
-import violetcraft.block.dimension.BlockVioletPortal;
-import violetcraft.block.dimension.BlockVioletSapling;
-import violetcraft.block.machine.BlockGenerator;
-import violetcraft.block.ore.BlockBlueTopazOre;
-import violetcraft.block.ore.BlockPinkSapphireOre;
-import violetcraft.block.ore.BlockRollYellowOre;
-import violetcraft.block.ore.BlockScarRedOre;
 import violetcraft.item.ItemCookedMoonRabbit;
 import violetcraft.item.ItemMoonRabbitTear;
 import violetcraft.item.ItemRabbitEgg;
@@ -49,22 +34,6 @@ public class ItemRegistry{
     public static final Item RabbitEgg = new ItemRabbitEgg();
     // Tear =============================================================================================================
     public static final Item RabbitTear = new ItemMoonRabbitTear();
-    //Block ============================================================================================================
-    public static final Block VirenBlock = new BlockVirenBlock();
-    public static final Block Generator = new BlockGenerator();
-    public static final Block VioletGrassBlock = new BlockVioletGrass();
-    public static final Block VioletGrass = new VioletBush();
-    public static final Block VioletDift = new BlockVioletDift();
-    public static final Block VioletPortal = new BlockVioletPortal();
-    public static final Block VioletSapling = new BlockVioletSapling();
-    public static final Block VioletLeave = new BlockVioletLeave();
-    public static final Block VioletOakLog = new BlockVioletOakLog();
-    // Ore =============================================================================================================
-    public static final Block RollYellowOre = new BlockRollYellowOre();
-    public static final Block ScarRedOre = new BlockScarRedOre();
-    public static final Block BlueTopazOre = new BlockBlueTopazOre();
-    public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
-    public static final Block VirenOre = new BlockVirenOre();
 
     public static void addItemRegistry() {
         //Register Items
