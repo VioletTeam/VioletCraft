@@ -4,11 +4,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import violetcraft.tileentity.TileEntityGuiBlock;
+import violetcraft.tile.TileGuiBlock;
 
 public class ContainerViolet extends Container
 {
-	private TileEntityGuiBlock tileEntity;
 	/** ブロック側のインベントリの第一スロットの番号 */
 	private static final int index0 = 0;
 	/** プレイヤーのインベントリの第一スロットの番号 */
@@ -17,9 +16,10 @@ public class ContainerViolet extends Container
 	private static final int index2 = 81;
 	/** このコンテナの全体のスロット数 */
 	private static final int index3 = 90;
+    private TileGuiBlock tileEntity;
 
-	public ContainerViolet(EntityPlayer player, TileEntityGuiBlock tileEntity) {
-		// スロットを設定する。
+    public ContainerViolet(EntityPlayer player, TileGuiBlock tileEntity) {
+        // スロットを設定する。
 		this.tileEntity = tileEntity;
 		for (int iy = 0; iy < 6; iy++) {
 			for (int ix = 0; ix < 9; ix++) {
@@ -63,8 +63,8 @@ public class ContainerViolet extends Container
 			}
 
 			if (itemStack1.stackSize == 0) {
-				slot.putStack((ItemStack) null);
-			} else {
+                slot.putStack(null);
+            } else {
 				slot.onSlotChanged();
 			}
 			if (itemStack1.stackSize == itemStack.stackSize) {
@@ -74,19 +74,4 @@ public class ContainerViolet extends Container
 		}
 		return itemStack;
 	}
-
-    //座標でGUIを開くか判定するためのもの。
-//    int xCoord, yCoord, zCoord;
-//    public ContainerViolet(int x, int y, int z) {
-//        this.xCoord = x;
-//        this.yCoord = y;
-//        this.zCoord = z;
-//    }
-
-//    @Override
-//    public boolean canInteractWith(EntityPlayer player) {
-//        もし、ブロックとの位置関係でGUI制御したいなら、こちらを使う
-//        return player.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64D;
-//        return true;
-//    }
 }

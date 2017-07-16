@@ -1,77 +1,93 @@
 package violetcraft.registry;
 
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.block.BlockBlueTopazOre;
-import violetcraft.block.BlockPinkSapphireOre;
-import violetcraft.block.BlockRollYellowOre;
-import violetcraft.block.BlockScarRedOre;
+import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
+import violetcraft.block.VioletBush;
+import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.dimension.BlockVioletGrass;
+import violetcraft.block.dimension.BlockVioletLeave;
+import violetcraft.block.dimension.BlockVioletOakLog;
+import violetcraft.block.dimension.BlockVioletPortal;
+import violetcraft.block.dimension.BlockVioletSapling;
+import violetcraft.block.machine.BlockGenerator;
+import violetcraft.block.ore.BlockBlueTopazOre;
+import violetcraft.block.ore.BlockPinkSapphireOre;
+import violetcraft.block.ore.BlockRollYellowOre;
+import violetcraft.block.ore.BlockScarRedOre;
 import violetcraft.item.ItemCookedMoonRabbit;
 import violetcraft.item.ItemMoonRabbitTear;
-import violetcraft.item.ItemRabbitegg;
+import violetcraft.item.ItemRabbitEgg;
 import violetcraft.item.ItemRawMoonRabbit;
 import violetcraft.item.ItemVirenIngot;
-import violetcraft.item.ItemVirenScythe;
 import violetcraft.item.ItemVirenSword;
-import violetcraft.item.ItemYukariParker;
+import violetcraft.item.armor.ItemYukariParker;
 
-public class ItemRegistry {
-    public static ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
-    /***
-     * Ore
-     */
-    public static Block RollYellowOre;
-    public static Block ScarRedOre;
-    public static Block blueTopazOre;
-    public static Block PinkSapphireOre;
-    public static Block BlockVirenOre;
+public class ItemRegistry{
+    //Material =========================================================================================================
+    public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
+    public static final Item RollYellowIngot = null;
+    public static final Item ScarRedIngot = null;
+    public static final Item BLueTopaz = null;
+    public static final Item PinkSapphire = null;
+    // Item ============================================================================================================
+    public static final Item CookedMoonMeat = new ItemCookedMoonRabbit(5, 6, true);
+    public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
+    // Ingot ===========================================================================================================
+    public static final Item VirenIngot = new ItemVirenIngot();
+    // Creative Tab ====================================================================================================
+    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
+        public Item getTabIconItem() {
+            return VirenIngot;
+        }
+    };
+    // Tools ===========================================================================================================
+    public static final Item VirenSword = new ItemVirenSword();
+    // Armor ===========================================================================================================
+    public static final Item YukariParker = new ItemYukariParker(Parker, 0, 1);
+    // Egg =============================================================================================================
+    public static final Item RabbitEgg = new ItemRabbitEgg();
+    // Tear =============================================================================================================
+    public static final Item RabbitTear = new ItemMoonRabbitTear();
+    //Block ============================================================================================================
+    public static final Block VirenBlock = new BlockVirenBlock();
+    public static final Block Generator = new BlockGenerator();
+    public static final Block VioletGrassBlock = new BlockVioletGrass();
+    public static final Block VioletGrass = new VioletBush();
+    public static final Block VioletDift = new BlockVioletDift();
+    public static final Block VioletPortal = new BlockVioletPortal();
+    public static final Block VioletSapling = new BlockVioletSapling();
+    public static final Block VioletLeave = new BlockVioletLeave();
+    public static final Block VioletOakLog = new BlockVioletOakLog();
+    // Ore =============================================================================================================
+    public static final Block RollYellowOre = new BlockRollYellowOre();
+    public static final Block ScarRedOre = new BlockScarRedOre();
+    public static final Block BlueTopazOre = new BlockBlueTopazOre();
+    public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
+    public static final Block VirenOre = new BlockVirenOre();
 
-    /***
-     * Ingot
-     */
-    public static Item RollYellowIngot;
-    public static Item ScarRedIngot;
-    public static Item blueTopaz;
-    public static Item PinkSapphire;
-    public static Item VirenIngot;
+    public static void addItemRegistry() {
+        //Register Items
+        registerItem(RawMoonMeat);
+        registerItem(CookedMoonMeat);
+        //Register Ingots
+        registerItem(VirenIngot);
+        //Register Tools
+        registerItem(VirenSword);
+        //Register Armors
+        registerItem(YukariParker);
+        //Register Eggs
+        registerItem(RabbitEgg);
+        //Register Tear
+        registerItem(RabbitTear);
+    }
 
-    /***
-     * Item
-     */
-    public static Item VirenSword;
-	public static Item ItemVirenScythe;
-    public static Item test;
-    public static Item moonmeat_cooked;
-    public static Item moonmeat_raw;
-    public static Item moonrabbit_tear;
-    public static Item rabbitegg;
-
-    /***
-     * YukariParker
-     */
-    public static Item yukariParker;
-
-    public static void registry() {
-        VirenIngot = new ItemVirenIngot();
-
-        VirenSword = new ItemVirenSword();
-        GameRegistry.registerItem(new ItemVirenScythe(Item.ToolMaterial.EMERALD), "viren_scythe");
-
-        RollYellowOre = new BlockRollYellowOre();
-        ScarRedOre = new BlockScarRedOre();
-        blueTopazOre = new BlockBlueTopazOre();
-        PinkSapphireOre = new BlockPinkSapphireOre();
-        BlockVirenOre = new BlockVirenOre();
-        yukariParker = new ItemYukariParker(Parker, 0, 1);
-
-        rabbitegg = new ItemRabbitegg();
-        moonmeat_cooked= new ItemCookedMoonRabbit(5,6,true);
-        moonmeat_raw= new ItemRawMoonRabbit(3,1,true);
-        GameRegistry.registerItem(new ItemMoonRabbitTear(),"moonrabbit_tear");
+    private static void registerItem(Item item) {
+        GameRegistry.registerItem(item, item.getUnlocalizedName());
     }
 }

@@ -37,7 +37,7 @@ public class ItemVirenScythe extends ItemSword {
 		ToolMaterial = EnumHelper.addToolMaterial("VIRENBLOCK", miningLevel, endurance, speed, damage, correction);
 
 		setUnlocalizedName(name);
-		setCreativeTab(VioletCraftMod.VioletCradtTab);
+		setCreativeTab(VioletCraftMod.tabVioletCraft);
 		setTextureName( "violetcraft:" + name );
 
 	    maxStackSize = 1;
