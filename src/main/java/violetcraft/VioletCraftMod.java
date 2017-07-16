@@ -17,6 +17,8 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
 import violetcraft.gui.GuiHandler;
+import violetcraft.registry.BlockRegistry;
+import violetcraft.registry.ItemRegistry;
 import violetcraft.world.WorldProviderViolet;
 import violetcraft.world.biome.BiomeGenViolet;
 import violetcraft.world.biome.BiomeGenVioletIce;
@@ -68,6 +70,8 @@ public final class VioletCraftMod {
             cfg.save();
         }
 
+        BlockRegistry.addBlockRegistry();
+        ItemRegistry.addItemRegistry();
         DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
         // 独自ディメンションを登録
         DimensionManager.registerDimension(dimensionID, providerType);
