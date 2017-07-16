@@ -1,27 +1,31 @@
 package violetcraft.registry;
 
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.registry.ItemRegistry;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
 import violetcraft.block.VioletBush;
-import violetcraft.block.dimension.*;
+import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.dimension.BlockVioletGrass;
+import violetcraft.block.dimension.BlockVioletLeave;
+import violetcraft.block.dimension.BlockVioletOakLog;
+import violetcraft.block.dimension.BlockVioletPortal;
+import violetcraft.block.dimension.BlockVioletSapling;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
 import violetcraft.block.ore.BlockRollYellowOre;
 import violetcraft.block.ore.BlockScarRedOre;
-import violetcraft.item.*;
+import violetcraft.item.ItemCookedMoonRabbit;
+import violetcraft.item.ItemMoonRabbitTear;
+import violetcraft.item.ItemRabbitEgg;
+import violetcraft.item.ItemRawMoonRabbit;
+import violetcraft.item.ItemVirenIngot;
+import violetcraft.item.ItemVirenSword;
 import violetcraft.item.armor.ItemYukariParker;
 
 public class ItemRegistry{

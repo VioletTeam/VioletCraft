@@ -13,6 +13,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
@@ -42,6 +44,12 @@ public final class VioletCraftMod {
     public static int dimensionID = -90;
     public static int providerType = -61;
 
+	/** 追加するクリエイティブタブ */
+    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
+        public Item getTabIconItem() {
+            return ItemRegistry.VirenIngot;
+        }
+    };
 
     public static int biomevioletID = 80;
     public static int biomevioletID2 = 81;
