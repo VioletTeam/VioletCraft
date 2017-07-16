@@ -67,7 +67,7 @@ public class ItemRegistry{
     public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
     public static final Block VirenOre = new BlockVirenOre();
 
-    public void handlePreInit(FMLPreInitializationEvent event) {
+    public static void addItemRegistry() {
         //Register Items
         registerItem(RawMoonMeat);
         registerItem(CookedMoonMeat);

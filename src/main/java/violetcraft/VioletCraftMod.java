@@ -90,7 +90,6 @@ public final class VioletCraftMod {
         BiomeGenBase violetice = (new BiomeGenVioletIce(biomevioletID2))
                 .setColor(0x00ff00).setBiomeName("VioletIce");
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
-        VioletCraftRegistry.handleInit(event);
     }
 
     /**
