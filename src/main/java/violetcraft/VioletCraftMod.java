@@ -2,6 +2,7 @@ package violetcraft;
 
 
 import com.google.common.collect.Lists;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
@@ -51,7 +52,6 @@ public final class VioletCraftMod {
      * @param event please see cpw.mods.fml.common.event.FMLPreInitializationEvent
      */
     @EventHandler
-    @SuppressWarnings("unused")
     public void preInit(FMLPreInitializationEvent event) {
         loadMeta();
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
@@ -67,7 +67,7 @@ public final class VioletCraftMod {
         } finally {
             cfg.save();
         }
-        VioletCraftRegistry.handlePreInit(event);
+
         DimensionManager.registerProviderType(providerType, WorldProviderViolet.class, false);
         // 独自ディメンションを登録
         DimensionManager.registerDimension(dimensionID, providerType);
@@ -80,7 +80,6 @@ public final class VioletCraftMod {
      @param event see cpw.mods.fml.common.event.FMLInitializationEvent
      */
     @EventHandler
-    @SuppressWarnings("unused")
     public void init(FMLInitializationEvent event) {
         BiomeGenBase violetplain = (new BiomeGenViolet(biomevioletID))
                 .setColor(0x00ff00).setBiomeName("Violetplean");
@@ -96,7 +95,6 @@ public final class VioletCraftMod {
      * @param event please see cpw.mods.fml.common.event.FMLPostInitializationEvent
      */
     @EventHandler
-    @SuppressWarnings("unused")
     public void postInit(FMLPostInitializationEvent event) {
         proxy.registerRender();
 
