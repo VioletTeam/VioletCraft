@@ -3,7 +3,6 @@ package violetcraft.registry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import violetcraft.block.BlockVirenBlock;
-import violetcraft.block.BlockVirenOre;
 import violetcraft.block.VioletBush;
 import violetcraft.block.dimension.BlockVioletDift;
 import violetcraft.block.dimension.BlockVioletGrass;
@@ -16,6 +15,7 @@ import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
 import violetcraft.block.ore.BlockRollYellowOre;
 import violetcraft.block.ore.BlockScarRedOre;
+import violetcraft.block.ore.BlockVirenOre;
 
 public class BlockRegistry {
 

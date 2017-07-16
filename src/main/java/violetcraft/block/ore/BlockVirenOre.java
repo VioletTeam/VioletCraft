@@ -1,4 +1,4 @@
-package violetcraft.block;
+package violetcraft.block.ore;
 
 import java.util.Random;
 
@@ -33,20 +33,7 @@ public class BlockVirenOre extends Block
         setLightOpacity(1);/*ブロックの透過係数。デフォルト０（不透過）*/
         setLightLevel(0F);/*明るさ 1.0F = 15*/
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);/*当たり判定*/
-
-//    	GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
     }
-
-//    @Override
-//    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float posX, float posY, float posZ){
-//        //ブロックを右クリックした際の動作
-//        return true;
-//    }
-//
-//    @Override
-//    public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player){
-//        //ブロックを左クリックした際の動作
-//    }
 
     @Override
     public void onNeighborBlockChange(World world, int x, int y, int z, Block neighborBlock){
@@ -64,25 +51,4 @@ public class BlockVirenOre extends Block
         //ドロップさせる量を返す
         return 1;
     }
-
-//    @Override
-//    @SideOnly(Side.CLIENT)
-//    public void registerBlockIcons(IIconRegister par1IconRegister)
-//    {
-//        this.TopIcon = par1IconRegister.registerIcon("violetcraft:VirenOre");
-//        this.SideIcon = par1IconRegister.registerIcon("violetcraft:VirenOre");
-//    }
-//
-//    @SideOnly(Side.CLIENT)
-//    public IIcon getIcon(int par1, int par2)
-//    {
-//         if(par1 == 0 || par1 == 1)
-//         {
-//                  return TopIcon;
-//         }
-//         else
-//         {
-//                  return SideIcon;
-//         }
-//    }
 }
