@@ -98,37 +98,7 @@ public class ItemRegistry{
         registerBlock(BlueTopazOre);
         registerBlock(RollYellowOre);
     }
-    static void handleInit(FMLInitializationEvent event) {
-
-
-        //Add Recipes
-        GameRegistry.addRecipe(new ItemStack(VirenSword, 1),
-                " x ", " x ", " y ", 'x',
-                VirenIngot, 'y', Items.stick);
-        GameRegistry.addRecipe(new ItemStack(YukariParker),
-                "wbw", "blb", "wpw",
-                'b', new ItemStack(Items.dye, 1, 0), 'p', new ItemStack(Items.dye, 1, 9), 'l', Items.leather_chestplate, 'w', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(VirenBlock, 1),
-                "xxx", "xxx", "xxx",
-                'x', VirenIngot);
-        GameRegistry.addRecipe(new ItemStack(VirenSword, 1),
-                " x ", " x ", " y ",
-                'x', VirenIngot, 'y', Items.stick);
-
-        //Add Smelting Recipes
-        GameRegistry.addSmelting(ItemRegistry.VirenOre, new ItemStack(ItemRegistry.VirenIngot), 0.1f);
-        GameRegistry.addSmelting(ItemRegistry.RawMoonMeat, new ItemStack(ItemRegistry.CookedMoonMeat), 0.15f);
-
-        //Add Fuel Handler
-        GameRegistry.registerFuelHandler(fuel -> {
-            Item item = fuel.getItem();
-            if (item == Items.apple) {
-                return 200;
-            } else {
-                return 0;
-            }
-        });
-    }
+    
     private static void registerBlock(Block block) {
         GameRegistry.registerBlock(block, block.getUnlocalizedName());
     }
