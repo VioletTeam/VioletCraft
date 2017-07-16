@@ -1,5 +1,6 @@
 package violetcraft.registry;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.BlockVirenOre;
@@ -36,6 +37,25 @@ public class BlockRegistry {
     public static final Block VirenOre = new BlockVirenOre();
 
 	public static void addBlockRegistry() {
-
+        //Register Blocks
+        registerBlock(VirenBlock);
+        registerBlock(Generator);
+        registerBlock(VioletGrassBlock);
+        registerBlock(VioletGrass);
+        registerBlock(VioletDift);
+        registerBlock(VioletPortal);
+        registerBlock(VioletSapling);
+        registerBlock(VioletLeave);
+        registerBlock(VioletOakLog);
+        //Register Ores
+        registerBlock(VirenOre);
+        registerBlock(ScarRedOre);
+        registerBlock(PinkSapphireOre);
+        registerBlock(BlueTopazOre);
+        registerBlock(RollYellowOre);
 	}
+    private static void registerBlock(Block block) {
+        GameRegistry.registerBlock(block, block.getUnlocalizedName());
+    }
+
 }

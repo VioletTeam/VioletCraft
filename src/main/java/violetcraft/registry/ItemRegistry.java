@@ -67,7 +67,7 @@ public class ItemRegistry{
     public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
     public static final Block VirenOre = new BlockVirenOre();
 
-    static void handlePreInit(FMLPreInitializationEvent event) {
+    public void handlePreInit(FMLPreInitializationEvent event) {
         //Register Items
         registerItem(RawMoonMeat);
         registerItem(CookedMoonMeat);
@@ -81,30 +81,9 @@ public class ItemRegistry{
         registerItem(RabbitEgg);
         //Register Tear
         registerItem(RabbitTear);
-        //Register Blocks
-        registerBlock(VirenBlock);
-        registerBlock(Generator);
-        registerBlock(VioletGrassBlock);
-        registerBlock(VioletGrass);
-        registerBlock(VioletDift);
-        registerBlock(VioletPortal);
-        registerBlock(VioletSapling);
-        registerBlock(VioletLeave);
-        registerBlock(VioletOakLog);
-        //Register Ores
-        registerBlock(VirenOre);
-        registerBlock(ScarRedOre);
-        registerBlock(PinkSapphireOre);
-        registerBlock(BlueTopazOre);
-        registerBlock(RollYellowOre);
-    }
-    
-    private static void registerBlock(Block block) {
-        GameRegistry.registerBlock(block, block.getUnlocalizedName());
     }
 
     private static void registerItem(Item item) {
         GameRegistry.registerItem(item, item.getUnlocalizedName());
     }
-
 }
