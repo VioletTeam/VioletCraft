@@ -2,7 +2,6 @@ package violetcraft.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
@@ -25,6 +24,7 @@ import violetcraft.item.ItemMoonRabbitTear;
 import violetcraft.item.ItemRabbitEgg;
 import violetcraft.item.ItemRawMoonRabbit;
 import violetcraft.item.ItemVirenIngot;
+import violetcraft.item.ItemVirenScythe;
 import violetcraft.item.ItemVirenSword;
 import violetcraft.item.armor.ItemYukariParker;
 
@@ -40,14 +40,9 @@ public class ItemRegistry{
     public static final Item RawMoonMeat = new ItemRawMoonRabbit(3, 1, true);
     // Ingot ===========================================================================================================
     public static final Item VirenIngot = new ItemVirenIngot();
-    // Creative Tab ====================================================================================================
-    public static final CreativeTabs tabVioletCraft = new CreativeTabs("violet_craft") {
-        public Item getTabIconItem() {
-            return VirenIngot;
-        }
-    };
     // Tools ===========================================================================================================
     public static final Item VirenSword = new ItemVirenSword();
+    public static final Item ItemVirenScythe = new ItemVirenScythe("viren_scythe", VioletCraftMaterialRegistry.VIRENBLOCK);
     // Armor ===========================================================================================================
     public static final Item YukariParker = new ItemYukariParker(Parker, 0, 1);
     // Egg =============================================================================================================
@@ -79,6 +74,7 @@ public class ItemRegistry{
         registerItem(VirenIngot);
         //Register Tools
         registerItem(VirenSword);
+        registerItem(ItemVirenScythe);
         //Register Armors
         registerItem(YukariParker);
         //Register Eggs
