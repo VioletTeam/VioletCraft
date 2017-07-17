@@ -13,8 +13,11 @@ import violetcraft.item.ItemVirenIngot;
 import violetcraft.item.ItemVirenScythe;
 import violetcraft.item.ItemVirenSword;
 import violetcraft.item.armor.ItemYukariParker;
+import violetcraft.item.book.ItemVioletBook;
 
 public class ItemRegistry{
+    public static final Item Magicpaper = ItemIntermediate.createItem("magicpaper", "magicpaper");
+    public static final Item violet_book =new ItemVioletBook();
     public static final Item MyPiece = ItemIntermediate.createItem("my_piece", "my_piece");
     public static final Item MyPiecetest = ItemIntermediate.createItem("MyPiecetest", "MyPiecetest");
 
@@ -40,9 +43,9 @@ public class ItemRegistry{
     public static final Item RabbitTear = new ItemMoonRabbitTear();
 
     public static void addItemRegistry() {
-    	GameRegistry.registerItem(MyPiece, "my_piece");
+    	GameRegistry.registerItem(Magicpaper, "magicpaper");
     	GameRegistry.registerItem(MyPiecetest, "MyPiecetest");
-
+        registerItem(violet_book);
         //Register Items
         registerItem(RawMoonMeat);
         registerItem(CookedMoonMeat);
