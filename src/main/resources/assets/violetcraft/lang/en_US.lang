@@ -11,7 +11,10 @@ tile.vc.scarRedOre.name=ScarRed ORe
 tile.vc.pinkSapphireOre.name=Pink Sapphire Ore
 tile.vc.blueTopazOre.name=Blue Topaz Ore
 tile.vc.rollYellowOre.name=Roll Yellow Ore
+tile.VioletPlank.name=VioletPlank
 
+item.magicpaper.name=MagicPaper
+item.violet_book.name=VioletknowledgeBook
 item.vireningot.name=Viren Ingot
 item.virensword.name=Viren Sword
 item.viren_scythe.name=Viren Scythe
