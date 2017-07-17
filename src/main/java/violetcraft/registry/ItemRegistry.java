@@ -17,7 +17,7 @@ import violetcraft.item.book.ItemVioletBook;
 
 public class ItemRegistry{
     public static final Item Magicpaper = ItemIntermediate.createItem("magicpaper", "magicpaper");
-    public static final Item violet_book =new ItemVioletBook();
+    public static final Item violetbook =new ItemVioletBook();
     public static final Item MyPiece = ItemIntermediate.createItem("my_piece", "my_piece");
 
     //Material =========================================================================================================
@@ -44,7 +44,7 @@ public class ItemRegistry{
     public static void addItemRegistry() {
         GameRegistry.registerItem(MyPiece, "my_piece");
         GameRegistry.registerItem(Magicpaper, "magicpaper");
-        registerItem(violet_book);
+        registerItem(violetbook);
         //Register Items
         registerItem(RawMoonMeat);
         registerItem(CookedMoonMeat);
