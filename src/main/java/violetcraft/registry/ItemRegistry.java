@@ -4,8 +4,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
-import violetcraft.VioletCraftMod;
 import violetcraft.item.ItemCookedMoonRabbit;
+import violetcraft.item.ItemIntermediate;
 import violetcraft.item.ItemMoonRabbitTear;
 import violetcraft.item.ItemRabbitEgg;
 import violetcraft.item.ItemRawMoonRabbit;
@@ -15,7 +15,9 @@ import violetcraft.item.ItemVirenSword;
 import violetcraft.item.armor.ItemYukariParker;
 
 public class ItemRegistry{
-	public static final Item Item = new Item();
+    public static final Item MyPiece = ItemIntermediate.createItem("my_piece", "my_piece");
+    public static final Item MyPiecetest = ItemIntermediate.createItem("MyPiecetest", "MyPiecetest");
+
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -38,7 +40,9 @@ public class ItemRegistry{
     public static final Item RabbitTear = new ItemMoonRabbitTear();
 
     public static void addItemRegistry() {
-    	IntermediateItem(Item, "my_piece");
+    	GameRegistry.registerItem(MyPiece, "my_piece");
+    	GameRegistry.registerItem(MyPiecetest, "MyPiecetest");
+
         //Register Items
         registerItem(RawMoonMeat);
         registerItem(CookedMoonMeat);
@@ -56,20 +60,6 @@ public class ItemRegistry{
     }
 
     private static void registerItem(Item item) {
-        GameRegistry.registerItem(item, item.getUnlocalizedName());
-    }
-
-    /**
-     * 中間アイテムなどの素材用のアイテムの追加
-     *
-     * @param item Item
-     * @param name アイテム名
-     */
-    public static void IntermediateItem(Item item, String name) {
-    	item.setCreativeTab(VioletCraftMod.tabVioletCraft);
-    	item.setUnlocalizedName(name);
-    	item.setTextureName("violetcraft:" + name);
-    	item.setMaxStackSize(64);
         GameRegistry.registerItem(item, item.getUnlocalizedName());
     }
 }
