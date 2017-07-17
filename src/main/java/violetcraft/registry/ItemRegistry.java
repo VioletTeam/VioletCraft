@@ -43,8 +43,9 @@ public class ItemRegistry{
     public static final Item RabbitTear = new ItemMoonRabbitTear();
 
     public static void addItemRegistry() {
-    	GameRegistry.registerItem(Magicpaper, "magicpaper");
     	GameRegistry.registerItem(MyPiecetest, "MyPiecetest");
+        GameRegistry.registerItem(MyPiece, "my_piece");
+        GameRegistry.registerItem(Magicpaper, "magicpaper");
         registerItem(violet_book);
         //Register Items
         registerItem(RawMoonMeat);
