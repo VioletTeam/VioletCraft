@@ -4,7 +4,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import violetcraft.block.BlockVirenBlock;
 import violetcraft.block.VioletBush;
-import violetcraft.block.dimension.*;
+import violetcraft.block.dimension.BlockVioletDift;
+import violetcraft.block.dimension.BlockVioletGrass;
+import violetcraft.block.dimension.BlockVioletLeave;
+import violetcraft.block.dimension.BlockVioletOakLog;
+import violetcraft.block.dimension.BlockVioletOakPlank;
+import violetcraft.block.dimension.BlockVioletPortal;
+import violetcraft.block.dimension.BlockVioletSapling;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
@@ -25,10 +31,11 @@ public class BlockRegistry {
     public static final Block VioletLeave = new BlockVioletLeave();
     public static final Block VioletOakLog = new BlockVioletOakLog();
     public static final Block VioletOakPlank = new BlockVioletOakPlank();
-    // Ore =============================================================================================================
+
+    /* ore */
     public static final Block RollYellowOre = new BlockRollYellowOre();
     public static final Block ScarRedOre = new BlockScarRedOre();
-    public static final Block BlueTopazOre = new BlockBlueTopazOre();
+    public static final Block BlueTopazOre = new BlockBlueTopazOre("blue_topaz_ore");
     public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
     public static final Block VirenOre = new BlockVirenOre();
 
@@ -54,5 +61,4 @@ public class BlockRegistry {
     private static void registerBlock(Block block) {
         GameRegistry.registerBlock(block, block.getUnlocalizedName());
     }
-
 }

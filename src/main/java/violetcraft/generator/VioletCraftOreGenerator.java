@@ -20,20 +20,12 @@ public class VioletCraftOreGenerator implements IWorldGenerator {
 	}
 
 	private void generateOre(World world, Random random, int x, int z) {
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 20; i++) {
 			int genX = x + random.nextInt(16);
 			int genY = 1 + random.nextInt(60);
 			int genZ = z + random.nextInt(16);
 			// ロールイエロー鉱石の生成
             new WorldGenMinable(BlockRegistry.RollYellowOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
-        }
-
-		for(int i = 0; i < 5; i++) {
-			int genX = x + random.nextInt(16);
-			int genY = 1 + random.nextInt(15);
-			int genZ = z + random.nextInt(16);
-			// ヴァイレン鉱石の生成
-            new WorldGenMinable(BlockRegistry.VirenOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
         }
 
 		for(int i = 0; i < 10; i++) {
@@ -42,6 +34,22 @@ public class VioletCraftOreGenerator implements IWorldGenerator {
 			int genZ = z + random.nextInt(16);
 			// 深紅鉱石の生成
             new WorldGenMinable(BlockRegistry.ScarRedOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
+        }
+
+		for(int i = 0; i < 10; i++) {
+			int genX = x + random.nextInt(16);
+			int genY = 1 + random.nextInt(15);
+			int genZ = z + random.nextInt(16);
+			// 蒼玉鉱石の生成
+            new WorldGenMinable(BlockRegistry.BlueTopazOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
+        }
+
+		for(int i = 0; i < 5; i++) {
+			int genX = x + random.nextInt(16);
+			int genY = 1 + random.nextInt(15);
+			int genZ = z + random.nextInt(16);
+			// ヴァイレン鉱石の生成
+            new WorldGenMinable(BlockRegistry.VirenOre, 0, 8, Blocks.stone).generate(world, random, genX, genY, genZ);
         }
 	}
 }
