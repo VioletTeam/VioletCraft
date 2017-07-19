@@ -18,7 +18,7 @@ public class ModAspect {
         initAspect();
         registerAspect();
 
-        ResearchCategories.registerCategory(ResearchViolet, new ResourceLocation("violetcraft", "textures/items/magicpaper.png"), new ResourceLocation("tofufactory", "textures/gui/guiTofuKinu.png"));
+        ResearchCategories.registerCategory(ResearchViolet, new ResourceLocation("violetcraft", "textures/items/magicpaper.png"), new ResourceLocation("violetcraft", "textures/gui/guiviolet.png"));
 
     }
 
