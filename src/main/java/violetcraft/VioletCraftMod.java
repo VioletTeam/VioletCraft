@@ -3,6 +3,7 @@ package violetcraft;
 
 import com.google.common.collect.Lists;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
@@ -37,6 +38,8 @@ public final class VioletCraftMod {
     //Gui IDs
     public static final int GUI_GENERATOR = 0;
     public static final int GUI_ID = 0;
+    //plugin
+    public static boolean thaumcraftLoaded = false;
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
     public static CommonProxy proxy;
     @Mod.Instance(MOD_ID)
@@ -66,6 +69,7 @@ public final class VioletCraftMod {
      */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        thaumcraftLoaded = Loader.isModLoaded("Thaumcraft");
         loadMeta();
         Configuration cfg = new Configuration(event.getSuggestedConfigurationFile());
 
@@ -118,6 +122,7 @@ public final class VioletCraftMod {
     public void postInit(FMLPostInitializationEvent event) {
         proxy.registerRender();
 
+        proxy.postInit(event);
         NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new GuiHandler());
         /*EntityのRenderを登録する
          *Client側でのみ登録するため、今回はif文で処理をする。*/
