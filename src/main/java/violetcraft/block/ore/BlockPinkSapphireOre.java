@@ -5,12 +5,12 @@ import net.minecraft.block.material.Material;
 import violetcraft.VioletCraftMod;
 
 public class BlockPinkSapphireOre extends Block {
-    public BlockPinkSapphireOre() {
+    public BlockPinkSapphireOre(String name) {
         super(Material.rock);
 
         setCreativeTab(VioletCraftMod.tabVioletCraft);
-        setBlockName("vv.pinkSapphireOre");
-        setBlockTextureName("violetcraft:pink_sapphire_ore");
+        setBlockName(name);
+        setBlockTextureName("violetcraft:" + name);
         setHardness(1.5F);
         setResistance(1.0F);
         setStepSound(Block.soundTypeStone);

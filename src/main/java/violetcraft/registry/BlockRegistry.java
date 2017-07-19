@@ -36,7 +36,7 @@ public class BlockRegistry {
     public static final Block RollYellowOre = new BlockRollYellowOre();
     public static final Block ScarRedOre = new BlockScarRedOre();
     public static final Block BlueTopazOre = new BlockBlueTopazOre("blue_topaz_ore");
-    public static final Block PinkSapphireOre = new BlockPinkSapphireOre();
+    public static final Block PinkSapphireOre = new BlockPinkSapphireOre("pink_sapphire_ore");
     public static final Block VirenOre = new BlockVirenOre();
 
 	public static void addBlockRegistry() {
