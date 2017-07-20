@@ -7,6 +7,7 @@ item.raw_moonrabbit.name=生のムーンラビットの肉
 item.cooked_moonrabbit.name=焼いたムーンラビットの肉
 item.magicpaper.name=魔法の紙
 item.violet_book.name=特殊な本
+item.WandCaps.virencap.name=ヴァイレンのキャップ
 
 tile.block_viren_block.name=Viren Block
 tile.VioletGrassBlock.name=バイオレットの草ブロック
@@ -19,3 +20,12 @@ tile.VioletLog.name=バイオレットの木
 tile.VioletPlank.name=バイオレットの木材
 
 entity.MoonRabbit.name=ムーンラビット
+
+tc.research_category.Violet=夜空の魔法
+
+tc.research_page.VioletPaper=中間素材、別の魔術で使われるらしいが・・・？
+tc.research_page.VioletCap=ヴァイレンの鉱石はは秘めた力が蓄えられてるためか、魔法石突に向いている
+tc.research_name.MagicPaper=魔法の紙
+tc.research_name.VirenCap=特化型キャップ
+
+viren=ヴァイレン

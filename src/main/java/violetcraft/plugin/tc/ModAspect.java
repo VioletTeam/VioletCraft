@@ -48,10 +48,11 @@ public class ModAspect {
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletGrassBlock, 1, 0), (new AspectList()).add(VIOLET, 3).add(Aspect.EARTH, 3));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletDift, 1, 0), (new AspectList()).add(VIOLET, 3).add(Aspect.EARTH, 3).add(Aspect.PLANT, 3));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletOakPlank, 1, 0), (new AspectList()).add(VIOLET, 3).add(Aspect.TREE, 4));
-        ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletOakPlank, 1, 0), (new AspectList()).add(VIOLET, 5).add(Aspect.TREE, 6));
+        ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletOakLog, 1, 0), (new AspectList()).add(VIOLET, 5).add(Aspect.TREE, 6));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletLeave, 1, 0), (new AspectList()).add(VIOLET, 1).add(Aspect.PLANT, 3));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletSapling, 1, 0), (new AspectList()).add(VIOLET, 2).add(Aspect.PLANT, 2));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlockRegistry.VioletGrass, 1, 0), (new AspectList()).add(VIOLET, 1).add(Aspect.PLANT, 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ItemRegistry.wandCap, 1, 0), (new AspectList()).add(VIOLET, 8).add(Aspect.AURA, 4));
     }
 
 

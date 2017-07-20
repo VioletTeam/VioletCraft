@@ -23,6 +23,7 @@ item.moonrabbitegg.name=MoonRabbitEgg
 item.moonrabbit_tear.name=MoonRabbit Tear
 item.raw_moonrabbit.name=Raw MoonRabbit
 item.cooked_moonrabbit.name=Cooked MoonRabbit
+item.WandCaps.virencap.name=VirenCap
 
 block.virenore.name=Viren Ore
 
@@ -38,5 +39,11 @@ tile.VioletLeave.name=VioletLeave
 tile.VioletSapling.name=VioletSapling
 tile.VioletLog.name=VioletLog
 
+tc.research_category.Violet=VioletCraft
+
+tc.research_page.VioletPaper=It seems to be used in intermediate materials, another magic ....?
+tc.research_page.VioletCap=Or for ore of Vairen is being stored the power to conceals is directed to the magic
+tc.research_name.MagicPaper=MagicPaper
+tc.research_name.VirenCap=VirenCap
 
 itemGroup.violettab=Violet Tab
