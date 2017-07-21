@@ -19,7 +19,7 @@ public class BlockGenerator extends BlockContainer
 	public BlockGenerator() {
         super(Material.rock);
         this.setCreativeTab(VioletCraftMod.tabVioletCraft);
-        this.setBlockName("vc.generator");
+        this.setBlockName("generator");
         this.setBlockTextureName("violetcraft:generator");
         this.setHardness(1.0F);
         this.setResistance(10.0F);
