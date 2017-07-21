@@ -1,21 +1,18 @@
 #Items
-item.vc.virenIngot.name=Viren Ingot
-item.vc.virenSword.name=Viren Sword
-item.vc.yukariParker.name=YukariParker
-item.vc.rabbitEgg.name=MoonRabbitEgg
+item.virenIngot.name=Viren Ingot
+item.virenSword.name=Viren Sword
+item.yukariParker.name=Yukari Parker
+item.rabbitEgg.name=Moon Rabbit Egg
 item.magicpaper.name=MagicPaper
-item.violet_book.name=VioletknowledgeBook
-item.vireningot.name=Viren Ingot
-item.virensword.name=Viren Sword
+item.violet_book.name=Violet knowledge Book
 item.viren_scythe.name=Viren Scythe
-item.yukariparker.name=YukariParker
-item.moonrabbitegg.name=MoonRabbitEgg
-item.moonrabbit_tear.name=MoonRabbit Tear
-item.raw_moonrabbit.name=Raw MoonRabbit
+item.moonrabbitegg.name=Moon Rabbit Egg
+item.moonrabbit_tear.name=Moon Rabbit Tear
+item.raw_moonrabbit.name=Raw Moon Rabbit
 item.cooked_moonrabbit.name=Cooked MoonRabbit
-item.WandCaps.virencap.name=VirenCap
-item.my_piece.name=MyPiece
-item.my_core.name=MyCore
+item.WandCaps.virencap.name=Viren Cap
+item.my_piece.name=My Piece
+item.my_core.name=My Core
 #Blocks
 tile.virenBlock.name=Viren Block
 tile.generator.name=Generator
@@ -24,17 +21,17 @@ tile.scarRedOre.name=ScarRed ORe
 tile.pinkSapphireOre.name=Pink Sapphire Ore
 tile.blueTopazOre.name=Blue Topaz Ore
 tile.rollYellowOre.name=Roll Yellow Ore
-tile.VioletPlank.name=VioletPlank
+tile.VioletPlank.name=Violet Plank
 tile.block_viren_block.name=Viren Block
-tile.VioletGrassBlock.name=VioletGrassBlock
-tile.VioletBush.name=VioletBush
-tile.VioletPortal.name=VioletPortal
-tile.VioletDift.name=VioletDift
-tile.VioletLeave.name=VioletLeave
-tile.VioletSapling.name=VioletSapling
-tile.VioletLog.name=VioletLog
+tile.VioletGrassBlock.name=Violet Grass Block
+tile.VioletBush.name=Violet Bush
+tile.VioletPortal.name=Violet Portal
+tile.VioletDift.name=Violet Dift
+tile.VioletLeave.name=Violet Leave
+tile.VioletSapling.name=Violet Sapling
+tile.VioletLog.name=Violet Log
 
-entity.MoonRabbit.name=MoonRabbit
+entity.MoonRabbit.name=Moon Rabbit
 
 tc.research_category.Violet=VioletCraft
 

@@ -16,7 +16,7 @@ import violetcraft.entity.EntityMoonRabbit;
 public class ItemRabbitEgg extends Item {
     public ItemRabbitEgg() {
     	setCreativeTab(VioletCraftMod.tabVioletCraft);
-        this.setUnlocalizedName("vc.rabbitEgg");
+        this.setUnlocalizedName("rabbitEgg");
         maxStackSize = 16;
         this.setTextureName("violetcraft:rabbit_egg");
     }
