@@ -3,16 +3,6 @@ item.vc.virenIngot.name=Viren Ingot
 item.vc.virenSword.name=Viren Sword
 item.vc.yukariParker.name=YukariParker
 item.vc.rabbitEgg.name=MoonRabbitEgg
-#Blocks
-tile.vc.virenBlock.name=Viren Block
-tile.vc.generator.name=Generator
-tile.vc.virenOre.name=Viren Ore
-tile.vc.scarRedOre.name=ScarRed ORe
-tile.vc.pinkSapphireOre.name=Pink Sapphire Ore
-tile.vc.blueTopazOre.name=Blue Topaz Ore
-tile.vc.rollYellowOre.name=Roll Yellow Ore
-tile.VioletPlank.name=VioletPlank
-
 item.magicpaper.name=MagicPaper
 item.violet_book.name=VioletknowledgeBook
 item.vireningot.name=Viren Ingot
@@ -26,12 +16,15 @@ item.cooked_moonrabbit.name=Cooked MoonRabbit
 item.WandCaps.virencap.name=VirenCap
 item.my_piece.name=MyPiece
 item.my_core.name=MyCore
-
-block.virenore.name=Viren Ore
-
-entity.MoonRabbit.name=MoonRabbit
-
-itemGroup.violet_craft=Violet Craft
+#Blocks
+tile.vc.virenBlock.name=Viren Block
+tile.vc.generator.name=Generator
+tile.vc.virenOre.name=Viren Ore
+tile.vc.scarRedOre.name=ScarRed ORe
+tile.vc.pinkSapphireOre.name=Pink Sapphire Ore
+tile.vc.blueTopazOre.name=Blue Topaz Ore
+tile.vc.rollYellowOre.name=Roll Yellow Ore
+tile.VioletPlank.name=VioletPlank
 tile.block_viren_block.name=Viren Block
 tile.VioletGrassBlock.name=VioletGrassBlock
 tile.VioletBush.name=VioletBush
@@ -40,6 +33,8 @@ tile.VioletDift.name=VioletDift
 tile.VioletLeave.name=VioletLeave
 tile.VioletSapling.name=VioletSapling
 tile.VioletLog.name=VioletLog
+
+entity.MoonRabbit.name=MoonRabbit
 
 tc.research_category.Violet=VioletCraft
 
