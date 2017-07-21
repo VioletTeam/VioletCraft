@@ -25,6 +25,7 @@ item.raw_moonrabbit.name=Raw MoonRabbit
 item.cooked_moonrabbit.name=Cooked MoonRabbit
 item.WandCaps.virencap.name=VirenCap
 item.my_piece.name=MyPiece
+item.my_core.name=MyCore
 
 block.virenore.name=Viren Ore
 
