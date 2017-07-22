@@ -22,7 +22,7 @@ public class ItemVirenSword extends ItemSword {
     public ItemVirenSword() {
         super(TOOLCONF);
         this.setCreativeTab(VioletCraftMod.tabVioletCraft);
-        this.setUnlocalizedName("vc.virenSword");
+        this.setUnlocalizedName("virenSword");
         maxStackSize = 1;
         this.setTextureName("violetcraft:viren_sword");
     }

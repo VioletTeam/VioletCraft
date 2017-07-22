@@ -24,7 +24,7 @@ public class ItemRegistry{
     public static final Item Magicpaper = ItemIntermediate.createItem("magicpaper", "magicpaper");
     public static final Item violetbook =new ItemVioletBook();
     public static final Item MyPiece = ItemIntermediate.createItem("my_piece", "my_piece");
-
+    public static final Item MyCore = ItemIntermediate.createItem("my_core", "my_core");
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -51,6 +51,7 @@ public class ItemRegistry{
     public static void addItemRegistry() {
         GameRegistry.registerItem(MyPiece, "my_piece");
         GameRegistry.registerItem(Magicpaper, "magicpaper");
+        GameRegistry.registerItem(MyCore, "my_core");
         registerItem(violetbook);
         //Register Items
         registerItem(RawMoonMeat);

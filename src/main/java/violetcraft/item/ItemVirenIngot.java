@@ -7,7 +7,7 @@ public class ItemVirenIngot extends Item
 {
     public ItemVirenIngot() {
         this.setCreativeTab(VioletCraftMod.tabVioletCraft);
-        this.setUnlocalizedName("vc.virenIngot");
+        this.setUnlocalizedName("virenIngot");
         maxStackSize = 64;
         this.setTextureName("violetcraft:viren_ingot");
     }

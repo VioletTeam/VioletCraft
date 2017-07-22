@@ -13,7 +13,7 @@ public class BlockVirenBlock extends Block {
     {
     	super(Material.rock);
         setCreativeTab(VioletCraftMod.tabVioletCraft);
-        setBlockName("vc.virenBlock");
+        setBlockName("virenBlock");
         setBlockTextureName("violetcraft:viren_block");
         setHardness(1.5F);
         setResistance(1.0F);
