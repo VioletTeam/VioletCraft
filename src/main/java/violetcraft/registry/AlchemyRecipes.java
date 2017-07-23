@@ -41,20 +41,20 @@ public class AlchemyRecipes
         this.blockAlchemy(Blocks.quartz_ore, new ItemStack(Items.quartz), 0.2F);
     }
 
-    public void blockAlchemy(Block block, ItemStack itemStack, float p_151393_3_)
+    public void blockAlchemy(Block block, ItemStack itemStack, float par3)
     {
-        this.itemAlchemy(Item.getItemFromBlock(block), itemStack, p_151393_3_);
+        this.itemAlchemy(Item.getItemFromBlock(block), itemStack, par3);
     }
 
-    public void itemAlchemy(Item item, ItemStack itemstack, float p_151396_3_)
+    public void itemAlchemy(Item item, ItemStack itemstack, float par3)
     {
-        this.recipelist(new ItemStack(item, 1, 32767), itemstack, p_151396_3_);
+        this.recipelist(new ItemStack(item, 1, 32767), itemstack, par3);
     }
 
-    public void recipelist(ItemStack itemstack, ItemStack itemStack, float p_151394_3_)
+    public void recipelist(ItemStack itemstack, ItemStack itemStack, float par3)
     {
         this.smeltingList.put(itemstack, itemStack);
-        this.experienceList.put(itemStack, p_151394_3_);
+        this.experienceList.put(itemStack, par3);
     }
 
     /**
