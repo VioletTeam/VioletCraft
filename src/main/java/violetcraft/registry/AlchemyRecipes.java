@@ -33,12 +33,6 @@ public class AlchemyRecipes
         this.blockAlchemy(Blocks.log2, new ItemStack(BlockRegistry.VioletOakLog), 0.1F);
         this.blockAlchemy(Blocks.sapling, new ItemStack(BlockRegistry.VioletSapling), 0.1F);
         this.itemAlchemy(Items.paper, new ItemStack(ItemRegistry.Magicpaper), 0.05F);
-
-
-        this.blockAlchemy(Blocks.coal_ore, new ItemStack(Items.coal), 0.1F);
-        this.blockAlchemy(Blocks.redstone_ore, new ItemStack(Items.redstone), 0.7F);
-        this.blockAlchemy(Blocks.lapis_ore, new ItemStack(Items.dye, 1, 4), 0.2F);
-        this.blockAlchemy(Blocks.quartz_ore, new ItemStack(Items.quartz), 0.2F);
     }
 
     public void blockAlchemy(Block block, ItemStack itemStack, float par3)
