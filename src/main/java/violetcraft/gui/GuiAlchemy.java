@@ -10,7 +10,7 @@ import violetcraft.tile.TileGenerator;
 
 public class GuiAlchemy extends GuiContainer
 {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/gui_generator.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("violetcraft:textures/gui/gui_alchemy.png");
     private TileAlchemy tileGenerator;
 
     public GuiAlchemy(EntityPlayer player, TileAlchemy tileentity) {
@@ -32,7 +32,7 @@ public class GuiAlchemy extends GuiContainer
             String Sta1 = String.valueOf(i1);
             fontRendererObj.drawString(Sta1, 80, 30, 424342);
 
-            int ts = this.tileGenerator.generatorAmount;
+            int ts = this.tileGenerator.cookTime;
             String Sta2 = String.valueOf(ts);
             fontRendererObj.drawString(Sta2, 120, 30, 424342);
         }
@@ -48,14 +48,15 @@ public class GuiAlchemy extends GuiContainer
 
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
+        int i1;
         this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
 
         if (this.tileGenerator.isBurning()) {
-            int i1 = this.tileGenerator.getBurnTimeRemainingScaled(13);
+            i1 = this.tileGenerator.getBurnTimeRemainingScaled(12);
             this.drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
-//            i1 = this.tileGenerator.getCookProgressScaled(24);
-            this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
         }
+        i1 = this.tileGenerator.getCookProgressScaled(24);
+        this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
     }
 
 }

@@ -20,6 +20,8 @@ public class ContainerAlchemy extends Container {
         this.addSlotToContainer(new Slot(tileEntity, 0, 56, 17));
         // かまど下部スロット
         this.addSlotToContainer(new Slot(tileEntity, 1, 56, 53));
+        //かまど右スロット
+        this.addSlotToContainer(new Slot(tileEntity, 2, 116, 35));
 
 
         int i;
@@ -37,7 +39,7 @@ public class ContainerAlchemy extends Container {
     }
 
     @Override
-    public boolean canInteractWith(EntityPlayer p_75145_1_) {
+    public boolean canInteractWith(EntityPlayer player) {
         return true;
     }
 

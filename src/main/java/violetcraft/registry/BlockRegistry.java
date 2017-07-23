@@ -21,6 +21,7 @@ import violetcraft.block.ore.BlockVirenOre;
 
 public class BlockRegistry {
 
+
     //Block ============================================================================================================
     public static final Block VirenBlock = new BlockVirenBlock();
     public static final Block Generator = new BlockGenerator();

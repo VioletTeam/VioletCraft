@@ -13,41 +13,208 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.Packet;
 import net.minecraft.tileentity.TileEntity;
+import violetcraft.registry.AlchemyRecipes;
+
+import static violetcraft.tile.TileGenerator.testEE;
 
 public class TileAlchemy extends TileEntity implements ISidedInventory
 {
-    //生成時間
-    public int generatorTime;
-    public int currentItemBurnTime;
-
-    //生成量
-    public int generatorAmount;
-    public int currentgeneratorAmount;
-    public int generatorCookTime;
-    public int amountEE;
-
 
     private String field_145958_o;
+    //燃焼時間
+    public int burnTime;
 
-    private ItemStack[] GeneratorItemStack = new ItemStack[3];
+    public int currentItemBurnTime;
 
-    public static int testEE(ItemStack itemStack)
+    //精製量
+    public int generatorAmount;
+    public int amountEE;
+
+    //調理時間
+    public int cookTime;
+
+    private static final int[] slots_top = new int[] {0};
+    private static final int[] slots_bottom = new int[] {2, 1};
+    private static final int[] slots_sides = new int[] {1};
+
+    public ItemStack[] sampleItemStacks = new ItemStack[3];
+
+    public void readFromNBT(NBTTagCompound p_145839_1_)
     {
-        if(itemStack == null)
-        {
-            return 0;
-        } else {
-            int moddedBurnTime = net.minecraftforge.event.ForgeEventFactory.getFuelBurnTime(itemStack);
-            if (moddedBurnTime >= 0) return moddedBurnTime;
+        super.readFromNBT(p_145839_1_);
+        NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
+        this.sampleItemStacks = new ItemStack[this.getSizeInventory()];
 
-            Item item = itemStack.getItem();
-            if (item == Items.coal) return 100;
-            return GameRegistry.getFuelValue(itemStack);
+        for (int i = 0; i < this.sampleItemStacks.length; ++i)
+        {
+            if (this.sampleItemStacks[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.sampleItemStacks[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+
+        this.burnTime = p_145839_1_.getShort("BurnTime");
+        this.cookTime = p_145839_1_.getShort("CookTime");
+        this.currentItemBurnTime = getItemBurnTime(this.sampleItemStacks[1]);
+
+        if (p_145839_1_.hasKey("CustomName", 8))
+        {
+            this.field_145958_o = p_145839_1_.getString("CustomName");
         }
     }
 
-    //アイテムの燃焼時間
+    public void writeToNBT(NBTTagCompound p_145841_1_)
+    {
+        super.writeToNBT(p_145841_1_);
+        p_145841_1_.setShort("BurnTime", (short)this.burnTime);
+        p_145841_1_.setShort("CookTime", (short)this.cookTime);
+        NBTTagList nbttaglist = new NBTTagList();
+
+        for (int i = 0; i < this.sampleItemStacks.length; ++i)
+        {
+            if (this.sampleItemStacks[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.sampleItemStacks[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+
+        p_145841_1_.setTag("Items", nbttaglist);
+
+        if (this.hasCustomInventoryName())
+        {
+            p_145841_1_.setString("CustomName", this.field_145958_o);
+        }
+    }
+
+    //かまどの処理
+    @SideOnly(Side.CLIENT)
+    public int getCookProgressScaled(int par1)
+    {
+        return this.cookTime * par1 / 200;
+    }
+
+    //かまどの処理
+    @SideOnly(Side.CLIENT)
+    public int getBurnTimeRemainingScaled(int par1)
+    {
+        if (this.currentItemBurnTime == 0)
+        {
+            this.currentItemBurnTime = 200;
+        }
+
+        return this.burnTime * par1 / this.currentItemBurnTime;
+    }
+
+    //かまどの処理
+    public boolean isBurning()
+    {
+        return this.burnTime > 0;
+    }
+
+    //更新時に呼び出される
+    //かまどの処理
+    public void updateEntity()
+    {
+        boolean flag = this.burnTime > 0;
+        boolean flag1 = false;
+
+//        this.amountEE = testEE(this.sampleItemStacks[1]);
+
+        if (this.burnTime > 0) {
+            --this.burnTime;
+            this.generatorAmount += this.amountEE;
+        }
+
+        if(burnTime == 0 && this.canSmelt())
+        {
+            this.currentItemBurnTime = this.burnTime = getItemBurnTime(this.sampleItemStacks[1]);
+
+            if (this.burnTime > 0)
+            {
+                flag1 = true;
+
+                if (this.sampleItemStacks[1] != null)
+                {
+                    --this.sampleItemStacks[1].stackSize;
+
+                    if (this.sampleItemStacks[1].stackSize == 0)
+                    {
+                        this.sampleItemStacks[1] = this.sampleItemStacks[1].getItem().getContainerItem(this.sampleItemStacks[1]);
+                    }
+                }
+            }
+        }
+
+        if (this.isBurning() && this.canSmelt())
+        {
+            ++this.cookTime;
+
+            if (this.cookTime == 200)
+            {
+                this.cookTime = 0;
+                this.smeltItem();
+                flag1 = true;
+            }
+        }
+        else
+        {
+            this.cookTime = 0;
+        }
+
+    }
+
+    //かまどの処理
+    private boolean canSmelt()
+    {
+        if (this.sampleItemStacks[0] == null)
+        {
+            return false;
+        }
+        else
+        {
+            ItemStack itemstack = AlchemyRecipes.smelting().getSmeltingResult(this.sampleItemStacks[0]);
+            if (itemstack == null) return false;
+            if (this.sampleItemStacks[2] == null) return true;
+            if (!this.sampleItemStacks[2].isItemEqual(itemstack)) return false;
+            int result = this.sampleItemStacks[2].stackSize + itemstack.stackSize;
+            return (result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
+        }
+    }
+
+    //かまどの処理
+    public void smeltItem()
+    {
+        if (this.canSmelt())
+        {
+            ItemStack itemstack = AlchemyRecipes.smelting().getSmeltingResult(this.sampleItemStacks[0]);
+
+            if (this.sampleItemStacks[2] == null)
+            {
+                this.sampleItemStacks[2] = itemstack.copy();
+            }
+            else if (this.sampleItemStacks[2].isItemEqual(itemstack))
+            {
+                this.sampleItemStacks[2].stackSize += itemstack.stackSize;
+            }
+
+            --this.sampleItemStacks[0].stackSize;
+
+            if (this.sampleItemStacks[0].stackSize <= 0)
+            {
+                this.sampleItemStacks[0] = null;
+            }
+        }
+    }
+
+    //かまどの処理
     public static int getItemBurnTime(ItemStack itemStack)
     {
         if (itemStack == null)
@@ -93,202 +260,105 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
         }
     }
 
-    public boolean isBurning() {
-        return this.generatorTime > 0;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public int getBurnTimeRemainingScaled(int p_145955_1_) {
-        if (this.currentItemBurnTime == 0) {
-            this.currentItemBurnTime = 200;
-        }
-
-        return this.generatorTime * p_145955_1_ / this.currentItemBurnTime;
-    }
-
-    public void updateEntity() {
-        boolean flag = this.generatorTime > 0;
-        boolean flag1 = false;
-
-//        this.amountEE = testEE(this.GeneratorItemStack[1]);
-
-        if (this.generatorTime > 0) {
-            --this.generatorTime;
-            this.generatorAmount += this.amountEE;
-        }
-
-        if (this.generatorTime != 0 || this.GeneratorItemStack[1] != null) {
-            if (this.generatorTime == 0) {
-                this.currentItemBurnTime = this.generatorTime = getItemBurnTime(this.GeneratorItemStack[1]);
-                this.amountEE = testEE(this.GeneratorItemStack[1]);
-                if (this.generatorTime > 0) {
-                    if (this.GeneratorItemStack[1] != null) {
-                        //燃料アイテムの1減少
-                        --this.GeneratorItemStack[1].stackSize;
-                        if (this.GeneratorItemStack[1].stackSize == 0) {
-                            this.GeneratorItemStack[1] = GeneratorItemStack[1].getItem().getContainerItem(GeneratorItemStack[1]);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    public void readFromNBT(NBTTagCompound p_145839_1_)
+    //かまどの処理
+    public static boolean isItemFuel(ItemStack par0ItemStack)
     {
-        super.readFromNBT(p_145839_1_);
-        NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
-        this.GeneratorItemStack = new ItemStack[this.getSizeInventory()];
-
-        for (int i = 0; i < nbttaglist.tagCount(); ++i)
-        {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            byte b0 = nbttagcompound1.getByte("Slot");
-
-            if (b0 >= 0 && b0 < this.GeneratorItemStack.length)
-            {
-                this.GeneratorItemStack[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
-
-        this.generatorTime = p_145839_1_.getShort("BurnTime");
-        this.amountEE = p_145839_1_.getShort("CookTime");
-        this.currentItemBurnTime = getItemBurnTime(this.GeneratorItemStack[1]);
-
-        if (p_145839_1_.hasKey("CustomName", 8))
-        {
-            this.field_145958_o = p_145839_1_.getString("CustomName");
-        }
+        return getItemBurnTime(par0ItemStack) > 0;
     }
 
-    public void writeToNBT(NBTTagCompound p_145841_1_)
-    {
-        super.writeToNBT(p_145841_1_);
-        p_145841_1_.setShort("BurnTime", (short)this.generatorTime);
-        p_145841_1_.setShort("CookTime", (short)this.amountEE);
-        NBTTagList nbttaglist = new NBTTagList();
-
-        for (int i = 0; i < this.GeneratorItemStack.length; ++i)
-        {
-            if (this.GeneratorItemStack[i] != null)
-            {
-                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-                nbttagcompound1.setByte("Slot", (byte)i);
-                this.GeneratorItemStack[i].writeToNBT(nbttagcompound1);
-                nbttaglist.appendTag(nbttagcompound1);
-            }
-        }
-
-        p_145841_1_.setTag("Items", nbttaglist);
-
-        if (this.hasCustomInventoryName())
-        {
-            p_145841_1_.setString("CustomName", this.field_145958_o);
-        }
-    }
-
-    //調理進捗バーの取得
-    @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int par1)
-    {
-        return this.generatorTime * par1 / 200;
-    }
-
-    //残り時間バー取得
-//    @SideOnly(Side.CLIENT)
-//    public int getBurnTimeRemainingScaled(int p_145955_1_)
-//    {
-//        if (this.currentItemBurnTime == 0)
-//        {
-//            this.currentItemBurnTime = 200;
-//        }
-//
-//        return this.furnaceBurnTime * p_145955_1_ / this.currentItemBurnTime;
-//    }
-
-    //更新時に呼び出す。
-
-
+    // スロット数
     @Override
     public int getSizeInventory() {
-        return this.GeneratorItemStack.length;
+        return this.sampleItemStacks.length;
+    }
+
+    // インベントリ内の任意のスロットにあるアイテムを取得
+    @Override
+    public ItemStack getStackInSlot(int par1) {
+        return this.sampleItemStacks[par1];
     }
 
     @Override
-    public ItemStack getStackInSlot(int slot) {
-        return this.GeneratorItemStack[slot];
-    }
-
-    @Override
-    public ItemStack decrStackSize(int slot, int amount) {
-        if(this.GeneratorItemStack[slot] != null)
+    public ItemStack decrStackSize(int par1, int par2) {
+        if (this.sampleItemStacks[par1] != null)
         {
             ItemStack itemstack;
-            itemstack = this.GeneratorItemStack[slot];
-            this.GeneratorItemStack[slot] = null;
-            return itemstack;
-        } else {
+
+            if (this.sampleItemStacks[par1].stackSize <= par2)
+            {
+                itemstack = this.sampleItemStacks[par1];
+                this.sampleItemStacks[par1] = null;
+                return itemstack;
+            }
+            else
+            {
+                itemstack = this.sampleItemStacks[par1].splitStack(par2);
+
+                if (this.sampleItemStacks[par1].stackSize == 0)
+                {
+                    this.sampleItemStacks[par1] = null;
+                }
+
+                return itemstack;
+            }
+        }
+        else
+        {
             return null;
         }
-
-//		if(this.generatorItemStacks[slot] != null)
-//		{
-//			ItemStack itemstack;
-//			if (this.generatorItemStacks[slot].stackSize <= amount)
-//			{
-//				itemstack = this.generatorItemStacks[slot];
-//				this.generatorItemStacks[slot] = null;
-//				return itemstack;
-//			} else {
-//				itemstack = this.generatorItemStacks[slot].splitStack(amount);
-//				if(this.generatorItemStacks[slot].stackSize == 0)
-//				{
-//					this.generatorItemStacks[slot] = null;
-//				}
-//				return itemstack;
-//			}
-//		} else {
-//			return null;
-//		}
     }
 
     @Override
-    public ItemStack getStackInSlotOnClosing(int p_70304_1_) {
-        // TODO 自動生成されたメソッド・スタブ
-        return null;
-    }
-
-    @Override
-    public void setInventorySlotContents(int p_70299_1_, ItemStack itemStack) {
-        this.GeneratorItemStack[p_70299_1_] = itemStack;
-        if(itemStack != null && itemStack.stackSize > this.getInventoryStackLimit())
+    public ItemStack getStackInSlotOnClosing(int par1) {
+        if (this.sampleItemStacks[par1] != null)
         {
-            itemStack.stackSize = this.getInventoryStackLimit();
+            ItemStack itemstack = this.sampleItemStacks[par1];
+            this.sampleItemStacks[par1] = null;
+            return itemstack;
+        }
+        else
+        {
+            return null;
         }
     }
+
+    // インベントリ内のスロットにアイテムを入れる
+    @Override
+    public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
+        this.sampleItemStacks[par1] = par2ItemStack;
+
+        if (par2ItemStack != null && par2ItemStack.stackSize > this.getInventoryStackLimit())
+        {
+            par2ItemStack.stackSize = this.getInventoryStackLimit();
+        }
+    }
+
 
     @Override
     public String getInventoryName() {
-        // TODO 自動生成されたメソッド・スタブ
         return null;
     }
 
     @Override
     public boolean hasCustomInventoryName() {
-        // TODO 自動生成されたメソッド・スタブ
         return false;
     }
 
+
+
+    // インベントリ内のスタック限界値
     @Override
     public int getInventoryStackLimit() {
         return 64;
     }
 
+
+    // par1EntityPlayerがTileEntityを使えるかどうか
     @Override
-    public boolean isUseableByPlayer(EntityPlayer p_70300_1_) {
-        // TODO 自動生成されたメソッド・スタブ
+    public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
         return false;
     }
+
 
     @Override
     public void openInventory() {}
@@ -297,26 +367,24 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
     public void closeInventory() {}
 
     @Override
-    public boolean isItemValidForSlot(int p_94041_1_, ItemStack p_94041_2_) {
-        // TODO 自動生成されたメソッド・スタブ
+    public boolean isItemValidForSlot(int par1, ItemStack par2ItemStack) {
         return false;
     }
 
+    //ホッパーにアイテムの受け渡しをする際の優先度
     @Override
-    public int[] getAccessibleSlotsFromSide(int p_94128_1_) {
-        // TODO 自動生成されたメソッド・スタブ
-        return null;
+    public int[] getAccessibleSlotsFromSide(int par1) {
+        return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
     }
 
+    //ホッパーからアイテムを入れられるかどうか
     @Override
-    public boolean canInsertItem(int p_102007_1_, ItemStack p_102007_2_, int p_102007_3_) {
-        // TODO 自動生成されたメソッド・スタブ
+    public boolean canInsertItem(int par1, ItemStack par2ItemStack, int par3) {
         return false;
     }
-
+    //隣接するホッパーにアイテムを送れるかどうか
     @Override
     public boolean canExtractItem(int p_102008_1_, ItemStack p_102008_2_, int p_102008_3_) {
-        // TODO 自動生成されたメソッド・スタブ
         return false;
     }
 

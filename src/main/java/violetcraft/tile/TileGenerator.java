@@ -139,16 +139,16 @@ public class TileGenerator extends TileEntity implements ISidedInventory
         NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
         this.GeneratorItemStack = new ItemStack[this.getSizeInventory()];
 
-        for (int i = 0; i < nbttaglist.tagCount(); ++i)
-        {
-            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-            byte b0 = nbttagcompound1.getByte("Slot");
-
-            if (b0 >= 0 && b0 < this.GeneratorItemStack.length)
-            {
-                this.GeneratorItemStack[b0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-            }
-        }
+		for (int i = 0; i < this.GeneratorItemStack.length; ++i)
+		{
+			if (this.GeneratorItemStack[i] != null)
+			{
+				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+				nbttagcompound1.setByte("Slot", (byte)i);
+				this.GeneratorItemStack[i].writeToNBT(nbttagcompound1);
+				nbttaglist.appendTag(nbttagcompound1);
+			}
+		}
 
         this.generatorTime = p_145839_1_.getShort("BurnTime");
         this.amountEE = p_145839_1_.getShort("CookTime");
