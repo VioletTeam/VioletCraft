@@ -22,9 +22,9 @@ import violetcraft.tile.TileAlchemy;
 public class BlockAlchemy extends BlockContainer
 {
     @SideOnly(Side.CLIENT)
-    private IIcon field_149935_N;
+    private IIcon sideicon;
     @SideOnly(Side.CLIENT)
-    private IIcon field_149936_O;
+    private IIcon topicon;
     public BlockAlchemy(){
         super(Material.rock);
         this.setCreativeTab(VioletCraftMod.tabVioletCraft);
@@ -36,19 +36,19 @@ public class BlockAlchemy extends BlockContainer
         this.setLightLevel(0);
     }
 
-    public static void updateFurnaceBlockState(boolean p_149931_0_, World p_149931_1_, int p_149931_2_, int p_149931_3_, int p_149931_4_) {
-        int l = p_149931_1_.getBlockMetadata(p_149931_2_, p_149931_3_, p_149931_4_);
-        TileEntity tileentity = p_149931_1_.getTileEntity(p_149931_2_, p_149931_3_, p_149931_4_);
+    public static void updateFurnaceBlockState(boolean p_149931_0_, World world, int par2, int par3, int par4) {
+        int l = world.getBlockMetadata(par2, par3, par4);
+        TileEntity tileentity = world.getTileEntity(par2, par3, par4);
         if (p_149931_0_) {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, BlockRegistry.AlchemyMachine);
+            world.setBlock(par2, par3, par4, BlockRegistry.AlchemyMachine);
         } else {
-            p_149931_1_.setBlock(p_149931_2_, p_149931_3_, p_149931_4_, BlockRegistry.AlchemyMachine);
+            world.setBlock(par2, par3, par4, BlockRegistry.AlchemyMachine);
         }
-        p_149931_1_.setBlockMetadataWithNotify(p_149931_2_, p_149931_3_, p_149931_4_, l, 2);
+        world.setBlockMetadataWithNotify(par2, par3, par4, l, 2);
 
         if (tileentity != null) {
             tileentity.validate();
-            p_149931_1_.setTileEntity(p_149931_2_, p_149931_3_, p_149931_4_, tileentity);
+            world.setTileEntity(par2, par3, par4, tileentity);
         }
     }
 
@@ -125,14 +125,14 @@ public class BlockAlchemy extends BlockContainer
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        return p_149691_1_ == 1 ? this.field_149935_N : (p_149691_1_ == 0 ? this.field_149935_N : (p_149691_1_ == 2 ? this.blockIcon:this.field_149936_O));
+        return p_149691_1_ == 1 ? this.sideicon : (p_149691_1_ == 0 ? this.sideicon : (p_149691_1_ == 2 ? this.blockIcon:this.topicon));
     }
 
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister p_149651_1_)
+    public void registerBlockIcons(IIconRegister icon)
     {
-        this.blockIcon = p_149651_1_.registerIcon("violetcraft:alchemy_top");
-        this.field_149936_O = p_149651_1_.registerIcon("violetcraft:alchemy_side");
-        this.field_149935_N = p_149651_1_.registerIcon("violetcraft:alchemy_side");
+        this.blockIcon = icon.registerIcon("violetcraft:alchemy_top");
+        this.topicon = icon.registerIcon("violetcraft:alchemy_side");
+        this.sideicon = icon.registerIcon("violetcraft:alchemy_side");
     }
 }

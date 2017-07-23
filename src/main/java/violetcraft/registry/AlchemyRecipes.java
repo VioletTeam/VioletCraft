@@ -5,7 +5,6 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFishFood;
 import net.minecraft.item.ItemStack;
 
 import java.util.HashMap;
@@ -42,20 +41,20 @@ public class AlchemyRecipes
         this.blockAlchemy(Blocks.quartz_ore, new ItemStack(Items.quartz), 0.2F);
     }
 
-    public void blockAlchemy(Block p_151393_1_, ItemStack p_151393_2_, float p_151393_3_)
+    public void blockAlchemy(Block block, ItemStack itemStack, float p_151393_3_)
     {
-        this.itemAlchemy(Item.getItemFromBlock(p_151393_1_), p_151393_2_, p_151393_3_);
+        this.itemAlchemy(Item.getItemFromBlock(block), itemStack, p_151393_3_);
     }
 
-    public void itemAlchemy(Item p_151396_1_, ItemStack p_151396_2_, float p_151396_3_)
+    public void itemAlchemy(Item item, ItemStack itemstack, float p_151396_3_)
     {
-        this.func_151394_a(new ItemStack(p_151396_1_, 1, 32767), p_151396_2_, p_151396_3_);
+        this.func_151394_a(new ItemStack(item, 1, 32767), itemstack, p_151396_3_);
     }
 
-    public void func_151394_a(ItemStack p_151394_1_, ItemStack p_151394_2_, float p_151394_3_)
+    public void func_151394_a(ItemStack itemstack, ItemStack itemStack, float p_151394_3_)
     {
-        this.smeltingList.put(p_151394_1_, p_151394_2_);
-        this.experienceList.put(p_151394_2_, p_151394_3_);
+        this.smeltingList.put(itemstack, itemStack);
+        this.experienceList.put(itemStack, p_151394_3_);
     }
 
     /**
@@ -75,14 +74,14 @@ public class AlchemyRecipes
 
             entry = iterator.next();
         }
-        while (!this.func_151397_a(p_151395_1_, entry.getKey()));
+        while (!this.getItem(p_151395_1_, entry.getKey()));
 
         return entry.getValue();
     }
 
-    private boolean func_151397_a(ItemStack p_151397_1_, ItemStack p_151397_2_)
+    private boolean getItem(ItemStack itemStack2, ItemStack itemStack3)
     {
-        return p_151397_2_.getItem() == p_151397_1_.getItem() && (p_151397_2_.getItemDamage() == 32767 || p_151397_2_.getItemDamage() == p_151397_1_.getItemDamage());
+        return itemStack3.getItem() == itemStack2.getItem() && (itemStack3.getItemDamage() == 32767 || itemStack3.getItemDamage() == itemStack2.getItemDamage());
     }
 
     public Map<ItemStack, ItemStack> getSmeltingList()
@@ -90,9 +89,9 @@ public class AlchemyRecipes
         return this.smeltingList;
     }
 
-    public float func_151398_b(ItemStack p_151398_1_)
+    public float func_151398_b(ItemStack itemStack)
     {
-        float ret = p_151398_1_.getItem().getSmeltingExperience(p_151398_1_);
+        float ret = itemStack.getItem().getSmeltingExperience(itemStack);
         if (ret != -1) return ret;
 
         Iterator<Map.Entry<ItemStack, Float>> iterator = this.experienceList.entrySet().iterator();
@@ -107,7 +106,7 @@ public class AlchemyRecipes
 
             entry = iterator.next();
         }
-        while (!this.func_151397_a(p_151398_1_, entry.getKey()));
+        while (!this.getItem(itemStack, entry.getKey()));
 
         return (entry.getValue()).floatValue();
     }
