@@ -36,10 +36,10 @@ public class BlockAlchemy extends BlockContainer
         this.setLightLevel(0);
     }
 
-    public static void updateFurnaceBlockState(boolean p_149931_0_, World world, int par2, int par3, int par4) {
+    public static void updateFurnaceBlockState(boolean par0, World world, int par2, int par3, int par4) {
         int l = world.getBlockMetadata(par2, par3, par4);
         TileEntity tileentity = world.getTileEntity(par2, par3, par4);
-        if (p_149931_0_) {
+        if (par0) {
             world.setBlock(par2, par3, par4, BlockRegistry.AlchemyMachine);
         } else {
             world.setBlock(par2, par3, par4, BlockRegistry.AlchemyMachine);
@@ -66,7 +66,7 @@ public class BlockAlchemy extends BlockContainer
     }
 
     @Override
-    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+    public TileEntity createNewTileEntity(World world, int par2) {
         return new TileAlchemy();
     }
 
@@ -123,9 +123,9 @@ public class BlockAlchemy extends BlockContainer
         super.breakBlock(par1World, par2, par3, par4, par5, par6);
     }
     @SideOnly(Side.CLIENT)
-    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int par1, int par2)
     {
-        return p_149691_1_ == 1 ? this.sideicon : (p_149691_1_ == 0 ? this.sideicon : (p_149691_1_ == 2 ? this.blockIcon:this.topicon));
+        return par1 == 1 ? this.sideicon : (par1 == 0 ? this.sideicon : (par1 == 2 ? this.blockIcon:this.topicon));
     }
 
     @SideOnly(Side.CLIENT)

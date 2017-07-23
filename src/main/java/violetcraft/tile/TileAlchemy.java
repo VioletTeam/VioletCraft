@@ -41,10 +41,10 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
 
     public ItemStack[] sampleItemStacks = new ItemStack[3];
 
-    public void readFromNBT(NBTTagCompound p_145839_1_)
+    public void readFromNBT(NBTTagCompound ntbwriteread)
     {
-        super.readFromNBT(p_145839_1_);
-        NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
+        super.readFromNBT(ntbwriteread);
+        NBTTagList nbttaglist = ntbwriteread.getTagList("Items", 10);
         this.sampleItemStacks = new ItemStack[this.getSizeInventory()];
 
         for (int i = 0; i < this.sampleItemStacks.length; ++i)
@@ -58,21 +58,21 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
             }
         }
 
-        this.burnTime = p_145839_1_.getShort("BurnTime");
-        this.cookTime = p_145839_1_.getShort("CookTime");
+        this.burnTime = ntbwriteread.getShort("BurnTime");
+        this.cookTime = ntbwriteread.getShort("CookTime");
         this.currentItemBurnTime = getItemBurnTime(this.sampleItemStacks[1]);
 
-        if (p_145839_1_.hasKey("CustomName", 8))
+        if (ntbwriteread.hasKey("CustomName", 8))
         {
-            this.field_145958_o = p_145839_1_.getString("CustomName");
+            this.field_145958_o = ntbwriteread.getString("CustomName");
         }
     }
 
-    public void writeToNBT(NBTTagCompound p_145841_1_)
+    public void writeToNBT(NBTTagCompound ntbwrite)
     {
-        super.writeToNBT(p_145841_1_);
-        p_145841_1_.setShort("BurnTime", (short)this.burnTime);
-        p_145841_1_.setShort("CookTime", (short)this.cookTime);
+        super.writeToNBT(ntbwrite);
+        ntbwrite.setShort("BurnTime", (short)this.burnTime);
+        ntbwrite.setShort("CookTime", (short)this.cookTime);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.sampleItemStacks.length; ++i)
@@ -86,11 +86,11 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
             }
         }
 
-        p_145841_1_.setTag("Items", nbttaglist);
+        ntbwrite.setTag("Items", nbttaglist);
 
         if (this.hasCustomInventoryName())
         {
-            p_145841_1_.setString("CustomName", this.field_145958_o);
+            ntbwrite.setString("CustomName", this.field_145958_o);
         }
     }
 
@@ -384,7 +384,7 @@ public class TileAlchemy extends TileEntity implements ISidedInventory
     }
     //隣接するホッパーにアイテムを送れるかどうか
     @Override
-    public boolean canExtractItem(int p_102008_1_, ItemStack p_102008_2_, int p_102008_3_) {
+    public boolean canExtractItem(int par2, ItemStack itemStack, int par3) {
         return false;
     }
 

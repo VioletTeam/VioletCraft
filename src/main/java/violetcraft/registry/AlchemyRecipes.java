@@ -48,10 +48,10 @@ public class AlchemyRecipes
 
     public void itemAlchemy(Item item, ItemStack itemstack, float p_151396_3_)
     {
-        this.func_151394_a(new ItemStack(item, 1, 32767), itemstack, p_151396_3_);
+        this.recipelist(new ItemStack(item, 1, 32767), itemstack, p_151396_3_);
     }
 
-    public void func_151394_a(ItemStack itemstack, ItemStack itemStack, float p_151394_3_)
+    public void recipelist(ItemStack itemstack, ItemStack itemStack, float p_151394_3_)
     {
         this.smeltingList.put(itemstack, itemStack);
         this.experienceList.put(itemStack, p_151394_3_);
@@ -60,7 +60,7 @@ public class AlchemyRecipes
     /**
      * Returns the smelting result of an item.
      */
-    public ItemStack getSmeltingResult(ItemStack p_151395_1_)
+    public ItemStack getSmeltingResult(ItemStack itemstack)
     {
         Iterator<Map.Entry<ItemStack, ItemStack>> iterator = this.smeltingList.entrySet().iterator();
         Map.Entry<ItemStack, ItemStack> entry;
@@ -74,7 +74,7 @@ public class AlchemyRecipes
 
             entry = iterator.next();
         }
-        while (!this.getItem(p_151395_1_, entry.getKey()));
+        while (!this.getItem(itemstack, entry.getKey()));
 
         return entry.getValue();
     }
@@ -89,7 +89,7 @@ public class AlchemyRecipes
         return this.smeltingList;
     }
 
-    public float func_151398_b(ItemStack itemStack)
+    public float stack(ItemStack itemStack)
     {
         float ret = itemStack.getItem().getSmeltingExperience(itemStack);
         if (ret != -1) return ret;
