@@ -38,6 +38,7 @@ public final class VioletCraftMod {
     //Gui IDs
     public static final int GUI_GENERATOR = 0;
     public static final int GUI_ID = 0;
+    public static final int GUI_Alchemy=2;
     //plugin
     public static boolean thaumcraftLoaded = false;
     @SidedProxy(clientSide = "violetcraft.ClientProxy", serverSide = "violetcraft.ServerProxy")
