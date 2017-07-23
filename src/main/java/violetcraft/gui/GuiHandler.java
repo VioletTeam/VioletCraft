@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import violetcraft.VioletCraftMod;
+import violetcraft.tile.TileAlchemy;
 import violetcraft.tile.TileGenerator;
 import violetcraft.tile.TileGuiBlock;
 
@@ -24,6 +25,9 @@ public class GuiHandler implements IGuiHandler
         if (ID == VioletCraftMod.GUI_GENERATOR) {
             return new ContainerGenerator(player, (TileGenerator) tileentity);
         }
+        if(ID == VioletCraftMod.GUI_Alchemy){
+            return new ContainerAlchemy(player, (TileAlchemy) tileentity);
+        }
         return null;
     }
 
@@ -42,6 +46,9 @@ public class GuiHandler implements IGuiHandler
 
         if (ID == 1) {
             return new GuiGenerator(player, (TileGenerator) tileentity);
+        }
+        if (ID == 2){
+            return new GuiAlchemy(player, (TileAlchemy) tileentity);
         }
     	return null;
 

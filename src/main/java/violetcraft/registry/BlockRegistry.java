@@ -11,6 +11,7 @@ import violetcraft.block.dimension.BlockVioletOakLog;
 import violetcraft.block.dimension.BlockVioletOakPlank;
 import violetcraft.block.dimension.BlockVioletPortal;
 import violetcraft.block.dimension.BlockVioletSapling;
+import violetcraft.block.machine.BlockAlchemy;
 import violetcraft.block.machine.BlockGenerator;
 import violetcraft.block.ore.BlockBlueTopazOre;
 import violetcraft.block.ore.BlockPinkSapphireOre;
@@ -23,6 +24,7 @@ public class BlockRegistry {
     //Block ============================================================================================================
     public static final Block VirenBlock = new BlockVirenBlock();
     public static final Block Generator = new BlockGenerator();
+    public static final Block AlchemyMachine = new BlockAlchemy();
     public static final Block VioletGrassBlock = new BlockVioletGrass();
     public static final Block VioletGrass = new VioletBush();
     public static final Block VioletDift = new BlockVioletDift();
@@ -43,6 +45,7 @@ public class BlockRegistry {
         //Register Blocks
         registerBlock(VirenBlock);
         registerBlock(Generator);
+        registerBlock(AlchemyMachine);
         registerBlock(VioletGrassBlock);
         registerBlock(VioletGrass);
         registerBlock(VioletDift);
