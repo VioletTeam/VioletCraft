@@ -10,6 +10,7 @@ item.violet_book.name=特殊な本
 item.WandCaps.virencap.name=ヴァイレンのキャップ
 item.my_piece.name=ミューンのかけら
 item.my_core.name=ミューンの塊
+item.tear_eye.name=涙の目
 
 tile.block_viren_block.name=Viren Block
 tile.VioletGrassBlock.name=バイオレットの草ブロック

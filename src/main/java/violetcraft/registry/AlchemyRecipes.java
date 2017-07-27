@@ -33,6 +33,7 @@ public class AlchemyRecipes
         this.blockAlchemy(Blocks.log2, new ItemStack(BlockRegistry.VioletOakLog), 0.1F);
         this.blockAlchemy(Blocks.sapling, new ItemStack(BlockRegistry.VioletSapling), 0.1F);
         this.itemAlchemy(Items.paper, new ItemStack(ItemRegistry.Magicpaper), 0.05F);
+        this.itemAlchemy(Items.ender_pearl, new ItemStack(ItemRegistry.tear_eye), 0.2F);
     }
 
     public void blockAlchemy(Block block, ItemStack itemStack, float par3)

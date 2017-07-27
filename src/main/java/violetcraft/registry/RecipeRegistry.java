@@ -10,7 +10,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
-import violetcraft.block.dimension.BlockVioletOakPlank;
 
 public class RecipeRegistry {
 
@@ -31,6 +30,9 @@ public class RecipeRegistry {
 		GameRegistry.addShapelessRecipe(new ItemStack(BlockRegistry.VioletOakPlank, 4),
 
 				VioletOakLog);
+		GameRegistry.addRecipe(new ItemStack(BlockRegistry.VioletPortal, 1),
+				"beb","ete","beb",
+				't',tear_eye,'b',Items.slime_ball,'e',Items.ender_pearl);
 
 		//Add Smelting Recipes
 		GameRegistry.addSmelting(BlockRegistry.VirenOre, new ItemStack(VirenIngot), 0.1f);

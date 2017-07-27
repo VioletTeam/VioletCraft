@@ -18,6 +18,7 @@ public class BlockVioletPortal extends Block {
 
     public BlockVioletPortal() {
         super(Material.portal);
+        this.setCreativeTab(VioletCraftMod.tabVioletCraft);
         this.setHardness(50.0F);
         this.setResistance(3000.0F);
         this.setStepSound(soundTypePiston);
