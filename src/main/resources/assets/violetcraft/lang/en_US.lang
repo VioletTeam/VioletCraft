@@ -13,6 +13,7 @@ item.cooked_moonrabbit.name=Cooked MoonRabbit
 item.WandCaps.virencap.name=Viren Cap
 item.my_piece.name=My Piece
 item.my_core.name=My Core
+item.tear_eye.name=Tear Eye
 #Blocks
 tile.virenBlock.name=Viren Block
 tile.generator.name=Generator

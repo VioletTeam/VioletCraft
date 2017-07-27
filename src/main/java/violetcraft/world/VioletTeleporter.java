@@ -20,7 +20,7 @@ import net.minecraft.world.WorldServer;
 import violetcraft.registry.BlockRegistry;
 
 public class VioletTeleporter extends Teleporter {
-    public static final Block frameBlock = BlockRegistry.ScarRedOre;
+    public static final Block frameBlock = Blocks.bedrock;
     public static final Block portalBlock = BlockRegistry.VioletPortal;
     public static final int[] frameMetaTable = new int[]{4, 2, 5, 3};
 

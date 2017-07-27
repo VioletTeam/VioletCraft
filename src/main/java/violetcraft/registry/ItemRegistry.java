@@ -7,14 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
 import thaumcraft.api.wands.WandCap;
-import violetcraft.item.ItemCookedMoonRabbit;
-import violetcraft.item.ItemIntermediate;
-import violetcraft.item.ItemMoonRabbitTear;
-import violetcraft.item.ItemRabbitEgg;
-import violetcraft.item.ItemRawMoonRabbit;
-import violetcraft.item.ItemVirenIngot;
-import violetcraft.item.ItemVirenScythe;
-import violetcraft.item.ItemVirenSword;
+import violetcraft.item.*;
 import violetcraft.item.armor.ItemYukariParker;
 import violetcraft.item.book.ItemVioletBook;
 import violetcraft.item.caps.ItemWandCaps;
@@ -25,6 +18,7 @@ public class ItemRegistry{
     public static final Item violetbook =new ItemVioletBook();
     public static final Item MyPiece = ItemIntermediate.createItem("my_piece", "my_piece");
     public static final Item MyCore = ItemIntermediate.createItem("my_core", "my_core");
+    public static final Item tear_eye =ItemIntermediate.createItem("tear_eye", "tear_eye");
     //Material =========================================================================================================
     public static final ItemArmor.ArmorMaterial Parker = EnumHelper.addArmorMaterial("YUKARIParker", 8, new int[]{3, 5, 6, 3}, 30);
     public static final Item RollYellowIngot = null;
@@ -52,6 +46,7 @@ public class ItemRegistry{
         GameRegistry.registerItem(MyPiece, "my_piece");
         GameRegistry.registerItem(Magicpaper, "magicpaper");
         GameRegistry.registerItem(MyCore, "my_core");
+        GameRegistry.registerItem(tear_eye,"tear_eye");
         registerItem(violetbook);
         //Register Items
         registerItem(RawMoonMeat);
