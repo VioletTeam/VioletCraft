@@ -137,7 +137,7 @@ public final class VioletCraftMod {
         metadata.modId = MOD_ID;
         metadata.name = MOD_NAME;
         metadata.version = VERSION;
-        metadata.authorList = Lists.newArrayList("keikun4649", "pentan", "c6h2cl2");
+        metadata.authorList = Lists.newArrayList("hrose_kei");
         metadata.description = "Violet Craft mods.";
         metadata.credits = "Created by Hrose Kei";
         metadata.logoFile = "assets/violetcraft/violet_logo.png";
